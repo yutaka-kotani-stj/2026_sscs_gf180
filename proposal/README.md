@@ -53,3 +53,6 @@ equate classes "-circuit1 cap_mim_2f0_m4m5_noshield" "-circuit2 cap_mim_2f0fF"
 
 # BGR
 see https://note.com/akira_tsuchiya/n/na50333ac5986
+
+# Reference
+https://iic-jku.github.io/analog-circuit-design/aicd.html
