@@ -261,3 +261,7 @@ This example demonstrates the proper use of the library naming conventions (`cor
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Reference
+
+https://iic-jku.github.io/analog-circuit-design/aicd.html
