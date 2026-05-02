@@ -22,8 +22,9 @@ Teddy: Divider
 
 | Spec       | Description                              |
 | ---------- | ---------------------------------------- |
-|  Frequency | 65-80MHz(FM RADIO 76-90MHz - IF:10.7MHz) |
-| Bandwidth  | 200kHz                                   |
+|  Input Frequency | 76-90MHz(FM RADIO)                       |
+|  VCO Frequency   | 65-80MHz(FM RADIO 76-90MHz - IF:10.7MHz) |
+| Bandwidth        | 200kHz                                   |
 
 
 ## Clock multiplier mode
