@@ -48,6 +48,9 @@ add line below on  "$PDK_ROOT/$PDK/libs.tech/netgen/${PDK}_setup.tcl"
 ```
 equate classes "-circuit1 cap_mim_2f0_m4m5_noshield" "-circuit2 cap_mim_2f0fF"
 ```
+to calculate MIM cap capacitance, see below:
+
+[tb_mim_cap.ipynb](../designs/libs/tb_analog/tb_mim_cap/tb_mim_cap.ipynb)
 
 # CMOS
 
