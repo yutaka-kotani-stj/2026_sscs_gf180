@@ -15,7 +15,7 @@ Teddy: Divider
 
 
 # Block diagram
-![pll_model](../image/pll_model.png)
+![pll_model](../images/pll_model.png)
 
 # Spec
 Frequency:
