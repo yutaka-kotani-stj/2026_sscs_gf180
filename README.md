@@ -1,4 +1,4 @@
-# IIC-OSIC-TOOLS Analog Design Project Template (GlobalFoundries 180nm)
+# SSCS 2026 Chipathon project with IIC-OSIC-TOOLS(GlobalFoundries 180nm)
 
 This repository is an analog design project template for the SSCS 2025 Chipathon (https://github.com/sscs-ose/sscs-chipathon-2025). The design environment is setup using the IIC-OSIC-TOOLS docker container (https://github.com/iic-jku/IIC-OSIC-TOOLS). The container is preconfigured with GlobalFoundries 180nm PDK (gf180mcuD).
 
@@ -52,24 +52,7 @@ In brief:
 - The **team leader** creates the repository from this template and adds teammates as collaborators.
 - Every contributor works on a dedicated feature branch and opens a pull request for review before merging into `main`.  
 
-### Step 1: Create Your Project Repository
-
-#### Use GitHub Template
-
-This repository is set up as a GitHub template. Using the template feature gives you a clean project without the template's commit history.
-
-
-
-1. Visit the template repository: [https://github.com/Jianxun/iic-osic-tools-project-template/](https://github.com/Jianxun/iic-osic-tools-project-template/)
-2. Click the green **"Use this template"** button
-3. Select **"Create a new repository"**
-4. Fill in your repository details:
-   - Repository name (e.g., `my-analog-design-project`)
-   - Description (optional)
-   - Choose public or private
-5. Click **"Create repository"**
-
-![GitHub "Use this template" button](docs/screenshots/using_github_template.png)
+### Step 1: Git clone Your Project Repository
 
 **Clone your new repository to your local machine using GitHub Desktop:**
 1. Open GitHub Desktop
@@ -261,3 +244,5 @@ This example demonstrates the proper use of the library naming conventions (`cor
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
