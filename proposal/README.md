@@ -18,7 +18,20 @@ Teddy: Divider
 ![pll_model](../images/pll_model.png)
 
 # Spec
-Frequency:
+## FM Demodulator mode
+
+| Spec       | Description                              |
+| ---------- | ---------------------------------------- |
+|  Frequency | 65-80MHz(FM RADIO 76-90MHz - IF:10.7MHz) |
+| Bandwidth  | 200kHz                                   |
+
+
+## Clock multiplier mode
+
+| Spec             | Description |
+| ---------------- | ----------- |
+| Input Frequency  | 10MHz       |
+| Output Frequency | 80MHz       |
 
 
 # Conceptual simulation
