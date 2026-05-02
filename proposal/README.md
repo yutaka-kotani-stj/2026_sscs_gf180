@@ -15,14 +15,14 @@ Teddy: Divider
 
 
 # Block diagram
-![pll_model](image/pll_model.png)
+![pll_model](../image/pll_model.png)
 
 # Spec
 Frequency:
 
 
 # Conceptual simulation
-[pll_phase_based.ipynb](jupyter/pll_phase_based.ipynb)
+[pll_phase_based.ipynb](../designs/libs/model_pll/pll_phase_based.ipynb)
 
 
 # PFD
