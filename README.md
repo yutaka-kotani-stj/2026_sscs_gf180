@@ -2,6 +2,9 @@
 
 This repository is an analog design project template for the SSCS 2025 Chipathon (https://github.com/sscs-ose/sscs-chipathon-2025). The design environment is setup using the IIC-OSIC-TOOLS docker container (https://github.com/iic-jku/IIC-OSIC-TOOLS). The container is preconfigured with GlobalFoundries 180nm PDK (gf180mcuD).
 
+## Project Overview
+see [proposal](proposal/README.md)
+
 ## What's Included
 
 When you use this template, you get:
