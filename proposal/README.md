@@ -52,6 +52,10 @@ because of tuning simplicity , this VCO just have one capacitor. current for cha
 frequency of OSC is defined:
 Fosc = Id / ( 4 * C *  Vth)
 before complicated design of vco, we can derive possible FOSC min and max.
+## VCO Spec
+[tb_vco](../designs/libs/tb_analog/tb_vco/tb_vco.ipynb)
+![vco_spec](../images/vco_spec.png)
+
 
 # Divider
 
