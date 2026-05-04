@@ -18,6 +18,16 @@ Teddy: Divider
 ![pll_model](../images/pll_model.png)
 
 # Spec
+## Operating condition 
+| Symbol    | Description          | Value |
+| --------- |--------------------- | ----- |
+|  Vdd      | Power supply voltage | 3.3V  |
+|  Vth      | Input Threshold      | 1.65V |
+|  Vin(min) | Input voltage (min)  | 0.8V  |
+|  Vin(max) | Input voltage (max)  | 2.5V  |
+|  Vout(min)| Output voltage(min)  | 0.0V  |
+|  Vout(max)| Output voltage(max)  | 3.3V  |
+
 ## FM Demodulator mode
 
 | Spec       | Description                              |
@@ -25,7 +35,6 @@ Teddy: Divider
 |  Input Frequency | 76-90MHz(FM RADIO)                       |
 |  VCO Frequency   | 65-80MHz(FM RADIO 76-90MHz - IF:10.7MHz) |
 | Bandwidth        | 200kHz                                   |
-
 
 ## Clock multiplier mode
 
@@ -39,7 +48,7 @@ Teddy: Divider
 [pll_phase_based.ipynb](../designs/libs/model_pll/pll_phase_based.ipynb)
 
 
-# PFD
+# PFD (Phase Frequency Detector)
 
 # Charge pump
 
@@ -52,6 +61,10 @@ because of tuning simplicity , this VCO just have one capacitor. current for cha
 frequency of OSC is defined:
 Fosc = Id / ( 4 * C *  Vth)
 before complicated design of vco, we can derive possible FOSC min and max.
+## VCO Spec
+[tb_vco](../designs/libs/tb_analog/tb_vco/tb_vco.ipynb)
+![vco_spec](../images/vco_spec.png)
+
 
 # Divider
 
