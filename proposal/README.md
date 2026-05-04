@@ -18,7 +18,7 @@ Teddy: Divider
 ![pll_model](../images/pll_model.png)
 
 # Spec
-## Operationg condition 
+## Operating condition 
 | Symbol    | Description          | Value |
 | --------- |--------------------- | ----- |
 |  Vdd      | Power supply voltage | 3.3V  |
