@@ -65,6 +65,7 @@ before complicated design of vco, we can derive possible FOSC min and max.
 [tb_vco](../designs/libs/tb_analog/tb_vco/tb_vco.ipynb)
 ![vco_spec](../images/vco_spec.png)
 
+![tb_vco_tran](../images/tb_vco_tran.png)
 
 # Divider
 
