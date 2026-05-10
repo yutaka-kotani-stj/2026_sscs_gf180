@@ -5,6 +5,9 @@ This repository is an analog design project template for the SSCS 2025 Chipathon
 ## Project Overview
 see [proposal](proposal/README.md).
 
+see proposal slide [proposal_slide](proposal/proposal.pdf).
+
+
 ## What's Included
 
 When you use this template, you get:
