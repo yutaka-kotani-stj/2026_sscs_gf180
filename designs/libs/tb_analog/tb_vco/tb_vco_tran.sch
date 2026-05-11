@@ -27,7 +27,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0
+x1=1.9786874e-08
 divx=5
 subdivx=4
 
@@ -40,7 +40,7 @@ x"
 logx=0
 logy=0
 legend=1
-x2=1000n}
+x2=4.2938688e-07}
 B 2 1340 -560 1930 -100 {flags=graph
 y1=0
 ypos1=0
@@ -48,7 +48,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0
+x1=1.9786874e-08
 divx=5
 subdivx=4
 
@@ -61,7 +61,7 @@ i(Vmeas1)"
 logx=0
 logy=0
 legend=1
-x2=1e-06
+x2=4.2938688e-07
 y2=200u}
 B 2 720 -1060 1310 -600 {flags=graph
 y1=0
@@ -71,8 +71,8 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0
-x2=1e-06
+x1=1.9786874e-08
+x2=4.2938688e-07
 divx=5
 subdivx=4
 
@@ -166,12 +166,35 @@ N 160 -460 160 -340 {lab=#net4}
 N 500 -360 540 -360 {lab=y}
 N 400 -360 440 -360 {lab=x}
 C {devices/lab_pin.sym} 620 -460 0 1 {name=l4 sig_type=std_logic lab=out_p}
-C {devices/code_shown.sym} 20 -830 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 30 -1810 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
 save currents
-tran   0.01n 1000n
+let ib=10e-6
+let ib_step=10e-6
+let ib_max=200e-6
+let count=0
+let count_length=((ib_max-ib)/ib_step)+1
+echo count_length:$&count_length
+let chart_y_freq = vector(count_length)
+let chart_x_curr = vector(count_length)
+
+while ib <= ib_max
+ alter I0=ib
+ setplot new
+ tran   0.01n 2000n
+ plot V(out_p)
+ meas tran tdiff TRIG v(out_p) VAL=1.65 RISE=2 TARG v(out_p) VAL=1.65 RISE=3
+ let freq=1/tdiff
+ echo ib: $&ib A, frequency: $&freq Hz
+ let chart_y_freq[count]=freq
+ let chart_x_curr[count]=ib
+ let ib=ib+ib_step
+ let count=count + 1
+end
+set nolegend
+plot chart_y_freq vs chart_x_curr  pointplot ylabel 'Output Frequnecy [Hz]' xlabel 'Bias current [A]'
 write tb_vco_tran.raw
 .endc
 "}
