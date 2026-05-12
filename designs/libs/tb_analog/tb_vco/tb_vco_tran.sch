@@ -1,4 +1,4 @@
-v {xschem version=3.4.7 file_version=1.2
+v {xschem version=3.4.8RC file_version=1.3
 * Copyright 2022 GlobalFoundries PDK Authors
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,6 +18,7 @@ G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 B 2 720 -560 1310 -100 {flags=graph
 y1=0
@@ -201,7 +202,7 @@ write tb_vco_tran.raw
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
 C {symbols/nfet_03v3.sym} 380 -410 0 1 {name=M1
 L=0.28u
-W=3.8u
+W=1.6u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -222,7 +223,7 @@ xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]
 }
 C {symbols/nfet_03v3.sym} 560 -410 0 0 {name=M2
 L=0.28u
-W=3.8u
+W=1.6u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -236,7 +237,7 @@ spiceprefix=X
 }
 C {symbols/cap_mim_2f0fF.sym} 470 -360 1 0 {name=C1
 W=34.32e-6
-L=34.32e-6
+L=3.432e-6
 model=cap_mim_2f0fF
 spiceprefix=X
 m=1}
@@ -291,7 +292,7 @@ C {ammeter.sym} 360 -290 0 0 {name=Vmeas savecurrent=true spice_ignore=0}
 C {ammeter.sym} 580 -290 0 0 {name=Vmeas1 savecurrent=true spice_ignore=0}
 C {symbols/pfet_03v3.sym} 560 -510 0 0 {name=M4
 L=0.28u
-W=1.6u
+W=3.2u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -322,7 +323,7 @@ spiceprefix=X
 C {isource.sym} 160 -310 0 0 {name=I0 value=100u}
 C {symbols/pfet_03v3.sym} 340 -510 0 0 {name=M3
 L=0.28u
-W=1.6u
+W=3.2u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -336,7 +337,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 180 -510 0 1 {name=M8
 L=0.28u
-W=1.6u
+W=3.2u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
