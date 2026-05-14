@@ -79,15 +79,16 @@ The project includes platform-specific scripts to launch the Docker container wi
 ```cmd
 .\start_chipathon_x.bat
 ```
-If you are familiar with git bash, feel free to use `start_chipathon_vnc.sh`.
 
 #### ICC-OSIC-TOOLS Image Download 
 
 Now the script pulls the IIC-OSIC-TOOLS *chipathon* image. Have a coffee.
 
-![Container startup messages](docs/screenshots/docker_pull.png)
+#### Confirm your docker image name
+Your docker image name should be "hpretl/iic-osic-tools:chipathon26"
 
-### Step 5: Launch Design Tools
+
+### Launch Design Tools
 
 You can now start the design tools from the terminal. 
 
