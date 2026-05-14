@@ -72,19 +72,12 @@ In brief:
 
 The project includes platform-specific scripts to launch the Docker container with the IIC-OSIC-TOOLS environment. **Before running the following scripts, make sure your Docker Desktop is running.**
 
-#### For Mac/Unix/Linux Systems:
-Open a terminal, navigate to you repository, and use the following command:
-```bash
-./start_chipathon_vnc.sh
-```
-
 #### For Windows Systems:
 
 **Open Command Prompt or PowerShell** navigate to you repository, and use the following command:
 
-
 ```cmd
-.\start_chipathon_vnc.bat
+.\start_chipathon_x.bat
 ```
 If you are familiar with git bash, feel free to use `start_chipathon_vnc.sh`.
 
@@ -93,37 +86,6 @@ If you are familiar with git bash, feel free to use `start_chipathon_vnc.sh`.
 Now the script pulls the IIC-OSIC-TOOLS *chipathon* image. Have a coffee.
 
 ![Container startup messages](docs/screenshots/docker_pull.png)
-
-### Step 3: Access the Design Environment in the Docker Container
-
-Once the container is running, you have two options to access the design environment:
-
-#### Option A: VNC Client (Recommended for better performance)
-1. Download a VNC client:
-   - **Windows**: [TigerVNC](https://tigervnc.org) 
-   - **macOS**: [TigerVNC](https://tigervnc.org)  or built-in Screen Sharing
-   - **Linux**: `vncviewer` (install via package manager)
-
-2. Connect to: `localhost:5901`
-3. Enter password: `abc123`
-
-
-#### Option B: Web Browser (noVNC) (Good for quick debug)
-
-1. Open your web browser
-2. Navigate to: `http://localhost`
-3. Enter password: `abc123`
-4. Click "Connect"
-
-
-### Step 4: Open a Terminal in the Container
-
-Once you're in the VNC session, you can start running the design tools in the containter:
-1. Right-click on the desktop
-2. Select "Terminal Emulator" (or similar option)
-3. You should automatically be in the `/foss/designs` directory
-
-![Desktop context menu with Terminal Emulator option](docs/screenshots/open_a_terminal.png)
 
 ### Step 5: Launch Design Tools
 
@@ -157,27 +119,6 @@ You can launch the other design tools with their appropriate commands. Take a lo
 
 
 ### [Troubleshooting Notes](troubleshooting.md)
-
-## Running Tools After Installation
-
-Once you have run the script for the first time, the container can be started much quicker. 
-
-- Open a terminal or shell on your local machine, go to the local folder that holds your local repo and execute `./start_chipathon_vnc.sh` or `.\start_chipathon_vnc.bat`; [see Step 2 above](#step-2-launch-the-docker-container). Since the container exists, you will get the following prompt:
-
-```
-> ./start_chipathon_vnc.sh 
-[WARNING] Container iic-osic-tools_chipathon_xvnc_uid_501 exists.
-[HINT] It can also be restarted with "docker start iic-osic-tools_chipathon_xvnc_uid_501" or removed with "docker rm iic-osic-tools_chipathon_xvnc_uid_501" if required.
-
-Press "s" to start, and "r" to remove: 
-```
-- Hit `s` to start the container. 
-   - *Note:* You can also start the container from the *Docker Desktop* and directly connect with VNC (next step).
-
-- Connect to the running container with VNC or your browser [see Step 3 above](#step-3-access-the-design-environment-in-the-docker-container).
-
-- Start using the tools [Steps 4, 5, 6 above](#step-4-open-a-terminal-in-the-container)
-
 
 
 ## Library Structure Conventions
