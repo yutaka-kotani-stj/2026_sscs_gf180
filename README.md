@@ -83,9 +83,26 @@ The project includes platform-specific scripts to launch the Docker container wi
 
 Now the script pulls the IIC-OSIC-TOOLS *chipathon* image. Have a coffee.
 
-#### Confirm your docker image name
+### Step 3: Confirm your docker image name
 Your docker image name should be "hpretl/iic-osic-tools:chipathon26"
 
+### Step 4: Generate SSH key for github
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+passphase can be empty.
+change permission of key and key directory
+```
+chmod 700 ~/.ssh
+```
+
+### Step5: Register public key to github
+Get public key
+```
+cat ~/.ssh/id_ed25519.pub
+```
+Go to github and Click : Settings > SSH and GPG keys->New SSH key
+Paste public key
 
 ### Launch Design Tools
 
