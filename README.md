@@ -66,7 +66,6 @@ In brief:
 3. Select your newly created repository
 4. Choose your local directory and click "Clone"
 
-![GitHub Desktop clone dialog](docs/screenshots/clone_your_repo.png)
 
 ### Step 2: Launch the Docker Container
 
@@ -102,7 +101,6 @@ You should see the Xschem GUI with available devices from `gf180mcu` and their t
 
 See the recommended schematic workflow **[docs/schematic_workflow.md](docs/schematic_workflow.md)**
 
-![Xschem interface with PDK libraries loaded](docs/screenshots/start_xschem.png)
 
 #### Layout
 
@@ -112,7 +110,6 @@ Launch Klayout for layout design:
 ```
 See the recommended layout workflow with Klayout **[docs/layout_workflow.md](docs/layout_workflow.md)**
 
-![KLayout](docs/screenshots/start_klayout.png)
 
 
 #### Other Tools
