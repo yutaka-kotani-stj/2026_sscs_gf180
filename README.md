@@ -135,8 +135,7 @@ project-root/
 │   ├── libs/                   # Design libraries
 │   ├── simulations/            # Symbolic link to the Xschem simulation result folder
 │   └── scripts                 # scripts for launching tools and library maintenance
-├── start_chipathon_vnc.sh   # Container launch script (Unix/Linux/Mac)
-├── start_chipathon_vnc.bat  # Container launch script (Windows)
+├── start_chipathon_x.bat  # Container launch script (Windows)
 └── README.md                # This file
 ```
 
