@@ -104,6 +104,19 @@ cat ~/.ssh/id_ed25519.pub
 Go to github and Click : Settings > SSH and GPG keys->New SSH key
 Paste public key
 
+### Step6: Confirm your ssh key is register on github
+```
+ssh -T git@github.com
+```
+### Step7: Git clone team project on docker
+
+```
+git clone git@github.com:yutaka-kotani-stj/2026_sscs_gf180.git
+```
+
+
+
+
 ### Launch Design Tools
 
 You can now start the design tools from the terminal. 
