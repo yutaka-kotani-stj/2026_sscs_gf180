@@ -22,13 +22,12 @@ F {}
 E {}
 B 2 720 -560 1310 -100 {flags=graph
 y1=0
-y2=5
+y2=1.5
 ypos1=0
 ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=1.9786874e-08
 divx=5
 subdivx=4
 
@@ -41,7 +40,8 @@ x"
 logx=0
 logy=0
 legend=1
-x2=4.2938688e-07}
+x2=100n
+x1=0}
 B 2 1340 -560 1930 -100 {flags=graph
 y1=0
 ypos1=0
@@ -66,14 +66,13 @@ x2=4.2938688e-07
 y2=200u}
 B 2 720 -1060 1310 -600 {flags=graph
 y1=0
-y2=5
+y2=4
 ypos1=0
 ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=1.9786874e-08
-x2=4.2938688e-07
+x1=0
 divx=5
 subdivx=4
 
@@ -85,7 +84,8 @@ node="out_p
 out_n"
 logx=0
 logy=0
-legend=1}
+legend=1
+x2=100n}
 N 480 -120 480 -100 {lab=GND}
 N 350 -120 360 -120 {lab=GND}
 N 360 -140 360 -120 {lab=GND}
