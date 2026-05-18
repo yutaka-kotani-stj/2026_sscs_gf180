@@ -46,7 +46,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0
+x1=-0.0834557
 divx=5
 subdivx=4
 
@@ -58,10 +58,11 @@ node=vout
 logx=0
 logy=0
 legend=1
-x2=3.3
+x2=3.2165443
 hilight_wave=0
 autoload=1
-rawfile=$netlist_dir/tb_optamp_dc.raw}
+rawfile=$netlist_dir/tb_optamp_dc.raw
+rainbow=1}
 B 2 1340 -1230 2050 -690 {flags=graph
 y1=0
 y2=3.3
@@ -70,7 +71,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0
+x1=-0.0834557
 divx=5
 subdivx=4
 
@@ -82,16 +83,17 @@ node=gain
 logx=0
 logy=0
 legend=1
-x2=3.3
+x2=3.2165443
 hilight_wave=0
 autoload=1
-rawfile=$netlist_dir/tb_optamp_dc.raw}
+rawfile=$netlist_dir/tb_optamp_dc.raw
+rainbow=1}
 T {Differential amp} 330 -130 0 0 0.4 0.4 {}
 T {Phase compensation} 780 -130 0 0 0.4 0.4 {}
 T {Bias} 90 -130 0 0 0.4 0.4 {}
 T {Common source amp} 1100 -130 0 0 0.4 0.4 {}
-T {2stage OPAMP - DC analysis} 0 -1450 0 0 1 1 {}
-T {Test circuit - Non inverting 3x amp} 1560 -130 0 0 0.4 0.4 {}
+T {2stage OPAMP - DC analysis} 10 -1320 0 0 1 1 {}
+T {Test circuit - voltage follower} 1560 -130 0 0 0.4 0.4 {}
 N 1440 -350 1440 -330 {lab=GND}
 N 540 -250 540 -230 {lab=GND}
 N 300 -230 520 -230 {lab=GND}
@@ -193,21 +195,21 @@ N 720 -520 740 -520 {lab=#net4}
 N 720 -640 720 -520 {lab=#net4}
 N 120 -460 180 -460 {lab=#net4}
 N 180 -520 180 -460 {lab=#net4}
-N 1600 -330 1600 -300 {lab=vin_n}
-N 1600 -240 1600 -220 {lab=VREF}
+N 1860 -450 1860 -400 {lab=vout}
+N 1860 -340 1860 -320 {lab=GND}
 C {devices/lab_pin.sym} 620 -420 0 1 {name=l4 sig_type=std_logic lab=vin_p}
-C {devices/code_shown.sym} 20 -1000 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 20 -920 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
 save currents
-dc v2 0 3.3 0.1
+dc v2 0 3.3 0.1 rload 10k 100k 20k
 let gain=deriv(vout)
 write tb_optamp_dc.raw
 .endc
 "}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
-C {devices/launcher.sym} 75 -1295 0 0 {name=h1
+C {devices/launcher.sym} 75 -1205 0 0 {name=h1
 descr="Click left mouse button here with control key
 pressed to load/unload waveforms in graph."
 tclcommand="
@@ -225,7 +227,7 @@ C {devices/lab_pin.sym} 220 -420 0 0 {name=l8 sig_type=std_logic lab=vin_n}
 C {vdd.sym} 1440 -430 0 0 {name=l2 lab=VDD}
 C {gnd.sym} 1440 -330 0 0 {name=l3 lab=GND}
 C {vsource.sym} 1440 -380 0 0 {name=V1 value=3.3 savecurrent=false}
-C {devices/code_shown.sym} 20 -1210 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 20 -1130 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -322,7 +324,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {vdd.sym} 120 -590 0 0 {name=l9 lab=VDD}
-C {isource.sym} 120 -380 0 0 {name=I1 value=10u}
+C {isource.sym} 120 -380 0 0 {name=I1 value=40u}
 C {gnd.sym} 120 -210 0 0 {name=l10 lab=GND}
 C {symbols/pfet_03v3.sym} 1140 -520 0 0 {name=M7
 L=0.28u
@@ -417,7 +419,7 @@ C {devices/lab_pin.sym} 1200 -430 0 1 {name=l16 sig_type=std_logic lab=vout}
 C {devices/lab_pin.sym} 1640 -430 0 1 {name=l18 sig_type=std_logic lab=vin_n}
 C {devices/lab_pin.sym} 1770 -450 0 0 {name=l19 sig_type=std_logic lab=vout}
 C {res.sym} 1710 -330 1 0 {name=R1
-value=200k
+value=0.01
 footprint=1206
 device=resistor
 m=1}
@@ -427,9 +429,9 @@ C {devices/lab_pin.sym} 1640 -470 0 1 {name=l20 sig_type=std_logic lab=vin_p}
 C {vdd.sym} 1360 -430 0 0 {name=l22 lab=VREF}
 C {gnd.sym} 1360 -330 0 0 {name=l23 lab=GND}
 C {vsource.sym} 1360 -380 0 0 {name=V3 value=1.65 savecurrent=false}
-C {res.sym} 1600 -270 0 0 {name=R2
+C {res.sym} 1860 -370 0 0 {name=RLOAD
 value=100k
 footprint=1206
 device=resistor
 m=1}
-C {gnd.sym} 1600 -220 0 0 {name=l7 lab=VREF}
+C {gnd.sym} 1860 -320 0 0 {name=l7 lab=GND}
