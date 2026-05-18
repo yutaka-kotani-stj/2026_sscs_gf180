@@ -72,6 +72,7 @@ before complicated design of vco, we can derive possible FOSC min and max.
 # OPAMP
 OPAMP will be used in VCO. It will convert input votage to output current linearly with resistor.
 
+[tb_opamp_dc.sch](../designs/libs/tb_analog/tb_opamp/tb_opamp_dc.sch)
 ![tb_opamp_dc](../images/tb_opamp_dc.png)
 
 
