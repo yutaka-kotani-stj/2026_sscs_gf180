@@ -32,21 +32,21 @@ L 4 160 -210 160 -150 {}
 L 4 1100 -210 1100 -150 {}
 L 4 1100 -150 1260 -150 {}
 L 4 1260 -210 1260 -150 {}
-L 4 1340 -210 1340 -150 {}
-L 4 1340 -150 1900 -150 {}
-L 4 1900 -210 1900 -150 {}
-L 4 1630 -530 1630 -370 {}
-L 4 1630 -370 1790 -450 {}
-L 4 1630 -530 1790 -450 {}
-B 2 600 -1230 1310 -690 {flags=graph
-y1=0
+L 4 80 -820 80 -760 {}
+L 4 80 -760 640 -760 {}
+L 4 640 -820 640 -760 {}
+L 4 370 -1140 370 -980 {}
+L 4 370 -980 530 -1060 {}
+L 4 370 -1140 530 -1060 {}
+B 2 1330 -1100 2040 -560 {flags=graph
+y1=0.063
 y2=3.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=-0.0834557
+x1=0
 divx=5
 subdivx=4
 
@@ -58,12 +58,12 @@ node=vout
 logx=0
 logy=0
 legend=1
-x2=3.2165443
+x2=3.3
 hilight_wave=0
 autoload=1
-rawfile=$netlist_dir/tb_optamp_dc.raw
+rawfile=$netlist_dir/tb_opamp_dc.raw
 rainbow=1}
-B 2 1340 -1230 2050 -690 {flags=graph
+B 2 1330 -560 2040 -20 {flags=graph
 y1=0
 y2=3.3
 ypos1=0
@@ -71,7 +71,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=-0.0834557
+x1=0
 divx=5
 subdivx=4
 
@@ -79,22 +79,76 @@ unitx=1
 dataset=-1
 sim_type=dc
 color=4
-node=gain
+node=dc_gain
 logx=0
 logy=0
 legend=1
-x2=3.2165443
+x2=3.3
 hilight_wave=0
 autoload=1
-rawfile=$netlist_dir/tb_optamp_dc.raw
+rawfile=$netlist_dir/tb_opamp_dc.raw
 rainbow=1}
+B 2 2070 -1100 2780 -560 {flags=graph
+y1=-3
+ypos1=0
+ypos2=2
+divy=5
+subdivy=4
+unity=1
+divx=5
+subdivx=8
+
+unitx=1
+dataset=-1
+sim_type=ac
+logx=1
+logy=0
+legend=1
+hilight_wave=0
+autoload=1
+rawfile=$netlist_dir/tb_opamp_ac.raw
+rainbow=1
+digital=0
+x1=3
+x2=7
+color=4
+node=re(ac_gain_db)
+y2=3}
+B 2 2070 -560 2780 -20 {flags=graph
+ypos1=0
+ypos2=2
+divy=5
+subdivy=4
+unity=1
+divx=5
+subdivx=8
+
+unitx=1
+dataset=-1
+sim_type=ac
+logx=1
+logy=0
+legend=1
+hilight_wave=0
+autoload=1
+rawfile=$netlist_dir/tb_opamp_ac.raw
+rainbow=0
+digital=0
+x1=3
+x2=7
+y1=-180
+y2=180
+color=4
+node=ac_phase_deg}
 T {Differential amp} 330 -130 0 0 0.4 0.4 {}
 T {Phase compensation} 780 -130 0 0 0.4 0.4 {}
 T {Bias} 90 -130 0 0 0.4 0.4 {}
 T {Common source amp} 1100 -130 0 0 0.4 0.4 {}
-T {2stage OPAMP - DC analysis} 10 -1320 0 0 1 1 {}
-T {Test circuit - voltage follower} 1560 -130 0 0 0.4 0.4 {}
-N 1440 -350 1440 -330 {lab=GND}
+T {2stage OPAMP} 10 -1320 0 0 1 1 {}
+T {Test circuit - voltage follower} 300 -740 0 0 0.4 0.4 {}
+T {DC analysis} 1580 -1170 0 0 0.8 0.8 {}
+T {AC analysis} 2320 -1170 0 0 0.8 0.8 {}
+N 160 -960 160 -940 {lab=GND}
 N 540 -250 540 -230 {lab=GND}
 N 300 -230 520 -230 {lab=GND}
 N 300 -250 300 -230 {lab=GND}
@@ -163,19 +217,19 @@ N 880 -430 890 -430 {lab=#net2}
 N 880 -430 880 -170 {lab=#net2}
 N 1160 -430 1200 -430 {lab=vout}
 N 220 -420 260 -420 {lab=vin_n}
-N 1520 -350 1520 -330 {lab=GND}
-N 1440 -430 1440 -410 {lab=VDD}
-N 1600 -430 1640 -430 {lab=vin_n}
-N 1600 -430 1600 -330 {lab=vin_n}
-N 1600 -330 1680 -330 {lab=vin_n}
-N 1770 -450 1820 -450 {lab=vout}
-N 1820 -450 1820 -330 {lab=vout}
-N 1740 -330 1820 -330 {lab=vout}
-N 1520 -470 1640 -470 {lab=vin_p}
-N 1520 -470 1520 -410 {lab=vin_p}
-N 1360 -350 1360 -330 {lab=GND}
-N 1360 -430 1360 -410 {lab=VREF}
-N 1820 -450 1860 -450 {lab=vout}
+N 240 -960 240 -940 {lab=GND}
+N 160 -1040 160 -1020 {lab=VDD}
+N 340 -1040 380 -1040 {lab=vin_n}
+N 340 -1040 340 -940 {lab=vin_n}
+N 340 -940 420 -940 {lab=vin_n}
+N 510 -1060 560 -1060 {lab=vout}
+N 560 -1060 560 -940 {lab=vout}
+N 480 -940 560 -940 {lab=vout}
+N 260 -1080 380 -1080 {lab=vin_p}
+N 240 -1080 240 -1020 {lab=vin_p}
+N 80 -960 80 -940 {lab=GND}
+N 80 -1040 80 -1020 {lab=VREF}
+N 560 -1060 600 -1060 {lab=vout}
 N 1160 -280 1170 -280 {lab=GND}
 N 1170 -280 1170 -230 {lab=GND}
 N 1160 -230 1170 -230 {lab=GND}
@@ -195,25 +249,38 @@ N 720 -520 740 -520 {lab=#net4}
 N 720 -640 720 -520 {lab=#net4}
 N 120 -460 180 -460 {lab=#net4}
 N 180 -520 180 -460 {lab=#net4}
-N 1860 -450 1860 -400 {lab=vout}
-N 1860 -340 1860 -320 {lab=GND}
+N 600 -1060 600 -1010 {lab=vout}
+N 600 -950 600 -930 {lab=GND}
+N 240 -1080 260 -1080 {lab=vin_p}
 C {devices/lab_pin.sym} 620 -420 0 1 {name=l4 sig_type=std_logic lab=vin_p}
-C {devices/code_shown.sym} 20 -920 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 720 -1000 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
 save currents
+* DC analysis
 dc v2 0 3.3 0.1 rload 10k 100k 20k
-let gain=deriv(vout)
-write tb_optamp_dc.raw
+let dc_gain=deriv(vout)
+write tb_opamp_dc.raw
+
+* AC analysis
+alter @v2[acmag]=1
+ac dec 10 1k 10Meg
+let ac_gain = vout / vin_p
+let ac_gain_db = db(ac_gain)
+let ac_phase_deg = (180 / PI) * cph(ac_gain)
+write tb_opamp_ac.raw
 .endc
 "}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
-C {devices/launcher.sym} 75 -1205 0 0 {name=h1
-descr="Click left mouse button here with control key
-pressed to load/unload waveforms in graph."
+C {devices/launcher.sym} 795 -1265 0 0 {name=h1
+descr="Click left mouse button here with CTRL key
+to reload waveforms in graph."
 tclcommand="
-xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw
+xschem raw_read $netlist_dir/tb_opamp_dc.raw
+xschem raw_read $netlist_dir/tb_opamp_ac.raw
+xschem raw_read $netlist_dir/tb_opamp_tran.raw
+
 "
 }
 C {symbols/cap_mim_2f0fF.sym} 1010 -430 1 0 {name=C1
@@ -224,10 +291,10 @@ spiceprefix=X
 m=1}
 C {gnd.sym} 420 -210 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 220 -420 0 0 {name=l8 sig_type=std_logic lab=vin_n}
-C {vdd.sym} 1440 -430 0 0 {name=l2 lab=VDD}
-C {gnd.sym} 1440 -330 0 0 {name=l3 lab=GND}
-C {vsource.sym} 1440 -380 0 0 {name=V1 value=3.3 savecurrent=false}
-C {devices/code_shown.sym} 20 -1130 0 0 {name=MODELS only_toplevel=true
+C {vdd.sym} 160 -1040 0 0 {name=l2 lab=VDD}
+C {gnd.sym} 160 -940 0 0 {name=l3 lab=GND}
+C {vsource.sym} 160 -990 0 0 {name=V1 value=3.3 savecurrent=false}
+C {devices/code_shown.sym} 710 -1190 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -416,22 +483,22 @@ C {vdd.sym} 780 -590 0 0 {name=l13 lab=VDD}
 C {gnd.sym} 780 -210 0 0 {name=l14 lab=GND}
 C {gnd.sym} 920 -370 0 0 {name=l15 lab=GND}
 C {devices/lab_pin.sym} 1200 -430 0 1 {name=l16 sig_type=std_logic lab=vout}
-C {devices/lab_pin.sym} 1640 -430 0 1 {name=l18 sig_type=std_logic lab=vin_n}
-C {devices/lab_pin.sym} 1770 -450 0 0 {name=l19 sig_type=std_logic lab=vout}
-C {res.sym} 1710 -330 1 0 {name=R1
+C {devices/lab_pin.sym} 380 -1040 0 1 {name=l18 sig_type=std_logic lab=vin_n}
+C {devices/lab_pin.sym} 510 -1060 0 0 {name=l19 sig_type=std_logic lab=vout}
+C {res.sym} 450 -940 1 0 {name=R1
 value=0.01
 footprint=1206
 device=resistor
 m=1}
-C {gnd.sym} 1520 -330 0 0 {name=l21 lab=GND}
-C {vsource.sym} 1520 -380 0 0 {name=V2 value=1.65 savecurrent=false}
-C {devices/lab_pin.sym} 1640 -470 0 1 {name=l20 sig_type=std_logic lab=vin_p}
-C {vdd.sym} 1360 -430 0 0 {name=l22 lab=VREF}
-C {gnd.sym} 1360 -330 0 0 {name=l23 lab=GND}
-C {vsource.sym} 1360 -380 0 0 {name=V3 value=1.65 savecurrent=false}
-C {res.sym} 1860 -370 0 0 {name=RLOAD
-value=100k
+C {gnd.sym} 240 -940 0 0 {name=l21 lab=GND}
+C {vsource.sym} 240 -990 0 0 {name=V2 value="dc 1.65 ac 1" savecurrent=false}
+C {devices/lab_pin.sym} 380 -1080 0 1 {name=l20 sig_type=std_logic lab=vin_p}
+C {vdd.sym} 80 -1040 0 0 {name=l22 lab=VREF}
+C {gnd.sym} 80 -940 0 0 {name=l23 lab=GND}
+C {vsource.sym} 80 -990 0 0 {name=V3 value=1.65 savecurrent=false}
+C {res.sym} 600 -980 0 0 {name=RLOAD
+value=10k
 footprint=1206
 device=resistor
 m=1}
-C {gnd.sym} 1860 -320 0 0 {name=l7 lab=GND}
+C {gnd.sym} 600 -930 0 0 {name=l7 lab=GND}
