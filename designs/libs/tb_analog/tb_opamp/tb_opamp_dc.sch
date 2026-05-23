@@ -140,6 +140,56 @@ y1=-180
 y2=180
 color=4
 node=ac_phase_deg}
+B 2 2810 -1100 3520 -560 {flags=graph
+y1=0
+y2=3.3
+ypos1=0
+ypos2=2
+divy=5
+subdivy=4
+unity=1
+x1=0
+divx=5
+subdivx=4
+
+unitx=1
+dataset=-1
+sim_type=tran
+logx=0
+logy=0
+legend=1
+x2=0.1m
+hilight_wave=0
+autoload=1
+rawfile=$netlist_dir/tb_opamp_tran.raw
+rainbow=1
+color=4
+node=vin_p}
+B 2 2810 -560 3520 -20 {flags=graph
+y1=0
+y2=3.3
+ypos1=0
+ypos2=2
+divy=5
+subdivy=4
+unity=1
+x1=0
+divx=5
+subdivx=4
+
+unitx=1
+dataset=-1
+sim_type=tran
+logx=0
+logy=0
+legend=1
+x2=100u
+hilight_wave=0
+autoload=1
+rawfile=$netlist_dir/tb_opamp_tran.raw
+rainbow=1
+color=4
+node=vout}
 T {Differential amp} 330 -130 0 0 0.4 0.4 {}
 T {Phase compensation} 780 -130 0 0 0.4 0.4 {}
 T {Bias} 90 -130 0 0 0.4 0.4 {}
@@ -148,6 +198,7 @@ T {2stage OPAMP} 10 -1320 0 0 1 1 {}
 T {Test circuit - voltage follower} 300 -740 0 0 0.4 0.4 {}
 T {DC analysis} 1580 -1170 0 0 0.8 0.8 {}
 T {AC analysis} 2320 -1170 0 0 0.8 0.8 {}
+T {TRAN analysis} 3050 -1170 0 0 0.8 0.8 {}
 N 160 -960 160 -940 {lab=GND}
 N 540 -250 540 -230 {lab=GND}
 N 300 -230 520 -230 {lab=GND}
@@ -254,22 +305,22 @@ N 600 -950 600 -930 {lab=GND}
 N 240 -1080 260 -1080 {lab=vin_p}
 C {devices/lab_pin.sym} 620 -420 0 1 {name=l4 sig_type=std_logic lab=vin_p}
 C {devices/code_shown.sym} 720 -1000 0 0 {name=NGSPICE only_toplevel=true
-value="
-.control
+value=".control
 save all
 save currents
 * DC analysis
 dc v2 0 3.3 0.1 rload 10k 100k 20k
 let dc_gain=deriv(vout)
 write tb_opamp_dc.raw
-
 * AC analysis
-alter @v2[acmag]=1
 ac dec 10 1k 10Meg
 let ac_gain = vout / vin_p
 let ac_gain_db = db(ac_gain)
 let ac_phase_deg = (180 / PI) * cph(ac_gain)
 write tb_opamp_ac.raw
+* TRAN analysis
+tran 0.1u 100u
+write tb_opamp_tran.raw
 .endc
 "}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
@@ -491,7 +542,7 @@ footprint=1206
 device=resistor
 m=1}
 C {gnd.sym} 240 -940 0 0 {name=l21 lab=GND}
-C {vsource.sym} 240 -990 0 0 {name=V2 value="dc 1.65 ac 1" savecurrent=false}
+C {vsource.sym} 240 -990 0 0 {name=V2 value="dc 1.65 ac 1 sin(1.65 1 100k 0 0 0)" savecurrent=false}
 C {devices/lab_pin.sym} 380 -1080 0 1 {name=l20 sig_type=std_logic lab=vin_p}
 C {vdd.sym} 80 -1040 0 0 {name=l22 lab=VREF}
 C {gnd.sym} 80 -940 0 0 {name=l23 lab=GND}
