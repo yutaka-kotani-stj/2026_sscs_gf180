@@ -75,12 +75,12 @@ i(vmeas_n)"
 logx=0
 logy=0
 legend=1
-x2=2m
+x2=0.002
 hilight_wave=0
 autoload=1
 rainbow=1
 rawfile=$netlist_dir/tb_bmr_tran.raw
-y2=25u}
+y2=2.5e-05}
 B 2 1820 -1160 2530 -620 {flags=graph
 y1=0
 ypos1=0
@@ -98,7 +98,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=2m
+x2=0.002
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -109,7 +109,7 @@ node=vdd}
 T {Beta multiplier current reference} 0 -1170 0 0 1 1 {}
 T {DC analysis} 1330 -690 0 0 0.8 0.8 {}
 T {TRAN analysis} 2020 -1240 0 0 0.8 0.8 {}
-T {Startup} 150 -220 0 0 0.6 0.6 {}
+T {Start up} 150 -220 0 0 0.6 0.6 {}
 T {Beta multiplier} 440 -220 0 0 0.6 0.6 {}
 T {Current mirror} 790 -220 0 0 0.6 0.6 {}
 N 120 -960 120 -940 {lab=GND}
