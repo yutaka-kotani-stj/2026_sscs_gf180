@@ -171,7 +171,7 @@ N 460 -320 480 -320 {lab=#net3}
 N 420 -290 420 -270 {lab=GND}
 N 500 -320 560 -320 {lab=#net3}
 N 420 -800 500 -800 {lab=VDD}
-N 420 -770 420 -750 {lab=#net7}
+N 420 -770 420 -750 {lab=#net8}
 N 360 -800 380 -800 {lab=#net6}
 N 480 -440 500 -440 {lab=#net7}
 N 480 -320 500 -320 {lab=#net3}
@@ -182,7 +182,6 @@ N 300 -440 310 -440 {lab=GND}
 N 500 -800 520 -800 {lab=VDD}
 N 420 -850 520 -850 {lab=VDD}
 N 420 -850 420 -830 {lab=VDD}
-N 420 -650 420 -470 {lab=#net7}
 N 540 -270 690 -270 {lab=GND}
 N 240 -800 260 -800 {lab=#net6}
 N 260 -800 360 -800 {lab=#net6}
@@ -195,11 +194,7 @@ N 100 -850 200 -850 {lab=VDD}
 N 200 -770 200 -730 {lab=#net6}
 N 200 -750 260 -750 {lab=#net6}
 N 260 -800 260 -750 {lab=#net6}
-N 200 -670 200 -610 {lab=#net6}
-N 200 -550 200 -250 {lab=GND}
 N 300 -320 420 -320 {lab=GND}
-N 420 -750 420 -650 {lab=#net7}
-N 200 -730 200 -670 {lab=#net6}
 N 520 -850 520 -800 {lab=VDD}
 N 420 -870 420 -850 {lab=VDD}
 N 260 -920 260 -800 {lab=#net6}
@@ -233,6 +228,27 @@ N 1310 -1070 1390 -1070 {lab=GND}
 N 1390 -1080 1390 -1070 {lab=GND}
 N 1310 -1160 1390 -1160 {lab=out2}
 N 1390 -1160 1390 -1140 {lab=out2}
+N 420 -670 500 -670 {lab=#net8}
+N 420 -640 420 -620 {lab=#net7}
+N 360 -670 380 -670 {lab=#net10}
+N 500 -670 520 -670 {lab=#net8}
+N 420 -720 520 -720 {lab=#net8}
+N 420 -720 420 -700 {lab=#net8}
+N 240 -670 260 -670 {lab=#net10}
+N 260 -670 360 -670 {lab=#net10}
+N 200 -720 200 -700 {lab=#net6}
+N 100 -670 200 -670 {lab=#net6}
+N 100 -720 100 -670 {lab=#net6}
+N 100 -720 200 -720 {lab=#net6}
+N 200 -640 200 -600 {lab=#net10}
+N 200 -620 260 -620 {lab=#net10}
+N 260 -670 260 -620 {lab=#net10}
+N 520 -720 520 -670 {lab=#net8}
+N 200 -730 200 -720 {lab=#net6}
+N 420 -750 420 -720 {lab=#net8}
+N 420 -620 420 -470 {lab=#net7}
+N 200 -540 200 -520 {lab=GND}
+N 200 -520 200 -250 {lab=GND}
 C {devices/lab_pin.sym} 960 -750 0 1 {name=l4 sig_type=std_logic lab=out1_p}
 C {devices/code_shown.sym} 2110 -830 0 0 {name=NGSPICE only_toplevel=true
 value="
@@ -385,7 +401,7 @@ spiceprefix=X
 }
 C {gnd.sym} 600 -650 0 0 {name=l15 lab=GND}
 C {gnd.sym} 1020 -650 0 0 {name=l16 lab=GND}
-C {isource.sym} 200 -580 0 0 {name=I0 value=100u}
+C {isource.sym} 200 -570 0 0 {name=I0 value=100u}
 C {symbols/pfet_03v3.sym} 680 -800 0 0 {name=M3
 L=0.28u
 W=64u
@@ -536,3 +552,31 @@ m=1
 value=20p
 footprint=1206
 device="ceramic capacitor"}
+C {symbols/pfet_03v3.sym} 400 -670 0 0 {name=M7
+L=0.28u
+W=3.2u
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}
+C {symbols/pfet_03v3.sym} 220 -670 0 1 {name=M12
+L=0.28u
+W=3.2u
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}

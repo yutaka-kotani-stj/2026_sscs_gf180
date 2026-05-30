@@ -442,7 +442,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {vdd.sym} 120 -590 0 0 {name=l9 lab=VDD}
-C {isource.sym} 120 -380 0 0 {name=I1 value=40u}
+C {isource.sym} 120 -380 0 0 {name=I1 value=60u}
 C {gnd.sym} 120 -210 0 0 {name=l10 lab=GND}
 C {symbols/pfet_03v3.sym} 1140 -520 0 0 {name=M7
 L=0.28u

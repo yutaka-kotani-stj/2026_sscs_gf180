@@ -31,7 +31,7 @@ L 4 740 -240 1060 -240 {}
 L 4 1060 -300 1060 -240 {}
 B 2 1080 -620 1790 -80 {flags=graph
 y1=0
-y2=25u
+y2=10e-05
 ypos1=0
 ypos2=2
 divy=5
@@ -80,7 +80,7 @@ hilight_wave=0
 autoload=1
 rainbow=1
 rawfile=$netlist_dir/tb_bmr_tran.raw
-y2=2.5e-05}
+y2=10e-05}
 B 2 1820 -1160 2530 -620 {flags=graph
 y1=0
 ypos1=0
@@ -166,30 +166,28 @@ N 500 -630 500 -570 {lab=#net3}
 N 500 -570 500 -490 {lab=#net3}
 N 140 -400 140 -390 {lab=GND}
 N 440 -400 440 -390 {lab=GND}
-N 600 -410 600 -390 {lab=#net5}
-N 560 -440 580 -440 {lab=VDD}
 N 780 -780 780 -740 {lab=VDD}
 N 780 -710 790 -710 {lab=VDD}
 N 790 -760 790 -710 {lab=VDD}
 N 780 -760 790 -760 {lab=VDD}
 N 720 -710 740 -710 {lab=#net2}
 N 720 -830 720 -710 {lab=#net2}
-N 780 -680 780 -650 {lab=#net6}
+N 780 -680 780 -650 {lab=#net5}
 N 780 -590 780 -570 {lab=GND}
 N 900 -570 910 -570 {lab=GND}
 N 910 -570 910 -510 {lab=GND}
 N 900 -510 910 -510 {lab=GND}
 N 900 -780 900 -690 {lab=VDD}
-N 900 -630 900 -600 {lab=#net7}
+N 900 -630 900 -600 {lab=#net6}
 N 840 -570 860 -570 {lab=#net3}
 N 840 -570 840 -490 {lab=#net3}
 N 770 -490 840 -490 {lab=#net3}
 N 900 -540 900 -390 {lab=GND}
 N 200 -490 220 -490 {lab=#net3}
 N 400 -830 720 -830 {lab=#net2}
-N 560 -360 580 -360 {lab=VDD}
-N 560 -440 560 -360 {lab=VDD}
-N 600 -330 600 -300 {lab=GND}
+N 560 -420 580 -420 {lab=VDD}
+N 600 -470 600 -450 {lab=#net4}
+N 560 -440 560 -420 {lab=VDD}
 C {devices/code_shown.sym} 1090 -880 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
@@ -332,13 +330,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gnd.sym} 600 -300 0 0 {name=l24 lab=GND}
-C {symbols/ppolyf_u_3k.sym} 600 -440 0 0 {name=R2
-W=1e-6
-L=1e-6
-model=ppolyf_u_3k
-spiceprefix=X
-m=1}
+C {gnd.sym} 600 -390 0 0 {name=l24 lab=GND}
 C {vdd.sym} 560 -440 0 0 {name=l4 lab=VDD}
 C {symbols/pfet_03v3.sym} 760 -710 0 0 {name=M4
 L=4u
@@ -374,7 +366,7 @@ spiceprefix=X
 C {ammeter.sym} 900 -660 0 0 {name=Vmeas_n savecurrent=true spice_ignore=0}
 C {vdd.sym} 900 -780 0 0 {name=l14 lab=VDD}
 C {gnd.sym} 900 -390 0 0 {name=l15 lab=GND}
-C {symbols/ppolyf_u_3k.sym} 600 -360 0 0 {name=R1
+C {symbols/ppolyf_u_3k.sym} 600 -420 0 0 {name=R3
 W=1e-6
 L=1e-6
 model=ppolyf_u_3k
