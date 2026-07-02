@@ -59,7 +59,7 @@ rawfile=$netlist_dir/tb_vco_tran.raw
 }
 B 2 1510 -480 2100 -20 {flags=graph
 y1=0
-y2=1e+08
+y2=20Meg
 ypos1=0
 ypos2=2
 divy=5
@@ -80,7 +80,7 @@ rainbow=0
 color=4
 node=frequency_out
 mode=Line
-x2=0.00013
+x2=0.0001
 sim_type=freq
 rawfile=$netlist_dir/tb_vco_freq.raw}
 T {VCO} 150 -1190 0 0 1 1 {}
@@ -256,8 +256,8 @@ value="
 save all
 save currents
 let ib=0
-let ib_step=10e-6
-let ib_max=130e-6
+let ib_step=5e-6
+let ib_max=100e-6
 let count=0
 let count_length=((ib_max-ib)/ib_step)+1
 echo count_length:$&count_length
@@ -267,7 +267,7 @@ settype frequency chart_y_freq
 settype current chart_x_curr
 while ib <= ib_max
  alter I0=ib
- tran   0.01n 500n
+ tran   0.1n 1u
  plot V(out2)
  let m1_vgs=v(out_p)-v(x)
  let m2_vgs=v(out_n)-v(y)
@@ -299,7 +299,7 @@ wrdata tb_vco_freq.txt frequency_out
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
 C {symbols/nfet_03v3.sym} 720 -700 0 1 {name=M1
 L=0.28u
-W=32u
+W=8u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -322,7 +322,7 @@ xschem raw_read $netlist_dir/tb_vco_freq.raw
 }
 C {symbols/nfet_03v3.sym} 900 -700 0 0 {name=M2
 L=0.28u
-W=32u
+W=8u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -342,7 +342,7 @@ spiceprefix=X
 m=1}
 C {symbols/nfet_03v3.sym} 680 -320 0 0 {name=M5
 L=0.28u
-W=32u
+W=8u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -356,7 +356,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 900 -320 0 0 {name=M6
 L=0.28u
-W=32u
+W=8u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -387,7 +387,7 @@ value="
 "}
 C {symbols/pfet_03v3.sym} 900 -800 0 0 {name=M4
 L=0.28u
-W=64u
+W=16u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -401,10 +401,10 @@ spiceprefix=X
 }
 C {gnd.sym} 600 -650 0 0 {name=l15 lab=GND}
 C {gnd.sym} 1020 -650 0 0 {name=l16 lab=GND}
-C {isource.sym} 200 -570 0 0 {name=I0 value=100u}
+C {isource.sym} 200 -570 0 0 {name=I0 value=10u}
 C {symbols/pfet_03v3.sym} 680 -800 0 0 {name=M3
 L=0.28u
-W=64u
+W=16u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -419,7 +419,7 @@ spiceprefix=X
 C {vdd.sym} 200 -870 0 0 {name=l10 lab=VDD}
 C {symbols/nfet_03v3.sym} 680 -440 0 0 {name=M9
 L=0.28u
-W=32u
+W=8u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -433,7 +433,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 900 -440 0 0 {name=M10
 L=0.28u
-W=32u
+W=8u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
