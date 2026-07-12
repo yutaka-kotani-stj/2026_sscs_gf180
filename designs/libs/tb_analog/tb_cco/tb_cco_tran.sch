@@ -55,7 +55,7 @@ legend=1
 x2=3.6835963e-08
 autoload=1
 y2=3.4
-rawfile=$netlist_dir/tb_vco_tran.raw
+rawfile=$netlist_dir/tb_cco_tran.raw
 }
 B 2 1510 -480 2100 -20 {flags=graph
 y1=0
@@ -82,8 +82,8 @@ node=frequency_out
 mode=Line
 x2=0.0002
 sim_type=freq
-rawfile=$netlist_dir/tb_vco_freq.raw}
-T {VCO} 150 -1190 0 0 1 1 {}
+rawfile=$netlist_dir/tb_cco_freq.raw}
+T {Current Controlled Oscillator} 150 -1190 0 0 1 1 {}
 T {Bias current} 220 -130 0 0 0.6 0.6 {}
 T {Oscillator} 770 -130 0 0 0.6 0.6 {}
 T {Output buffer} 1200 -130 0 0 0.6 0.6 {}
@@ -282,7 +282,7 @@ while const.ib <= const.ib_max
  let const.count=const.count + 1
 end
 set nolegend
-write tb_vco_tran.raw
+write tb_cco_tran.raw
 setplot new
 let frequency_out=const.chart_y_freq
 let bias_current_in=const.chart_x_curr
@@ -290,8 +290,8 @@ setscale bias_current_in
 set curplotname='freq'
 display
 set wr_vecnames               ; for wrdata: write the vector names
-write tb_vco_freq.raw frequency_out
-wrdata tb_vco_freq.txt frequency_out
+write tb_cco_freq.raw frequency_out
+wrdata tb_cco_freq.txt frequency_out
 .endc
 "}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
