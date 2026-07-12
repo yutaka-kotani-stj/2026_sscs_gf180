@@ -1,8 +1,9 @@
-v {xschem version=3.4.7 file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 N 470 -480 490 -480 {lab=#net1}
 N 410 -550 530 -550 {lab=vdd}
@@ -71,23 +72,7 @@ N 410 -520 410 -510 {lab=vdd}
 N 400 -490 400 -480 {lab=vdd}
 N 400 -480 410 -480 {lab=vdd}
 N 480 -170 710 -170 {lab=vss}
-N 710 -200 710 -170 {lab=vss}
-N 670 -230 670 -170 {lab=vss}
-N 710 -230 720 -230 {lab=vss}
-N 720 -230 720 -170 {lab=vss}
-N 710 -170 720 -170 {lab=vss}
-N 710 -260 720 -260 {lab=vss}
-N 720 -260 720 -230 {lab=vss}
-N 710 -550 720 -550 {lab=vdd}
-N 710 -550 710 -520 {lab=vdd}
-N 720 -550 720 -490 {lab=vdd}
-N 710 -520 710 -510 {lab=vdd}
-N 720 -490 720 -480 {lab=vdd}
-N 710 -480 720 -480 {lab=vdd}
 N 540 -550 710 -550 {lab=vdd}
-N 670 -550 670 -480 {lab=vdd}
-N 710 -450 720 -450 {lab=vdd}
-N 720 -480 720 -450 {lab=vdd}
 C {devices/ipin.sym} 340 -370 0 0 {name=p1 lab=in_p}
 C {devices/ipin.sym} 600 -370 0 1 {name=p2 lab=in_n}
 C {devices/ipin.sym} 260 -310 0 0 {name=p3 lab=i_bias}
@@ -170,34 +155,6 @@ L=0.28u
 W=6u
 nf=2
 m=3
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {symbols/nfet_03v3.sym} 690 -230 0 0 {name=M7
-L=0.28u
-W=6u
-nf=2
-m=3
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {symbols/pfet_03v3.sym} 690 -480 0 0 {name=M8
-L=0.28u
-W=6u
-nf=2
-m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"

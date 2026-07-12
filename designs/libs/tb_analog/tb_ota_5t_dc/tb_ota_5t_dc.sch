@@ -1,8 +1,9 @@
-v {xschem version=3.4.7 file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 N -80 70 -20 70 {lab=out}
 N -80 -60 -80 70 {lab=out}
@@ -43,7 +44,7 @@ OP
 *show all > op.log
 show all
 
-DC V3 0 3.3 0.01
+DC V3 0 3.3 0.01 I0 10u 100u 10u
 *TRAN 10u
 write tb_ota_5t.raw
 .endc
