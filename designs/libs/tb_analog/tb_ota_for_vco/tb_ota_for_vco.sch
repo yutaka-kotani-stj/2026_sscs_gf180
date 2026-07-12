@@ -24,8 +24,8 @@ L 4 100 -280 100 -220 {}
 L 4 100 -220 660 -220 {}
 L 4 660 -280 660 -220 {}
 B 2 1330 -1100 2040 -560 {flags=graph
-y1=95u
-y2=105u
+y1=148u
+y2=155u
 ypos1=0
 ypos2=2
 divy=5
@@ -133,7 +133,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=3.2633157e-05
+x1=0
 divx=5
 subdivx=4
 
@@ -143,7 +143,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.0010326332
+x2=0.001
 hilight_wave=0
 autoload=1
 rawfile=$netlist_dir/tb_ota_for_vco_tran.raw
@@ -151,14 +151,14 @@ rainbow=1
 color=4
 node=vin_p}
 B 2 2810 -560 3520 -20 {flags=graph
-y1=9.9e-05
-y2=0.000102
+y1=151u
+y2=152u
 ypos1=0
 ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=3.2633157e-05
+x1=0
 divx=5
 subdivx=4
 
@@ -168,7 +168,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.0010326332
+x2=0.001
 hilight_wave=0
 autoload=1
 rawfile=$netlist_dir/tb_ota_for_vco_tran.raw
@@ -389,7 +389,7 @@ C {vsource.sym} 260 -450 0 0 {name=V2 value="dc 1.65 ac 0.1 sin(1.65 0.1 10k 0 0
 C {gnd.sym} 100 -400 0 0 {name=l23 lab=GND}
 C {vsource.sym} 100 -450 0 0 {name=V3 value=1.65 savecurrent=false}
 C {res.sym} 520 -490 0 0 {name=RLOAD
-value=10k
+value=1k
 footprint=1206
 device=resistor
 m=1}
