@@ -41,13 +41,13 @@ node=oscout
 logx=0
 logy=0
 legend=1
-x2=500n
+x2=400n
 autoload=1
 y2=3.3
 rawfile=$netlist_dir/tb_vco_tran.raw
 }
 B 2 860 -530 1450 -70 {flags=graph
-y1=10Meg
+y1=10.4Meg
 ypos1=0
 ypos2=2
 divy=5
@@ -72,7 +72,7 @@ sim_type=freq
 y2=11Meg
 x2=3.3}
 B 2 860 -1520 1450 -1060 {flags=graph
-y1=230u
+y1=238u
 ypos1=0
 ypos2=2
 divy=5
@@ -87,9 +87,9 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=500n
+x2=400n
 autoload=1
-y2=240u
+y2=244u
 rawfile=$netlist_dir/tb_vco_tran.raw
 color=7
 node=i(vmeas)}
@@ -141,7 +141,7 @@ settype frequency chart_y_freq
 settype voltage chart_x_vin
 while const.vin <= const.vin_max
  alter V3=const.vin
- tran   0.01n 0.5u
+ tran   0.04n 0.4u
  plot V(OSCOUT)
  let tdiff=0
  meas tran tdiff TRIG v(OSCOUT) VAL=1.65 RISE=2 TARG v(OSCOUT) VAL=1.65 RISE=3
@@ -193,7 +193,7 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {isource.sym} 280 -710 0 0 {name=I0 value=238u}
+C {isource.sym} 280 -710 0 0 {name=I0 value=242u}
 C {gnd.sym} 280 -660 0 0 {name=l13 lab=GND}
 C {devices/lab_pin.sym} 200 -420 0 0 {name=l11 sig_type=std_logic lab=OSCOUT}
 C {res.sym} 200 -350 0 0 {name=R1
