@@ -24,14 +24,14 @@ L 4 40 -200 40 -140 {}
 L 4 40 -140 880 -140 {}
 L 4 880 -200 880 -140 {}
 B 2 1330 -1100 2040 -560 {flags=graph
-y1=148u
-y2=155u
+y1=220u
+y2=250u
 ypos1=0
 ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0
+x1=-0.495
 divx=5
 subdivx=4
 
@@ -41,7 +41,7 @@ sim_type=dc
 logx=0
 logy=0
 legend=1
-x2=3.3
+x2=2.805
 hilight_wave=0
 autoload=1
 rawfile=$netlist_dir/tb_ota_for_vco_dc.raw
@@ -49,14 +49,14 @@ rainbow=1
 color=4
 node=i(vmeas)}
 B 2 1330 -560 2040 -20 {flags=graph
-y1=-2.4e-08
-y2=3e-06
+y1=0
+y2=10e-06
 ypos1=0
 ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0
+x1=-0.495
 divx=5
 subdivx=4
 
@@ -68,7 +68,7 @@ node=i(dc_gain)
 logx=0
 logy=0
 legend=1
-x2=3.3
+x2=2.805
 hilight_wave=0
 autoload=1
 rawfile=$netlist_dir/tb_ota_for_vco_dc.raw
@@ -151,8 +151,8 @@ rainbow=1
 color=4
 node=vin_p}
 B 2 2810 -560 3520 -20 {flags=graph
-y1=151u
-y2=152u
+y1=230u
+y2=240u
 ypos1=0
 ypos2=2
 divy=5
@@ -242,7 +242,7 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {isource.sym} 300 -290 0 0 {name=I1 value=150u}
+C {isource.sym} 300 -290 0 0 {name=I1 value=235.79u}
 C {gnd.sym} 650 -240 0 0 {name=l21 lab=GND}
 C {vsource.sym} 650 -290 0 0 {name=V2 value="dc 1.65 ac 0.1 sin(1.65 0.1 10k 0 0 0)" savecurrent=false}
 C {gnd.sym} 480 -240 0 0 {name=l23 lab=GND}
@@ -257,7 +257,7 @@ C {devices/lab_pin.sym} 650 -340 0 0 {name=l6 sig_type=std_logic lab=VIN_P}
 C {devices/lab_pin.sym} 480 -340 0 0 {name=l8 sig_type=std_logic lab=VIN_N}
 C {ammeter.sym} 500 -570 0 0 {name=Vmeas savecurrent=true spice_ignore=0}
 C {vdd.sym} 500 -620 0 0 {name=l4 lab=VDD}
-C {isource.sym} 240 -290 0 0 {name=I2 value=10u}
+C {isource.sym} 240 -290 0 0 {name=I2 value=15u}
 C {gnd.sym} 240 -240 0 0 {name=l7 lab=GND}
 C {libs/core_analog/ota_for_vco/ota_for_vco.sym} 300 -440 0 0 {name=x1}
 C {gnd.sym} 360 -240 0 0 {name=l10 lab=GND}

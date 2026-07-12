@@ -23,8 +23,8 @@ E {}
 L 4 40 -320 40 -260 {}
 L 4 40 -260 420 -260 {}
 L 4 420 -320 420 -260 {}
-B 2 480 -1020 1070 -560 {flags=graph
-y1=0
+B 2 860 -1030 1450 -570 {flags=graph
+y1=1.110223e-16
 ypos1=0
 ypos2=2
 divy=5
@@ -41,13 +41,13 @@ node=oscout
 logx=0
 logy=0
 legend=1
-x2=1u
+x2=500n
 autoload=1
-y2=4
-rawfile=$netlist_dir/tb_cco_tran.raw
+y2=3.3
+rawfile=$netlist_dir/tb_vco_tran.raw
 }
-B 2 480 -530 1070 -70 {flags=graph
-y1=0
+B 2 860 -530 1450 -70 {flags=graph
+y1=10Meg
 ypos1=0
 ypos2=2
 divy=5
@@ -68,11 +68,32 @@ rainbow=0
 color=4
 node=frequency_out
 mode=Line
-x2=300u
 sim_type=freq
-rawfile=$netlist_dir/tb_cco_freq.raw
-y2=20Meg}
-T {Current Controlled Oscillator} 30 -1190 0 0 1 1 {}
+y2=11Meg
+x2=3.3}
+B 2 860 -1520 1450 -1060 {flags=graph
+y1=230u
+ypos1=0
+ypos2=2
+divy=5
+subdivy=4
+unity=1
+x1=0
+divx=5
+subdivx=4
+
+unitx=1
+sim_type=tran
+logx=0
+logy=0
+legend=1
+x2=500n
+autoload=1
+y2=240u
+rawfile=$netlist_dir/tb_vco_tran.raw
+color=7
+node=i(vmeas)}
+T {Voltage Controlled Oscillator} 30 -1190 0 0 1 1 {}
 T {Test circuits} 140 -230 0 0 0.6 0.6 {}
 N 100 -390 100 -370 {lab=VDD}
 N 100 -320 100 -300 {lab=GND}
@@ -86,59 +107,70 @@ N 280 -310 360 -310 {lab=GND}
 N 360 -320 360 -310 {lab=GND}
 N 280 -400 360 -400 {lab=OSCOUT}
 N 360 -400 360 -380 {lab=OSCOUT}
-N 100 -510 100 -490 {lab=GND}
-N 100 -590 140 -590 {lab=#net1}
-N 100 -590 100 -570 {lab=#net1}
-N 300 -590 340 -590 {lab=OSCOUT}
-N 220 -550 220 -490 {lab=GND}
-N 220 -650 220 -630 {lab=VDD}
-C {devices/code_shown.sym} 1080 -880 0 0 {name=NGSPICE only_toplevel=true
+N 280 -680 280 -660 {lab=GND}
+N 680 -860 720 -860 {lab=OSCOUT}
+N 600 -820 600 -760 {lab=GND}
+N 600 -920 600 -900 {lab=VDD}
+N 280 -980 280 -960 {lab=VDD}
+N 340 -760 340 -740 {lab=GND}
+N 280 -760 280 -740 {lab=#net1}
+N 220 -680 220 -660 {lab=GND}
+N 220 -760 220 -740 {lab=#net2}
+N 480 -860 520 -860 {lab=#net3}
+N 380 -860 420 -860 {lab=#net4}
+N 140 -680 140 -660 {lab=GND}
+N 60 -680 60 -660 {lab=GND}
+N 140 -840 180 -840 {lab=#net5}
+N 140 -840 140 -740 {lab=#net5}
+N 60 -880 180 -880 {lab=#net6}
+N 60 -880 60 -740 {lab=#net6}
+C {devices/code_shown.sym} 1460 -890 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
 save currents
-let ib=5e-6
-let ib_step=5e-6
-let ib_max=300e-6
+let vin=0
+let vin_step=0.1
+let vin_max=3.3
 let count=0
-let count_length=((ib_max-ib)/ib_step)
+let count_length=((vin_max-vin)/vin_step)
 echo count_length:$&count_length
 let chart_y_freq=vector(count_length)*0
-let chart_x_curr=vector(count_length)*0
+let chart_x_vin=vector(count_length)*0
 settype frequency chart_y_freq
-settype current chart_x_curr
-while const.ib <= const.ib_max
- alter I0=const.ib
- tran   0.6n 5u
+settype voltage chart_x_vin
+while const.vin <= const.vin_max
+ alter V3=const.vin
+ tran   0.01n 0.5u
  plot V(OSCOUT)
  let tdiff=0
  meas tran tdiff TRIG v(OSCOUT) VAL=1.65 RISE=2 TARG v(OSCOUT) VAL=1.65 RISE=3
  if tdiff <> 0 
    let freq=1/tdiff
    let const.chart_y_freq[count]=freq
-   let const.chart_x_curr[count]=const.ib
+   let const.chart_x_vin[count]=const.vin
  else
    let freq=0   
  end
 
- let const.ib=const.ib+const.ib_step
+ let const.vin=const.vin+const.vin_step
  let const.count=const.count + 1
 end
 set nolegend
-write tb_cco_tran.raw
+write tb_vco_tran.raw
 setplot new
 let frequency_out=const.chart_y_freq
-let bias_current_in=const.chart_x_curr
-setscale bias_current_in
+let vco_vin=const.chart_x_vin
+setscale vco_vin
 set curplotname='freq'
 display
 set wr_vecnames               ; for wrdata: write the vector names
-write tb_cco_freq.raw frequency_out
-wrdata tb_cco_freq.txt frequency_out
+write tb_vco_freq.raw frequency_out
+wrdata tb_vco_freq.txt frequency_out
 .endc
 "}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
-C {devices/launcher.sym} 565 -1075 0 0 {name=h1
+C {devices/launcher.sym} 1625 -1305 0 0 {name=h1
 descr="Click left mouse button here with control key
 pressed to load/unload waveforms in graph."
 tclcommand="
@@ -150,7 +182,7 @@ xschem raw_read $netlist_dir/tb_vco_freq.raw
 C {vdd.sym} 100 -390 0 0 {name=l2 lab=VDD}
 C {gnd.sym} 100 -300 0 0 {name=l3 lab=GND}
 C {vsource.sym} 100 -350 0 0 {name=V1 value=3.3 savecurrent=false}
-C {devices/code_shown.sym} 1070 -1100 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 1450 -1100 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -161,8 +193,8 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {isource.sym} 100 -540 0 0 {name=I0 value=150u}
-C {gnd.sym} 100 -490 0 0 {name=l13 lab=GND}
+C {isource.sym} 280 -710 0 0 {name=I0 value=238u}
+C {gnd.sym} 280 -660 0 0 {name=l13 lab=GND}
 C {devices/lab_pin.sym} 200 -420 0 0 {name=l11 sig_type=std_logic lab=OSCOUT}
 C {res.sym} 200 -350 0 0 {name=R1
 value=470k
@@ -180,7 +212,17 @@ m=1
 value=20p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/lab_pin.sym} 340 -590 0 1 {name=l23 sig_type=std_logic lab=OSCOUT}
-C {vdd.sym} 220 -650 0 0 {name=l1 lab=VDD}
-C {gnd.sym} 220 -490 0 0 {name=l4 lab=GND}
-C {libs/core_analog/cco/cco.sym} 220 -590 0 0 {name=x2}
+C {devices/lab_pin.sym} 720 -860 0 1 {name=l23 sig_type=std_logic lab=OSCOUT}
+C {vdd.sym} 600 -920 0 0 {name=l1 lab=VDD}
+C {gnd.sym} 600 -760 0 0 {name=l4 lab=GND}
+C {libs/core_analog/cco/cco.sym} 600 -860 0 0 {name=x2}
+C {libs/core_analog/ota_for_vco/ota_for_vco.sym} 280 -860 0 0 {name=x1}
+C {vdd.sym} 280 -980 0 0 {name=l6 lab=VDD}
+C {gnd.sym} 340 -740 0 0 {name=l7 lab=GND}
+C {isource.sym} 220 -710 0 0 {name=I1 value=15u}
+C {gnd.sym} 220 -660 0 0 {name=l8 lab=GND}
+C {ammeter.sym} 450 -860 1 0 {name=Vmeas savecurrent=true spice_ignore=0}
+C {vsource.sym} 140 -710 0 0 {name=V2 value=1.65 savecurrent=false}
+C {gnd.sym} 140 -660 0 0 {name=l9 lab=GND}
+C {vsource.sym} 60 -710 0 0 {name=V3 value=1.65 savecurrent=false}
+C {gnd.sym} 60 -660 0 0 {name=l10 lab=GND}
