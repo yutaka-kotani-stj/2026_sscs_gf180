@@ -35,38 +35,35 @@ N 640 -960 640 -920 {lab=up}
 N 640 -860 640 -820 {lab=GND}
 N 280 -960 280 -920 {lab=down}
 N 280 -860 280 -820 {lab=GND}
-N 460 -170 460 -110 {lab=GND
+N 420 -240 420 -220 {lab=#net1
 }
-N 460 -250 460 -230 {lab=#net1
-}
-N 460 -330 460 -310 {lab=out
-}
-N 510 -330 510 -310 {lab=out
-}
-N 510 -250 510 -110 {lab=GND
-}
-N 460 -110 510 -110 {lab=GND}
-N 420 -330 520 -330 {lab=out}
-N 240 -270 240 -230 {lab=GND}
-N 240 -230 240 -110 {lab=GND}
-N 460 -110 460 -90 {lab=GND}
-N 240 -110 240 -90 {lab=GND}
-N 220 -410 220 -390 {lab=#net2}
-N 220 -510 220 -470 {lab=VDD}
-N 100 -350 140 -350 {lab=up}
-N 100 -310 140 -310 {lab=down}
-N 260 -510 260 -390 {lab=VDD}
-N 260 -520 260 -510 {lab=VDD}
-N 220 -520 220 -510 {lab=VDD}
-N 340 -330 420 -330 {lab=out}
+N 420 -340 520 -340 {lab=out}
+N 240 -280 240 -240 {lab=GND}
+N 240 -240 240 -120 {lab=GND}
+N 240 -120 240 -100 {lab=GND}
+N 220 -420 220 -400 {lab=#net2}
+N 220 -520 220 -480 {lab=VDD}
+N 100 -360 140 -360 {lab=up}
+N 100 -320 140 -320 {lab=down}
+N 260 -520 260 -400 {lab=VDD}
+N 260 -530 260 -520 {lab=VDD}
+N 220 -530 220 -520 {lab=VDD}
+N 340 -340 420 -340 {lab=out}
+N 420 -160 420 -100 {lab=GND}
+N 420 -340 420 -310 {lab=out}
+N 500 -340 500 -310 {lab=out}
+N 420 -140 500 -140 {lab=GND}
+N 500 -240 500 -140 {lab=GND}
+N 420 -310 420 -300 {lab=out}
+N 500 -310 500 -300 {lab=out}
 C {vsource.sym} 100 -890 0 0 {name=V1 value=3.3 savecurrent=false}
 C {gnd.sym} 100 -820 0 0 {name=l1 lab=GND}
 C {gnd.sym} 640 -820 0 0 {name=l4 lab=GND}
 C {lab_wire.sym} 640 -960 0 0 {name=p9 sig_type=std_logic lab=up}
 C {gnd.sym} 280 -820 0 0 {name=l5 lab=GND}
 C {lab_wire.sym} 280 -960 0 0 {name=p10 sig_type=std_logic lab=down}
-C {lab_wire.sym} 520 -330 0 1 {name=p11 sig_type=std_logic lab=out}
-C {res.sym} 460 -200 0 0 {name=R1
+C {lab_wire.sym} 520 -340 0 1 {name=p11 sig_type=std_logic lab=out}
+C {res.sym} 420 -190 0 0 {name=R1
 value=8.10k
 footprint=1206
 device=resistor
@@ -106,13 +103,13 @@ write cp_tb.raw
 .endc
 "
 spice_ignore=true}
-C {capa.sym} 460 -280 0 0 {name=C1
+C {capa.sym} 420 -270 0 0 {name=C1
 m=1
 value=589p
 footprint=1206
 device="ceramic capacitor"
 }
-C {capa.sym} 510 -280 0 0 {name=C2
+C {capa.sym} 500 -270 0 0 {name=C2
 m=1
 value=73.6p
 footprint=1206
@@ -137,12 +134,12 @@ C {launcher.sym} 710 -690 0 0 {name=h5
 descr="load waves"
 tclcommand="xschem raw_read $netlist_dir/tb_charge_pump.raw"
 }
-C {libs/core_analog/charge_pump/charge_pump.sym} 240 -330 0 0 {name=x1}
-C {gnd.sym} 240 -90 0 0 {name=l3 lab=GND}
-C {gnd.sym} 460 -90 0 0 {name=l7 lab=GND}
-C {isource.sym} 220 -440 0 0 {name=I0 value=100u}
-C {lab_wire.sym} 100 -350 0 0 {name=p4 sig_type=std_logic lab=up}
-C {lab_wire.sym} 100 -310 0 0 {name=p5 sig_type=std_logic lab=down}
+C {libs/core_analog/charge_pump/charge_pump.sym} 240 -340 0 0 {name=x1}
+C {gnd.sym} 240 -100 0 0 {name=l3 lab=GND}
+C {gnd.sym} 420 -100 0 0 {name=l7 lab=GND}
+C {isource.sym} 220 -450 0 0 {name=I0 value=100u}
+C {lab_wire.sym} 100 -360 0 0 {name=p4 sig_type=std_logic lab=up}
+C {lab_wire.sym} 100 -320 0 0 {name=p5 sig_type=std_logic lab=down}
 C {vdd.sym} 100 -960 0 0 {name=l2 lab=VDD}
-C {vdd.sym} 260 -520 0 0 {name=l6 lab=VDD}
-C {vdd.sym} 220 -520 0 0 {name=l8 lab=VDD}
+C {vdd.sym} 260 -530 0 0 {name=l6 lab=VDD}
+C {vdd.sym} 220 -530 0 0 {name=l8 lab=VDD}
