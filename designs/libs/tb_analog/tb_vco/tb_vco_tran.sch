@@ -107,16 +107,16 @@ N 280 -310 360 -310 {lab=GND}
 N 360 -320 360 -310 {lab=GND}
 N 280 -400 360 -400 {lab=OSCOUT}
 N 360 -400 360 -380 {lab=OSCOUT}
-N 280 -680 280 -660 {lab=GND}
-N 680 -860 720 -860 {lab=OSCOUT}
+N 280 -700 280 -680 {lab=GND}
+N 700 -860 720 -860 {lab=OSCOUT}
 N 600 -820 600 -760 {lab=GND}
 N 600 -920 600 -900 {lab=VDD}
 N 280 -980 280 -960 {lab=VDD}
-N 340 -760 340 -740 {lab=GND}
-N 280 -760 280 -740 {lab=#net1}
-N 220 -680 220 -660 {lab=GND}
-N 220 -760 220 -740 {lab=#net2}
-N 480 -860 520 -860 {lab=#net3}
+N 340 -780 340 -760 {lab=GND}
+N 280 -780 280 -760 {lab=#net1}
+N 220 -700 220 -680 {lab=GND}
+N 220 -780 220 -760 {lab=#net2}
+N 480 -860 500 -860 {lab=#net3}
 N 380 -860 420 -860 {lab=#net4}
 N 140 -680 140 -660 {lab=GND}
 N 60 -680 60 -660 {lab=GND}
@@ -124,6 +124,7 @@ N 140 -840 180 -840 {lab=#net5}
 N 140 -840 140 -740 {lab=#net5}
 N 60 -880 180 -880 {lab=#net6}
 N 60 -880 60 -740 {lab=#net6}
+N 280 -960 280 -940 {lab=VDD}
 C {devices/code_shown.sym} 1460 -890 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
@@ -193,8 +194,8 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {isource.sym} 280 -710 0 0 {name=I0 value=242u}
-C {gnd.sym} 280 -660 0 0 {name=l13 lab=GND}
+C {isource.sym} 280 -730 0 0 {name=I0 value=242u}
+C {gnd.sym} 280 -680 0 0 {name=l13 lab=GND}
 C {devices/lab_pin.sym} 200 -420 0 0 {name=l11 sig_type=std_logic lab=OSCOUT}
 C {res.sym} 200 -350 0 0 {name=R1
 value=470k
@@ -218,9 +219,9 @@ C {gnd.sym} 600 -760 0 0 {name=l4 lab=GND}
 C {libs/core_analog/cco/cco.sym} 600 -860 0 0 {name=x2}
 C {libs/core_analog/ota_for_vco/ota_for_vco.sym} 280 -860 0 0 {name=x1}
 C {vdd.sym} 280 -980 0 0 {name=l6 lab=VDD}
-C {gnd.sym} 340 -740 0 0 {name=l7 lab=GND}
-C {isource.sym} 220 -710 0 0 {name=I1 value=15u}
-C {gnd.sym} 220 -660 0 0 {name=l8 lab=GND}
+C {gnd.sym} 340 -760 0 0 {name=l7 lab=GND}
+C {isource.sym} 220 -730 0 0 {name=I1 value=15u}
+C {gnd.sym} 220 -680 0 0 {name=l8 lab=GND}
 C {ammeter.sym} 450 -860 1 0 {name=Vmeas savecurrent=true spice_ignore=0}
 C {vsource.sym} 140 -710 0 0 {name=V2 value=1.65 savecurrent=false}
 C {gnd.sym} 140 -660 0 0 {name=l9 lab=GND}
