@@ -52,6 +52,6 @@ footprint=1206
 device=resistor
 m=1}
 C {devices/gnd.sym} 400 10 0 0 {name=l1 lab=GND}
-C {NAND.sym} 80 260 0 0 {name=x1}
 C {vdd.sym} 290 -30 0 0 {name=l6 lab=VDD}
 C {vdd.sym} 210 -110 0 0 {name=l7 lab=VDD}
+C {libs/core_analog/nand/NAND.sym} 80 260 0 0 {name=x2}
