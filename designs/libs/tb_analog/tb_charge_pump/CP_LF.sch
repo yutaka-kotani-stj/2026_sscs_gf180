@@ -5,7 +5,7 @@ V {}
 S {}
 F {}
 E {}
-B 2 50 -10 1140 600 {flags=graph
+B 2 40 40 1130 650 {flags=graph
 y1=0
 y2=3.3
 ypos1=0
@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.6543612e-24
-x2=2e-07
+x1=-6e-08
+x2=1.4e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -305,9 +305,9 @@ meas tran IDOWN_ON AVG i(vmeas2) FROM=50n TO=500n
 write CP_LF.raw
 
 .endc" }
-C {launcher.sym} 270 230 0 0 {name=h5
+C {launcher.sym} 150 -490 0 0 {name=h5
 descr="load waves"
-tclcommand="xschem raw_read $netlist_dir/untitled-18.raw"
+tclcommand="xschem raw_read $netlist_dir/CP_LF.raw"
 }
 C {symbols/nfet_03v3.sym} -1090 -70 2 1 {name=M3
 L=0.28u
