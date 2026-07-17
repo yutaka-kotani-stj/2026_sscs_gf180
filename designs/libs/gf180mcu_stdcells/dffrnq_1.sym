@@ -1,5 +1,6 @@
 v {xschem version=3.1.0 file_version=1.2
 * Copyright 2022 Stefan Frederik Schippers
+* Copyright 2026 Yutaka KOTANI ; modified to adapt GF180MCU PDK standard cell
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,10 +17,10 @@ v {xschem version=3.1.0 file_version=1.2
 G {}
 K {type=primitive
 function3="3 1 0 M L 2 ~ M"
-format="@name @@CLK @@D @@RESET_B @VGND @VNB @VPB @VPWR @@Q @prefix\\\\dfrtp_1"
-template="name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ "
+format="@name @@D @@RESET_B @@CLK @@Q @VPWR @VNB @VPB @VGND @prefix\\\\dffrnq_1"
+template="name=x1 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ "
 extra="VGND VNB VPB VPWR prefix"
-verilogprefix=sky130_fd_sc_hd__
+verilogprefix=gf180mcu_fd_sc_mcu7t5v0__
 }
 V {}
 S {}
