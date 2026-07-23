@@ -1,0 +1,5 @@
+# Source the PDK xschemrc file
+source $env(PDK_ROOT)/$env(PDK)/libs.tech/xschem/xschemrc
+# Append a specific folder to the existing library path list
+append XSCHEM_LIBRARY_PATH :/foss/designs/03_super_long_wave/2026_sscs_gf180/designs
+
