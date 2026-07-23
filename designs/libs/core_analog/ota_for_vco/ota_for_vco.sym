@@ -1,0 +1,37 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+F {}
+E {}
+L 4 -80 -60 -80 60 {}
+L 4 -80 60 80 20 {}
+L 4 80 -20 80 20 {}
+L 4 -80 -60 80 -20 {}
+L 4 -100 20 -80 20 {}
+L 4 -100 -20 -80 -20 {}
+L 4 -60 56 -60 80 {}
+L 4 0 40 0 80 {}
+L 4 60 26 60 80 {}
+L 4 0 -80 0 -40 {}
+L 4 80 -0 100 0 {}
+B 5 -62.5 77.5 -57.5 82.5 {name=IBKVCO dir=in name=p2 }
+B 5 -102.5 17.5 -97.5 22.5 {name=VIN_N dir=in name=p3 }
+B 5 -102.5 -22.5 -97.5 -17.5 {name=VIN_P dir=in name=p4 }
+B 5 97.5 -2.5 102.5 2.5 {name=OTA_OUT dir=out name=p6 }
+B 5 57.5 77.5 62.5 82.5 {name=GND dir=in name=p7 }
+B 5 -2.5 -82.5 2.5 -77.5 {name=VDD dir=in name=p5 }
+B 5 -2.5 77.5 2.5 82.5 {name=IBCEN dir=in name=p1 }
+T {@symname} -75 -10 0 0 0.3 0.3 {}
+T {@name} -75 -80 0 0 0.3 0.3 {}
+T {IBKVCO} -50 66 0 0 0.2 0.2 {}
+T {VIN_N} -70 16 0 0 0.2 0.2 {}
+T {VIN_P} -70 -24 0 0 0.2 0.2 {}
+T {OTA_OUT} 20 -4 0 0 0.2 0.2 {}
+T {GND} 70 66 0 0 0.2 0.2 {}
+T {VDD} 10 -74 0 0 0.2 0.2 {}
+T {IBCEN} 10 66 0 0 0.2 0.2 {}
