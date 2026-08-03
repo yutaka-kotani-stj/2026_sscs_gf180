@@ -37,7 +37,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0
+x1=0.0406117
 divx=5
 subdivx=4
 
@@ -50,7 +50,7 @@ i(vmeas_n)"
 logx=0
 logy=0
 legend=1
-x2=3.6
+x2=3.6406117
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -69,9 +69,10 @@ subdivx=4
 unitx=1
 dataset=-1
 sim_type=tran
-color="4 7"
+color="4 7 12"
 node="i(vmeas_p)
-i(vmeas_n)"
+i(vmeas_n)
+i(vmeas_su)"
 logx=0
 logy=0
 legend=1
@@ -104,8 +105,9 @@ autoload=1
 rainbow=1
 rawfile=$netlist_dir/tb_bmr_tran.raw
 y2=4
-color=4
-node=vdd}
+color="4 8"
+node="vdd
+su"}
 T {Beta multiplier current reference} 0 -1170 0 0 1 1 {}
 T {DC analysis} 1330 -690 0 0 0.8 0.8 {}
 T {TRAN analysis} 2020 -1240 0 0 0.8 0.8 {}
@@ -126,68 +128,69 @@ N 600 -760 610 -760 {lab=VDD}
 N 610 -760 610 -710 {lab=VDD}
 N 600 -710 610 -710 {lab=VDD}
 N 120 -1040 120 -1020 {lab=VDD}
-N 140 -660 240 -660 {lab=#net1}
-N 180 -710 200 -710 {lab=#net1}
-N 200 -700 200 -660 {lab=#net1}
-N 280 -710 280 -690 {lab=#net2}
-N 200 -710 200 -700 {lab=#net1}
+N 140 -660 240 -660 {lab=su}
+N 180 -710 200 -710 {lab=su}
+N 200 -700 200 -660 {lab=su}
+N 280 -710 280 -690 {lab=#net1}
+N 200 -710 200 -700 {lab=su}
 N 280 -660 290 -660 {lab=GND}
 N 290 -660 290 -620 {lab=GND}
 N 430 -760 440 -760 {lab=VDD}
-N 280 -830 400 -830 {lab=#net2}
-N 280 -830 280 -710 {lab=#net2}
-N 480 -710 500 -710 {lab=#net2}
-N 130 -570 140 -570 {lab=GND}
-N 130 -570 130 -510 {lab=GND}
-N 130 -510 140 -510 {lab=GND}
+N 280 -830 400 -830 {lab=#net1}
+N 280 -830 280 -710 {lab=#net1}
+N 480 -710 500 -710 {lab=#net1}
+N 130 -460 140 -460 {lab=GND}
+N 130 -460 130 -400 {lab=GND}
+N 130 -400 140 -400 {lab=GND}
 N 430 -570 440 -570 {lab=GND}
 N 430 -570 430 -510 {lab=GND}
 N 430 -510 440 -510 {lab=GND}
-N 280 -630 440 -630 {lab=#net3}
-N 500 -710 560 -710 {lab=#net2}
-N 540 -830 540 -710 {lab=#net2}
-N 480 -570 560 -570 {lab=#net3}
-N 600 -570 610 -570 {lab=#net4}
-N 610 -570 610 -510 {lab=#net4}
-N 600 -510 610 -510 {lab=#net4}
-N 540 -710 540 -650 {lab=#net2}
-N 540 -650 600 -650 {lab=#net2}
-N 600 -680 600 -600 {lab=#net2}
-N 440 -680 440 -600 {lab=#net3}
-N 140 -680 140 -600 {lab=#net1}
-N 140 -540 140 -400 {lab=GND}
+N 280 -630 440 -630 {lab=#net2}
+N 500 -710 560 -710 {lab=#net1}
+N 540 -830 540 -710 {lab=#net1}
+N 480 -570 560 -570 {lab=#net2}
+N 600 -570 610 -570 {lab=#net3}
+N 610 -570 610 -510 {lab=#net3}
+N 600 -510 610 -510 {lab=#net3}
+N 540 -710 540 -650 {lab=#net1}
+N 540 -650 600 -650 {lab=#net1}
+N 600 -680 600 -600 {lab=#net1}
+N 440 -680 440 -600 {lab=#net2}
+N 140 -680 140 -600 {lab=su}
+N 140 -430 140 -290 {lab=GND}
 N 440 -540 440 -400 {lab=GND}
-N 600 -540 600 -470 {lab=#net4}
-N 180 -570 200 -570 {lab=#net3}
-N 200 -570 200 -490 {lab=#net3}
-N 220 -490 770 -490 {lab=#net3}
-N 440 -630 500 -630 {lab=#net3}
-N 500 -630 500 -570 {lab=#net3}
-N 500 -570 500 -490 {lab=#net3}
-N 140 -400 140 -390 {lab=GND}
+N 600 -540 600 -470 {lab=#net3}
+N 220 -490 770 -490 {lab=#net2}
+N 440 -630 500 -630 {lab=#net2}
+N 500 -630 500 -570 {lab=#net2}
+N 500 -570 500 -490 {lab=#net2}
+N 140 -290 140 -280 {lab=GND}
 N 440 -400 440 -390 {lab=GND}
 N 780 -780 780 -740 {lab=VDD}
 N 780 -710 790 -710 {lab=VDD}
 N 790 -760 790 -710 {lab=VDD}
 N 780 -760 790 -760 {lab=VDD}
-N 720 -710 740 -710 {lab=#net2}
-N 720 -830 720 -710 {lab=#net2}
-N 780 -680 780 -650 {lab=#net5}
+N 720 -710 740 -710 {lab=#net1}
+N 720 -830 720 -710 {lab=#net1}
+N 780 -680 780 -650 {lab=#net4}
 N 780 -590 780 -570 {lab=GND}
 N 900 -570 910 -570 {lab=GND}
 N 910 -570 910 -510 {lab=GND}
 N 900 -510 910 -510 {lab=GND}
 N 900 -780 900 -690 {lab=VDD}
-N 900 -630 900 -600 {lab=#net6}
-N 840 -570 860 -570 {lab=#net3}
-N 840 -570 840 -490 {lab=#net3}
-N 770 -490 840 -490 {lab=#net3}
+N 900 -630 900 -600 {lab=#net5}
+N 840 -570 860 -570 {lab=#net2}
+N 840 -570 840 -490 {lab=#net2}
+N 770 -490 840 -490 {lab=#net2}
 N 900 -540 900 -390 {lab=GND}
-N 200 -490 220 -490 {lab=#net3}
-N 400 -830 720 -830 {lab=#net2}
+N 400 -830 720 -830 {lab=#net1}
 N 560 -420 580 -420 {lab=VDD}
-N 600 -470 600 -450 {lab=#net4}
+N 600 -470 600 -450 {lab=#net3}
 N 560 -440 560 -420 {lab=VDD}
+N 140 -600 140 -580 {lab=su}
+N 140 -520 140 -490 {lab=#net6}
+N 180 -460 220 -460 {lab=#net2}
+N 220 -490 220 -460 {lab=#net2}
 C {devices/code_shown.sym} 1090 -880 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
@@ -271,7 +274,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {vdd.sym} 140 -780 0 0 {name=l9 lab=VDD}
-C {gnd.sym} 140 -390 0 0 {name=l10 lab=GND}
+C {gnd.sym} 140 -280 0 0 {name=l10 lab=GND}
 C {symbols/nfet_03v3.sym} 580 -570 0 0 {name=M9
 L=4u
 W=80u
@@ -301,7 +304,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {vdd.sym} 600 -780 0 0 {name=l13 lab=VDD}
-C {symbols/nfet_03v3.sym} 160 -570 0 1 {name=M1
+C {symbols/nfet_03v3.sym} 160 -460 0 1 {name=M1
 L=4u
 W=20u
 nf=1
@@ -372,3 +375,5 @@ L=1e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
+C {ammeter.sym} 140 -550 0 0 {name=Vmeas_su savecurrent=true spice_ignore=0}
+C {lab_pin.sym} 140 -620 0 0 {name=p1 sig_type=std_logic lab=su}
