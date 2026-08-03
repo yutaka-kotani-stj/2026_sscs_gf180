@@ -1,5 +1,5 @@
 // binary to thermocode decoder
-module bin_to_thermo #(
+module bin_to_therm #(
 	parameter BIN_WIDTH = 3,
 	parameter THERM_WIDTH = (1 << BIN_WIDTH) - 1 // 2^3 - 1 = 7 bits
 )(
