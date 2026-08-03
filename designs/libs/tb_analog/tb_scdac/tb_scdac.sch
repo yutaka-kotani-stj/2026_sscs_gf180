@@ -31,7 +31,7 @@ L 4 740 -240 1060 -240 {}
 L 4 1060 -300 1060 -240 {}
 B 2 1080 -620 1790 -80 {flags=graph
 y1=0
-y2=20u
+y2=500u
 ypos1=0
 ypos2=2
 divy=5
@@ -62,7 +62,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0
+x1=0.0001
 divx=5
 subdivx=4
 
@@ -72,7 +72,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.002
+x2=0.0021
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -88,7 +88,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0
+x1=0.0001
 divx=5
 subdivx=4
 
@@ -98,7 +98,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.002
+x2=0.0021
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -504,7 +504,7 @@ value="
 "}
 C {gnd.sym} 2560 -1440 0 0 {name=l7 lab=GND}
 C {symbols/nfet_03v3.sym} 2580 -1530 0 1 {name=M8
-L=4u
+L=1u
 W=64u
 nf=1
 mult=1
@@ -517,10 +517,10 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {isource.sym} 2560 -1730 0 0 {name=I0 value=16u}
+C {isource.sym} 2560 -1730 0 0 {name=I0 value=64u}
 C {vdd.sym} 2560 -1800 0 0 {name=l8 lab=VDD}
 C {symbols/nfet_03v3.sym} 2880 -1530 0 0 {name=M11
-L=4u
+L=1u
 W=64u
 nf=1
 mult=1
@@ -550,7 +550,7 @@ spiceprefix=X
 C {gnd.sym} 2900 -1440 0 0 {name=l16 lab=GND}
 C {lab_pin.sym} 2840 -1630 0 0 {name=p2 sig_type=std_logic lab=SEG2_7}
 C {symbols/nfet_03v3.sym} 3120 -1530 0 0 {name=M15
-L=4u
+L=1u
 W=64u
 nf=1
 mult=1
@@ -580,7 +580,7 @@ spiceprefix=X
 C {gnd.sym} 3140 -1440 0 0 {name=l18 lab=GND}
 C {lab_pin.sym} 3080 -1630 0 0 {name=p3 sig_type=std_logic lab=SEG2_6}
 C {symbols/nfet_03v3.sym} 3380 -1530 0 0 {name=M18
-L=4u
+L=1u
 W=64u
 nf=1
 mult=1
@@ -610,7 +610,7 @@ spiceprefix=X
 C {gnd.sym} 3400 -1440 0 0 {name=l19 lab=GND}
 C {lab_pin.sym} 3340 -1630 0 0 {name=p4 sig_type=std_logic lab=SEG2_5}
 C {symbols/nfet_03v3.sym} 3640 -1530 0 0 {name=M21
-L=4u
+L=1u
 W=64u
 nf=1
 mult=1
@@ -640,7 +640,7 @@ spiceprefix=X
 C {gnd.sym} 3660 -1440 0 0 {name=l20 lab=GND}
 C {lab_pin.sym} 3600 -1630 0 0 {name=p5 sig_type=std_logic lab=SEG2_4}
 C {symbols/nfet_03v3.sym} 3900 -1530 0 0 {name=M24
-L=4u
+L=1u
 W=64u
 nf=1
 mult=1
@@ -670,7 +670,7 @@ spiceprefix=X
 C {gnd.sym} 3920 -1440 0 0 {name=l21 lab=GND}
 C {lab_pin.sym} 3860 -1630 0 0 {name=p6 sig_type=std_logic lab=SEG2_3}
 C {symbols/nfet_03v3.sym} 4160 -1530 0 0 {name=M27
-L=4u
+L=1u
 W=64u
 nf=1
 mult=1
@@ -700,7 +700,7 @@ spiceprefix=X
 C {gnd.sym} 4180 -1440 0 0 {name=l22 lab=GND}
 C {lab_pin.sym} 4120 -1630 0 0 {name=p7 sig_type=std_logic lab=SEG2_2}
 C {symbols/nfet_03v3.sym} 4420 -1530 0 0 {name=M30
-L=4u
+L=1u
 W=64u
 nf=1
 mult=1
@@ -716,7 +716,7 @@ spiceprefix=X
 C {symbols/nfet_03v3.sym} 4420 -1630 0 0 {name=M31
 L=0.28u
 W=4u
-nf=1
+nf=8
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
@@ -732,7 +732,7 @@ C {lab_pin.sym} 4380 -1630 0 0 {name=p8 sig_type=std_logic lab=SEG2_1}
 C {symbols/pfet_03v3.sym} 2920 -1930 0 1 {name=M33
 L=1u
 W=64u
-nf=1
+nf=16
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
@@ -770,8 +770,8 @@ C {lab_pin.sym} 320 -1700 1 0 {name=p12 sig_type=std_logic lab=SEG2_3}
 C {lab_pin.sym} 380 -1700 1 0 {name=p13 sig_type=std_logic lab=SEG2_2}
 C {lab_pin.sym} 440 -1700 1 0 {name=p14 sig_type=std_logic lab=SEG2_1}
 C {symbols/nfet_03v3.sym} 2880 -1170 0 0 {name=M1
-L=4u
-W=32u
+L=1u
+W=8u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -800,8 +800,8 @@ spiceprefix=X
 C {gnd.sym} 2900 -1080 0 0 {name=l4 lab=GND}
 C {lab_pin.sym} 2840 -1270 0 0 {name=p15 sig_type=std_logic lab=SEG1_7}
 C {symbols/nfet_03v3.sym} 3120 -1170 0 0 {name=M3
-L=4u
-W=32u
+L=1u
+W=8u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -830,8 +830,8 @@ spiceprefix=X
 C {gnd.sym} 3140 -1080 0 0 {name=l6 lab=GND}
 C {lab_pin.sym} 3080 -1270 0 0 {name=p16 sig_type=std_logic lab=SEG1_6}
 C {symbols/nfet_03v3.sym} 3380 -1170 0 0 {name=M5
-L=4u
-W=32u
+L=1u
+W=8u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -860,8 +860,8 @@ spiceprefix=X
 C {gnd.sym} 3400 -1080 0 0 {name=l9 lab=GND}
 C {lab_pin.sym} 3340 -1270 0 0 {name=p17 sig_type=std_logic lab=SEG1_5}
 C {symbols/nfet_03v3.sym} 3640 -1170 0 0 {name=M7
-L=4u
-W=32u
+L=1u
+W=8u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -890,8 +890,8 @@ spiceprefix=X
 C {gnd.sym} 3660 -1080 0 0 {name=l10 lab=GND}
 C {lab_pin.sym} 3600 -1270 0 0 {name=p18 sig_type=std_logic lab=SEG1_4}
 C {symbols/nfet_03v3.sym} 3900 -1170 0 0 {name=M10
-L=4u
-W=32u
+L=1u
+W=8u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -920,8 +920,8 @@ spiceprefix=X
 C {gnd.sym} 3920 -1080 0 0 {name=l11 lab=GND}
 C {lab_pin.sym} 3860 -1270 0 0 {name=p19 sig_type=std_logic lab=SEG1_3}
 C {symbols/nfet_03v3.sym} 4160 -1170 0 0 {name=M14
-L=4u
-W=32u
+L=1u
+W=8u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -950,8 +950,8 @@ spiceprefix=X
 C {gnd.sym} 4180 -1080 0 0 {name=l12 lab=GND}
 C {lab_pin.sym} 4120 -1270 0 0 {name=p20 sig_type=std_logic lab=SEG1_2}
 C {symbols/nfet_03v3.sym} 4420 -1170 0 0 {name=M20
-L=4u
-W=32u
+L=1u
+W=8u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -980,8 +980,8 @@ spiceprefix=X
 C {gnd.sym} 4440 -1080 0 0 {name=l13 lab=GND}
 C {lab_pin.sym} 4380 -1270 0 0 {name=p21 sig_type=std_logic lab=SEG1_1}
 C {symbols/nfet_03v3.sym} 2880 -810 0 0 {name=M26
-L=4u
-W=4u
+L=1u
+W=1u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -1010,8 +1010,8 @@ spiceprefix=X
 C {gnd.sym} 2900 -720 0 0 {name=l14 lab=GND}
 C {lab_pin.sym} 2840 -910 0 0 {name=p22 sig_type=std_logic lab=SEG0_7}
 C {symbols/nfet_03v3.sym} 3120 -810 0 0 {name=M32
-L=4u
-W=4u
+L=1u
+W=1u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -1040,8 +1040,8 @@ spiceprefix=X
 C {gnd.sym} 3140 -720 0 0 {name=l15 lab=GND}
 C {lab_pin.sym} 3080 -910 0 0 {name=p23 sig_type=std_logic lab=SEG0_6}
 C {symbols/nfet_03v3.sym} 3380 -810 0 0 {name=M36
-L=4u
-W=4u
+L=1u
+W=1u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -1070,8 +1070,8 @@ spiceprefix=X
 C {gnd.sym} 3400 -720 0 0 {name=l17 lab=GND}
 C {lab_pin.sym} 3340 -910 0 0 {name=p24 sig_type=std_logic lab=SEG0_5}
 C {symbols/nfet_03v3.sym} 3640 -810 0 0 {name=M38
-L=4u
-W=4u
+L=1u
+W=1u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -1100,8 +1100,8 @@ spiceprefix=X
 C {gnd.sym} 3660 -720 0 0 {name=l24 lab=GND}
 C {lab_pin.sym} 3600 -910 0 0 {name=p25 sig_type=std_logic lab=SEG0_4}
 C {symbols/nfet_03v3.sym} 3900 -810 0 0 {name=M40
-L=4u
-W=4u
+L=1u
+W=1u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -1130,8 +1130,8 @@ spiceprefix=X
 C {gnd.sym} 3920 -720 0 0 {name=l28 lab=GND}
 C {lab_pin.sym} 3860 -910 0 0 {name=p26 sig_type=std_logic lab=SEG0_3}
 C {symbols/nfet_03v3.sym} 4160 -810 0 0 {name=M42
-L=4u
-W=4u
+L=1u
+W=1u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -1160,8 +1160,8 @@ spiceprefix=X
 C {gnd.sym} 4180 -720 0 0 {name=l29 lab=GND}
 C {lab_pin.sym} 4120 -910 0 0 {name=p27 sig_type=std_logic lab=SEG0_2}
 C {symbols/nfet_03v3.sym} 4420 -810 0 0 {name=M44
-L=4u
-W=4u
+L=1u
+W=1u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -1189,19 +1189,19 @@ spiceprefix=X
 }
 C {gnd.sym} 4440 -720 0 0 {name=l30 lab=GND}
 C {lab_pin.sym} 4380 -910 0 0 {name=p28 sig_type=std_logic lab=SEG0_1}
-C {vsource.sym} 80 -1650 0 0 {name=V21 value="0" savecurrent=false}
+C {vsource.sym} 80 -1650 0 0 {name=V21 value="3.3" savecurrent=false}
 C {gnd.sym} 80 -1600 0 0 {name=l31 lab=GND}
-C {vsource.sym} 140 -1650 0 0 {name=V20 value="0" savecurrent=false}
+C {vsource.sym} 140 -1650 0 0 {name=V20 value="3.3" savecurrent=false}
 C {gnd.sym} 140 -1600 0 0 {name=l32 lab=GND}
-C {vsource.sym} 200 -1650 0 0 {name=V19 value="0" savecurrent=false}
+C {vsource.sym} 200 -1650 0 0 {name=V19 value="3.3" savecurrent=false}
 C {gnd.sym} 200 -1600 0 0 {name=l33 lab=GND}
-C {vsource.sym} 260 -1650 0 0 {name=V18 value="0" savecurrent=false}
+C {vsource.sym} 260 -1650 0 0 {name=V18 value="3.3" savecurrent=false}
 C {gnd.sym} 260 -1600 0 0 {name=l34 lab=GND}
-C {vsource.sym} 320 -1650 0 0 {name=V17 value="0" savecurrent=false}
+C {vsource.sym} 320 -1650 0 0 {name=V17 value="3.3" savecurrent=false}
 C {gnd.sym} 320 -1600 0 0 {name=l35 lab=GND}
-C {vsource.sym} 380 -1650 0 0 {name=V16 value="0" savecurrent=false}
+C {vsource.sym} 380 -1650 0 0 {name=V16 value="3.3" savecurrent=false}
 C {gnd.sym} 380 -1600 0 0 {name=l36 lab=GND}
-C {vsource.sym} 440 -1650 0 0 {name=V15 value="0" savecurrent=false}
+C {vsource.sym} 440 -1650 0 0 {name=V15 value="3.3" savecurrent=false}
 C {gnd.sym} 440 -1600 0 0 {name=l37 lab=GND}
 C {lab_pin.sym} 80 -1460 1 0 {name=p29 sig_type=std_logic lab=SEG1_7}
 C {lab_pin.sym} 140 -1460 1 0 {name=p30 sig_type=std_logic lab=SEG1_6}
@@ -1220,9 +1220,9 @@ C {vsource.sym} 260 -1410 0 0 {name=V11 value="0" savecurrent=false}
 C {gnd.sym} 260 -1360 0 0 {name=l40 lab=GND}
 C {vsource.sym} 320 -1410 0 0 {name=V10 value="0" savecurrent=false}
 C {gnd.sym} 320 -1360 0 0 {name=l41 lab=GND}
-C {vsource.sym} 380 -1410 0 0 {name=V9 value="3.3" savecurrent=false}
+C {vsource.sym} 380 -1410 0 0 {name=V9 value="0" savecurrent=false}
 C {gnd.sym} 380 -1360 0 0 {name=l42 lab=GND}
-C {vsource.sym} 440 -1410 0 0 {name=V8 value="3.3" savecurrent=false}
+C {vsource.sym} 440 -1410 0 0 {name=V8 value="0" savecurrent=false}
 C {gnd.sym} 440 -1360 0 0 {name=l43 lab=GND}
 C {lab_pin.sym} 80 -1220 1 0 {name=p36 sig_type=std_logic lab=SEG0_7}
 C {lab_pin.sym} 140 -1220 1 0 {name=p37 sig_type=std_logic lab=SEG0_6}
@@ -1231,17 +1231,17 @@ C {lab_pin.sym} 260 -1220 1 0 {name=p39 sig_type=std_logic lab=SEG0_4}
 C {lab_pin.sym} 320 -1220 1 0 {name=p40 sig_type=std_logic lab=SEG0_3}
 C {lab_pin.sym} 380 -1220 1 0 {name=p41 sig_type=std_logic lab=SEG0_2}
 C {lab_pin.sym} 440 -1220 1 0 {name=p42 sig_type=std_logic lab=SEG0_1}
-C {vsource.sym} 80 -1170 0 0 {name=V7 value="3.3" savecurrent=false}
+C {vsource.sym} 80 -1170 0 0 {name=V7 value="0" savecurrent=false}
 C {gnd.sym} 80 -1120 0 0 {name=l44 lab=GND}
-C {vsource.sym} 140 -1170 0 0 {name=V6 value="3.3" savecurrent=false}
+C {vsource.sym} 140 -1170 0 0 {name=V6 value="0" savecurrent=false}
 C {gnd.sym} 140 -1120 0 0 {name=l45 lab=GND}
-C {vsource.sym} 200 -1170 0 0 {name=V5 value="3.3" savecurrent=false}
+C {vsource.sym} 200 -1170 0 0 {name=V5 value="0" savecurrent=false}
 C {gnd.sym} 200 -1120 0 0 {name=l46 lab=GND}
-C {vsource.sym} 260 -1170 0 0 {name=V4 value="3.3" savecurrent=false}
+C {vsource.sym} 260 -1170 0 0 {name=V4 value="0" savecurrent=false}
 C {gnd.sym} 260 -1120 0 0 {name=l47 lab=GND}
-C {vsource.sym} 320 -1170 0 0 {name=V3 value="3.3" savecurrent=false}
+C {vsource.sym} 320 -1170 0 0 {name=V3 value="0" savecurrent=false}
 C {gnd.sym} 320 -1120 0 0 {name=l48 lab=GND}
-C {vsource.sym} 380 -1170 0 0 {name=V2 value="3.3" savecurrent=false}
+C {vsource.sym} 380 -1170 0 0 {name=V2 value="0" savecurrent=false}
 C {gnd.sym} 380 -1120 0 0 {name=l49 lab=GND}
 C {vsource.sym} 440 -1170 0 0 {name=V1 value="3.3" savecurrent=false}
 C {gnd.sym} 440 -1120 0 0 {name=l50 lab=GND}
