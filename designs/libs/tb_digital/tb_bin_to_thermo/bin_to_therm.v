@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 // binary to thermocode decoder
 module bin_to_therm #(
 	parameter BIN_WIDTH = 3,

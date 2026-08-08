@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module bin_to_therm_tb;
+module tb_bin_to_therm;
 
     // 1. Parameter and Signal Declarations
     localparam BIN_WIDTH = 3;
