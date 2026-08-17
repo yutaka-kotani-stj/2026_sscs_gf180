@@ -1,0 +1,85 @@
+# ----- ------ ----- ----- ------ ----- ----- ------ -----
+# Chipathon 2026: Project configuration
+# LICENSE: Apache License Version 2.0
+# http://www.apache.org/licenses/
+# ----- ------ ----- ----- ------ ----- ----- ------ -----
+
+# data will be pulled from main branch of the repo.
+# please be sure that the main branch contains the data you want to submit.
+# This file will be updated with more information later
+
+# ======================================================
+# Project metadata (used for documentation / review)
+# ======================================================
+project:
+  title: "General purpose PLL"             # Project title (e.g. "Simple CPU", "PLL", "ADC")
+  team: "C3 Super Long Wave"                      # Your Team name
+  discord: "Yutaka KOTANI"                   # Optional: Discord username (for support / communication)
+  description: "PDK test data"  # Short one-line description
+  lvs_config: "./DRC_dry_run/lvs_config.json"
+
+pins:
+  - name: PFD_CLK_IN 
+    io_type: analog
+    secondary_esd: false
+   - name: PFD_CLK_FB
+    io_type: analog
+    secondary_esd: false
+   - name: PFD_UP
+    io_type: analog
+    secondary_esd: false
+   - name: PFD_DOWN
+    io_type: analog
+    secondary_esd: false
+   - name: CP_IBIAS
+    io_type: analog
+    secondary_esd: false
+   - name: CP_UP
+    io_type: analog
+    secondary_esd: false
+   - name: CP_DOWN
+    io_type: analog
+    secondary_esd: false
+   - name: CP_OUT
+    io_type: analog
+    secondary_esd: false
+   - name: OTA_VIN_P
+    io_type: analog
+    secondary_esd: false
+   - name: OTA_VIN_N
+    io_type: analog
+    secondary_esd: false
+   - name: OTA_OUT
+    io_type: analog
+    secondary_esd: false
+   - name: CCO_IBOSC
+    io_type: analog
+    secondary_esd: false
+   - name: CCO_OSCOUT
+    io_type: analog
+    secondary_esd: false
+   - name: PROBE_IN
+    io_type: analog
+    secondary_esd: false
+   - name: PROBE_OUT
+    io_type: analog
+    secondary_esd: false
+   - name: MOSBIUS_CLK
+    io_type: input_cmos
+   - name: MOSBIUS_RST_N
+    io_type: input_cmos
+   - name: MOSBIUS_S_DATA
+    io_type: input_cmos
+   - name: MOSBIUS_S_VALID
+    io_type: input_cmos
+   - name: MOSBIUS_LOAD_EN
+    io_type: input_cmos
+   - name: MOSBIUS_CS
+    io_type: input_cmos
+   - name: MOSBIUS_
+    io_type: input_cmos
+  - name: VDD
+    io_type: power
+  - name: VSS
+    io_type: ground  # note: due to a common ground connection, ground pads are generally not needed.
+
