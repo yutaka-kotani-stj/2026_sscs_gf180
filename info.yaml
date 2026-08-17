@@ -58,7 +58,7 @@ pins:
    - name: CCO_OSCOUT
     io_type: analog
     secondary_esd: false
-   - name: PROBE_IN
+   - name: VREF_OUT
     io_type: analog
     secondary_esd: false
    - name: PROBE_OUT
