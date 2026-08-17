@@ -81,6 +81,12 @@ pins:
    - name: VREF_OUT
     io_type: analog
     secondary_esd: false
+   - name: VF_IN
+    io_type: analog
+    secondary_esd: false
+   - name: VF_OUT
+    io_type: analog
+    secondary_esd: false
    - name: PROBE_OUT
     io_type: analog
     secondary_esd: false
