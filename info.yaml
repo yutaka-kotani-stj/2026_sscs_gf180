@@ -52,6 +52,26 @@ pins:
    - name: OTA_OUT
     io_type: analog
     secondary_esd: false
+   - name: OTA_IBKVCO
+    io_type: analog
+    secondary_esd: false
+   - name: OTA_IBCEN
+    io_type: analog
+    secondary_esd: false
+   - name: SCDAC0_OUT
+    io_type: analog
+    secondary_esd: false
+   - name: SCDAC1_OUT
+    io_type: analog
+    secondary_esd: false
+   - name: SCDAC2_OUT
+    io_type: analog
+   - name: CM_IN
+    io_type: analog
+    secondary_esd: false
+   - name: CM_OUT
+    io_type: analog
+    secondary_esd: false
    - name: CCO_IBOSC
     io_type: analog
     secondary_esd: false
