@@ -76,9 +76,7 @@ pins:
     io_type: input_cmos
    - name: MOSBIUS_CS
     io_type: input_cmos
-   - name: MOSBIUS_
-    io_type: input_cmos
-  - name: VDD
+ - name: VDD
     io_type: power
   - name: VSS
     io_type: ground  # note: due to a common ground connection, ground pads are generally not needed.
