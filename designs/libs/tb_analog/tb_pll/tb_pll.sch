@@ -46,7 +46,7 @@ node=CLK_IN
 y1=0
 x2=1.8e-05}
 B 2 40 -2820 6680 -2280 {flags=graph
-y1=0
+y1=-0.8
 ypos1=0
 ypos2=2
 divy=5
@@ -69,7 +69,7 @@ rawfile=$netlist_dir/tb_pll_tran.raw
 rainbow=1
 color=4
 node=OSCOUT
-y2=4}
+y2=3.2}
 B 2 40 -2280 6680 -1720 {flags=graph
 y2=3.3
 ypos1=0
@@ -210,9 +210,6 @@ N 1040 -3620 1040 -3600 {lab=GND}
 N 1040 -3700 1040 -3680 {lab=#net4}
 N 1300 -3780 1320 -3780 {lab=#net5}
 N 1200 -3780 1240 -3780 {lab=#net6}
-N 960 -3620 960 -3600 {lab=GND}
-N 960 -3760 1000 -3760 {lab=#net7}
-N 960 -3760 960 -3680 {lab=#net7}
 N 120 -3760 160 -3760 {lab=OSCOUT}
 N 120 -3760 120 -3500 {lab=OSCOUT}
 N 120 -3500 1540 -3500 {lab=OSCOUT}
@@ -225,12 +222,24 @@ N 800 -3800 820 -3800 {lab=VCOIN}
 N 800 -3840 800 -3800 {lab=VCOIN}
 N 380 -3760 380 -3720 {lab=DOWN}
 N 380 -3840 380 -3800 {lab=UP}
+N 880 -3660 1000 -3660 {lab=#net7}
+N 1000 -3760 1000 -3660 {lab=#net7}
+N 880 -3580 880 -3560 {lab=GND}
+N 880 -3680 880 -3650 {lab=#net7}
+N 880 -3650 880 -3640 {lab=#net7}
+N 880 -3760 880 -3740 {lab=VDD}
+N 860 -3740 880 -3740 {lab=VDD}
+N 850 -3740 860 -3740 {lab=VDD}
+N 850 -3740 850 -3710 {lab=VDD}
+N 850 -3710 860 -3710 {lab=VDD}
+N 850 -3710 850 -3610 {lab=VDD}
+N 850 -3610 860 -3610 {lab=VDD}
 C {devices/code_shown.sym} 2110 -3820 0 0 {name=NGSPICE only_toplevel=true
 value=".control
 save all
 save currents
 * TRAN analysis
-tran 0.0001u 20u
+tran 0.001u 20u
 write tb_pll_tran.raw
 .endc
 "}
@@ -304,9 +313,21 @@ C {gnd.sym} 1160 -3680 0 0 {name=l26 lab=GND}
 C {isource.sym} 1040 -3650 0 0 {name=I2 value=15u}
 C {gnd.sym} 1040 -3600 0 0 {name=l27 lab=GND}
 C {ammeter.sym} 1270 -3780 1 0 {name=Vmeas1 savecurrent=true spice_ignore=0}
-C {vsource.sym} 960 -3650 0 0 {name=V4 value=1.65 savecurrent=false}
-C {gnd.sym} 960 -3600 0 0 {name=l28 lab=GND}
 C {devices/lab_pin.sym} 140 -3800 0 0 {name=l30 sig_type=std_logic lab=CLK_IN}
 C {devices/lab_pin.sym} 800 -3840 0 1 {name=l1 sig_type=std_logic lab=VCOIN}
 C {devices/lab_pin.sym} 380 -3840 0 1 {name=l7 sig_type=std_logic lab=UP}
 C {devices/lab_pin.sym} 380 -3720 0 1 {name=l8 sig_type=std_logic lab=DOWN}
+C {symbols/ppolyf_u_3k.sym} 880 -3710 0 0 {name=R1
+W=1e-6
+L=1e-6
+model=ppolyf_u_3k
+spiceprefix=X
+m=1}
+C {symbols/ppolyf_u_3k.sym} 880 -3610 0 0 {name=R3
+W=1e-6
+L=1e-6
+model=ppolyf_u_3k
+spiceprefix=X
+m=1}
+C {gnd.sym} 880 -3560 0 0 {name=l9 lab=GND}
+C {vdd.sym} 880 -3760 0 0 {name=l10 lab=VDD}
