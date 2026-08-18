@@ -13,7 +13,7 @@
 # ======================================================
 project:
   title: "General purpose PLL"             # Project title (e.g. "Simple CPU", "PLL", "ADC")
-  team: "C3 Super Long Wave"                      # Your Team name
+  team: "C4 Super Long Wave"                      # Your Team name
   discord: "Yutaka KOTANI"                   # Optional: Discord username (for support / communication)
   description: "PDK test data"  # Short one-line description
   lvs_config: "./DRC_dry_run/lvs_config.json"
@@ -22,87 +22,87 @@ pins:
   - name: PFD_CLK_IN 
     io_type: analog
     secondary_esd: false
-   - name: PFD_CLK_FB
+  - name: PFD_CLK_FB
     io_type: analog
     secondary_esd: false
-   - name: PFD_UP
+  - name: PFD_UP
     io_type: analog
     secondary_esd: false
-   - name: PFD_DOWN
+  - name: PFD_DOWN
     io_type: analog
     secondary_esd: false
-   - name: CP_IBIAS
+  - name: CP_IBIAS
     io_type: analog
     secondary_esd: false
-   - name: CP_UP
+  - name: CP_UP
     io_type: analog
     secondary_esd: false
-   - name: CP_DOWN
+  - name: CP_DOWN
     io_type: analog
     secondary_esd: false
-   - name: CP_OUT
+  - name: CP_OUT
     io_type: analog
     secondary_esd: false
-   - name: OTA_VIN_P
+  - name: OTA_VIN_P
     io_type: analog
     secondary_esd: false
-   - name: OTA_VIN_N
+  - name: OTA_VIN_N
     io_type: analog
     secondary_esd: false
-   - name: OTA_OUT
+  - name: OTA_OUT
     io_type: analog
     secondary_esd: false
-   - name: OTA_IBKVCO
+  - name: OTA_IBKVCO
     io_type: analog
     secondary_esd: false
-   - name: OTA_IBCEN
+  - name: OTA_IBCEN
     io_type: analog
     secondary_esd: false
-   - name: SCDAC0_OUT
+  - name: SCDAC0_OUT
     io_type: analog
     secondary_esd: false
-   - name: SCDAC1_OUT
+  - name: SCDAC1_OUT
     io_type: analog
     secondary_esd: false
-   - name: SCDAC2_OUT
+  - name: SCDAC2_OUT
     io_type: analog
-   - name: CM_IN
-    io_type: analog
-    secondary_esd: false
-   - name: CM_OUT
+  - name: CM_IN
     io_type: analog
     secondary_esd: false
-   - name: CCO_IBOSC
+  - name: CM_OUT
     io_type: analog
     secondary_esd: false
-   - name: CCO_OSCOUT
+  - name: CCO_IBOSC
     io_type: analog
     secondary_esd: false
-   - name: VREF_OUT
+  - name: CCO_OSCOUT
     io_type: analog
     secondary_esd: false
-   - name: VF_IN
+  - name: VREF_OUT
     io_type: analog
     secondary_esd: false
-   - name: VF_OUT
+  - name: VF_IN
     io_type: analog
     secondary_esd: false
-   - name: PROBE_OUT
+  - name: VF_OUT
     io_type: analog
     secondary_esd: false
-   - name: MOSBIUS_CLK
+  - name: PROBE_OUT
+    io_type: analog
+    secondary_esd: false
+  - name: MOSBIUS_CLK
     io_type: input_cmos
-   - name: MOSBIUS_RST_N
+  - name: MOSBIUS_RST_N
     io_type: input_cmos
-   - name: MOSBIUS_S_DATA
+  - name: MOSBIUS_S_DATA
     io_type: input_cmos
-   - name: MOSBIUS_S_VALID
+  - name: MOSBIUS_S_VALID
     io_type: input_cmos
-   - name: MOSBIUS_LOAD_EN
+  - name: MOSBIUS_LOAD_EN
     io_type: input_cmos
-   - name: MOSBIUS_CS
+  - name: MOSBIUS_CS
     io_type: input_cmos
- - name: VDD
+  - name: VDD
     io_type: power
   - name: VSS
     io_type: ground  # note: due to a common ground connection, ground pads are generally not needed.
