@@ -1,0 +1,65 @@
+* NGSPICE file created from top_switch_matrix_system.ext - technology: gf180mcuD
+
+.subckt top_switch_matrix_system VDD VSS clk col_in[0] col_in[1] col_in[2] col_in[3]
++ load_en row_out[0] row_out[1] rst_n s_data s_valid
+X_49_ _49_/D rst_n _58_/CLK _49_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_48_ _48_/D rst_n _58_/CLK _48_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_47_ _55_/Q _54_/Q s_valid _55_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_63_ _63_/D rst_n _63_/CLK _63_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_46_ _54_/Q _53_/Q s_valid _54_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_29_ _57_/Q _29_/ZN VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+Xu_switch_matrix.GEN_ROW\[0\].GEN_COL\[1\].u_tg row_out[0] col_in[1] VDD VDD VSS VSS
++ _29_/ZN _57_/Q gf180mcu_as_ex_mcu7t5v0__trans_1
+Xu_switch_matrix.GEN_ROW\[1\].GEN_COL\[0\].u_tg row_out[1] col_in[0] VDD VDD VSS VSS
++ _26_/ZN _60_/Q gf180mcu_as_ex_mcu7t5v0__trans_1
+X_62_ _62_/D rst_n _63_/CLK _62_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_45_ _53_/Q _52_/Q s_valid _53_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_28_ _58_/Q _28_/ZN VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+X_61_ _61_/D rst_n _63_/CLK _61_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_44_ _52_/Q _51_/Q s_valid _52_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_27_ _59_/Q _27_/ZN VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+X_60_ _60_/D rst_n _63_/CLK _60_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_43_ _51_/Q _50_/Q s_valid _51_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_26_ _60_/Q _26_/ZN VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+X_42_ _50_/Q _49_/Q s_valid _50_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_25_ _61_/Q _25_/ZN VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+Xclkbuf_0_clk clk clkbuf_0_clk/Z VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
+X_41_ _49_/Q _48_/Q s_valid _49_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_24_ _62_/Q _24_/ZN VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+X_40_ _48_/Q s_data s_valid _48_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+Xu_switch_matrix.GEN_ROW\[0\].GEN_COL\[2\].u_tg row_out[0] col_in[2] VDD VDD VSS VSS
++ _28_/ZN _58_/Q gf180mcu_as_ex_mcu7t5v0__trans_1
+Xu_switch_matrix.GEN_ROW\[1\].GEN_COL\[1\].u_tg row_out[1] col_in[1] VDD VDD VSS VSS
++ _25_/ZN _61_/Q gf180mcu_as_ex_mcu7t5v0__trans_1
+Xu_switch_matrix.GEN_ROW\[0\].GEN_COL\[3\].u_tg row_out[0] col_in[3] VDD VDD VSS VSS
++ _27_/ZN _59_/Q gf180mcu_as_ex_mcu7t5v0__trans_1
+X_59_ _59_/D rst_n _63_/CLK _59_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+Xu_switch_matrix.GEN_ROW\[1\].GEN_COL\[2\].u_tg row_out[1] col_in[2] VDD VDD VSS VSS
++ _24_/ZN _62_/Q gf180mcu_as_ex_mcu7t5v0__trans_1
+X_58_ _58_/D rst_n _58_/CLK _58_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_57_ _57_/D rst_n _58_/CLK _57_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_56_ _56_/D rst_n _58_/CLK _56_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+Xclkbuf_1_0__f_clk clkbuf_0_clk/Z _58_/CLK VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
+X_39_ _63_/Q _55_/Q load_en _63_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_55_ _55_/D rst_n _63_/CLK _55_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_38_ _62_/Q _54_/Q load_en _62_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_54_ _54_/D rst_n _63_/CLK _54_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_37_ _61_/Q _53_/Q load_en _61_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_53_ _53_/D rst_n _63_/CLK _53_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_36_ _60_/Q _52_/Q load_en _60_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+Xu_switch_matrix.GEN_ROW\[1\].GEN_COL\[3\].u_tg row_out[1] col_in[3] VDD VDD VSS VSS
++ _31_/ZN _63_/Q gf180mcu_as_ex_mcu7t5v0__trans_1
+X_52_ _52_/D rst_n _58_/CLK _52_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_35_ _59_/Q _51_/Q load_en _59_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_51_ _51_/D rst_n _58_/CLK _51_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_34_ _58_/Q _50_/Q load_en _58_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_50_ _50_/D rst_n _58_/CLK _50_/Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_33_ _57_/Q _49_/Q load_en _57_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+Xclkbuf_1_1__f_clk clkbuf_0_clk/Z _63_/CLK VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
+X_32_ _56_/Q _48_/Q load_en _56_/D VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_31_ _63_/Q _31_/ZN VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+X_30_ _56_/Q _30_/ZN VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+Xu_switch_matrix.GEN_ROW\[0\].GEN_COL\[0\].u_tg row_out[0] col_in[0] VDD VDD VSS VSS
++ _30_/ZN _56_/Q gf180mcu_as_ex_mcu7t5v0__trans_1
+.ends
+
