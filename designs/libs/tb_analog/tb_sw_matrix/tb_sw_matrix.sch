@@ -53,7 +53,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=-0.00020939034
+x1=0
 divx=5
 subdivx=4
 
@@ -63,7 +63,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.0041189463
+x2=0.004
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -78,7 +78,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=-0.00020939034
+x1=0
 divx=5
 subdivx=4
 
@@ -88,7 +88,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.0041189463
+x2=0.004
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -103,7 +103,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=-0.00020939034
+x1=0
 divx=5
 subdivx=4
 
@@ -113,7 +113,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.0041189463
+x2=0.004
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -128,7 +128,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=-0.00020939034
+x1=0
 divx=5
 subdivx=4
 
@@ -138,7 +138,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.0041189463
+x2=0.004
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -153,7 +153,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=-0.00020939034
+x1=0
 divx=5
 subdivx=4
 
@@ -163,7 +163,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.0041189463
+x2=0.004
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -178,7 +178,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=-0.00020939034
+x1=0
 divx=5
 subdivx=4
 
@@ -188,7 +188,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.0041189463
+x2=0.004
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -203,7 +203,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=-0.00020939034
+x1=0
 divx=5
 subdivx=4
 
@@ -213,7 +213,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.0041189463
+x2=0.004
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -228,7 +228,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=-0.00020939034
+x1=0
 divx=5
 subdivx=4
 
@@ -238,7 +238,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.0041189463
+x2=0.004
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -253,7 +253,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=-0.00020939034
+x1=0
 divx=5
 subdivx=4
 
@@ -263,7 +263,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.0041189463
+x2=0.004
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -278,7 +278,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=-0.00020939034
+x1=0
 divx=5
 subdivx=4
 
@@ -288,7 +288,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.0041189463
+x2=0.004
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -303,7 +303,7 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=-0.00020939034
+x1=0
 divx=5
 subdivx=4
 
@@ -313,7 +313,7 @@ sim_type=tran
 logx=0
 logy=0
 legend=1
-x2=0.0041189463
+x2=0.004
 hilight_wave=0
 autoload=1
 rainbow=1
@@ -391,7 +391,8 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 
 .include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
-.include /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/tb_analog/tb_sw_matrix/top_switch_matrix_system.spice
+.include /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/tb_analog/tb_sw_matrix/top_switch_matrix_system.spice.cleaned.spice
+.include /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/tb_digital/tb_sw_matrix_system/gf180mcu_as_ex_mcu7t5v0/cds/gf180mcu_as_ex_mcu7t5v0.spice
 "}
 C {devices/code_shown.sym} 30 -800 0 0 {name=NGSPICE only_toplevel=true
 value="
@@ -435,7 +436,7 @@ C {vsource.sym} 240 -1130 0 0 {name=V5 value="3.3 PWL(1u 0 10u 0 1u 3.3 1600u 3.
 C {gnd.sym} 240 -1080 0 0 {name=l12 lab=GND}
 C {lab_pin.sym} 240 -1180 0 1 {name=p11 sig_type=std_logic lab=CS}
 C {lab_pin.sym} 840 -1800 0 0 {name=p12 sig_type=std_logic lab=CS}
-C {vsource.sym} 660 -1110 0 0 {name=V6 value="3.3 pwl(0n 0 800u 0 10u 3.3 1000u 3.3 1110u 0)" savecurrent=false}
+C {vsource.sym} 660 -1110 0 0 {name=V6 value="3.3 pwl(0n 0 1000u 0 1010u 3.3 1200u 3.3 1210u 0 1310u 0)" savecurrent=false}
 C {gnd.sym} 660 -1060 0 0 {name=l1 lab=GND}
 C {lab_pin.sym} 660 -1160 0 1 {name=p1 sig_type=std_logic lab=S_DATA}
 C {lab_pin.sym} 840 -1820 0 0 {name=p3 sig_type=std_logic lab=S_DATA}
