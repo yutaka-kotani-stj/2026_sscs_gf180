@@ -45,7 +45,7 @@ autoload=1
 rainbow=1
 color=4
 node=i(vmeas)
-rawfile=$netlist_dir/tb_std_trans_gate_dc.raw
+rawfile=$netlist_dir/tb_trans_gate_dc.raw
 x2=3.3
 y2=700u}
 B 2 1330 -560 2040 -20 {flags=graph
@@ -70,7 +70,7 @@ legend=1
 x2=3.3
 hilight_wave=0
 autoload=1
-rawfile=$netlist_dir/tb_std_trans_gate_dc.raw
+rawfile=$netlist_dir/tb_trans_gate_dc.raw
 rainbow=1
 y2=150}
 B 2 2070 -1100 2780 -560 {flags=graph
@@ -90,7 +90,7 @@ logy=0
 legend=1
 hilight_wave=0
 autoload=1
-rawfile=$netlist_dir/tb_std_trans_gate_ac.raw
+rawfile=$netlist_dir/tb_trans_gate_ac.raw
 rainbow=1
 digital=0
 x2=7.039923
@@ -116,7 +116,7 @@ logy=0
 legend=1
 hilight_wave=0
 autoload=1
-rawfile=$netlist_dir/tb_std_trans_gate_ac.raw
+rawfile=$netlist_dir/tb_trans_gate_ac.raw
 rainbow=0
 digital=0
 x1=3.039923
@@ -146,7 +146,7 @@ legend=1
 x2=0.01
 hilight_wave=0
 autoload=1
-rawfile=$netlist_dir/tb_std_trans_gate_tran.raw
+rawfile=$netlist_dir/tb_trans_gate_tran.raw
 rainbow=1
 color=4
 node=vin}
@@ -171,7 +171,7 @@ legend=1
 x2=0.01
 hilight_wave=-1
 autoload=1
-rawfile=$netlist_dir/tb_std_trans_gate_tran.raw
+rawfile=$netlist_dir/tb_trans_gate_tran.raw
 rainbow=1
 color=4
 node=vout}
@@ -198,9 +198,9 @@ autoload=1
 rainbow=1
 color=4
 node=vout
-rawfile=$netlist_dir/tb_std_trans_gate_dc.raw
+rawfile=$netlist_dir/tb_trans_gate_dc.raw
 x2=3.3}
-T {Starndard cell - Transmission gate} 30 -1130 0 0 1 1 {}
+T {Transmission gate} 30 -1130 0 0 1 1 {}
 T {Test circuit } 320 -200 0 0 0.4 0.4 {}
 T {AC analysis} 2320 -1170 0 0 0.8 0.8 {}
 T {TRAN analysis} 3050 -1170 0 0 0.8 0.8 {}
@@ -219,30 +219,21 @@ N 120 -690 180 -690 {lab=EN}
 N 640 -540 640 -500 {lab=VOUT}
 N 640 -360 640 -340 {lab=GND}
 N 120 -650 180 -650 {lab=ENB}
-N 580 -640 630 -640 {lab=EN}
-N 630 -680 630 -640 {lab=EN}
-N 580 -980 630 -980 {lab=ENB}
-N 630 -980 630 -940 {lab=ENB}
-N 580 -900 600 -900 {lab=VIN}
-N 580 -900 580 -720 {lab=VIN}
-N 580 -720 600 -720 {lab=VIN}
-N 700 -900 720 -900 {lab=VOUT}
-N 720 -900 720 -720 {lab=VOUT}
-N 700 -720 720 -720 {lab=VOUT}
-N 630 -730 630 -720 {lab=GND}
-N 630 -900 630 -880 {lab=VDD}
-N 630 -880 660 -880 {lab=VDD}
-N 660 -900 700 -900 {lab=VOUT}
-N 660 -720 700 -720 {lab=VOUT}
-N 630 -740 630 -730 {lab=GND}
-N 630 -740 660 -740 {lab=GND}
-N 560 -820 580 -820 {lab=VIN}
-N 720 -820 740 -820 {lab=VOUT}
+N 520 -680 570 -680 {lab=EN}
+N 570 -720 570 -680 {lab=EN}
+N 520 -880 570 -880 {lab=ENB}
+N 570 -880 570 -840 {lab=ENB}
 N 640 -440 640 -420 {lab=#net1}
 N 200 -420 200 -400 {lab=GND}
 N 200 -500 200 -480 {lab=EN}
 N 80 -420 80 -400 {lab=GND}
 N 80 -500 80 -480 {lab=ENB}
+N 590 -880 630 -880 {lab=VDD}
+N 590 -880 590 -840 {lab=VDD}
+N 490 -780 510 -780 {lab=VIN}
+N 630 -780 650 -780 {lab=VOUT}
+N 590 -720 590 -680 {lab=GND}
+N 590 -680 630 -680 {lab=GND}
 C {devices/code_shown.sym} 730 -390 0 0 {name=NGSPICE only_toplevel=true
 value=".control
 save all
@@ -250,16 +241,16 @@ save currents
 * DC analysis
 dc v2 0.1 3.3 0.001
 let res=(v(vin)-v(vout))/i(vmeas)
-write tb_std_trans_gate_dc.raw
+write tb_trans_gate_dc.raw
 * AC analysis
 ac dec 10 1k 10Meg
 let ac_gain = vout / vin
 let ac_gain_db = db(ac_gain)
 let ac_phase_deg = (180 / PI) * cph(ac_gain)
-write tb_std_trans_gate_ac.raw
+write tb_trans_gate_ac.raw
 * TRAN analysis
 tran 1u 10m
-write tb_std_trans_gate_tran.raw
+write tb_trans_gate_tran.raw
 .endc
 "}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
@@ -267,9 +258,9 @@ C {devices/launcher.sym} 815 -965 0 0 {name=h1
 descr="Click left mouse button here with CTRL key
 to reload waveforms in graph."
 tclcommand="
-xschem raw_read $netlist_dir/tb_std_trans_gate_dc.raw
-xschem raw_read $netlist_dir/tb_std_trans_gate_ac.raw
-xschem raw_read $netlist_dir/tb_std_trans_gate_tran.raw
+xschem raw_read $netlist_dir/tb_trans_gate_dc.raw
+xschem raw_read $netlist_dir/tb_trans_gate_ac.raw
+xschem raw_read $netlist_dir/tb_trans_gate_tran.raw
 
 "
 }
@@ -302,42 +293,14 @@ C {ipin.sym} 180 -730 0 1 {name=p5 lab=VIN}
 C {ipin.sym} 180 -690 0 1 {name=p6 lab=EN}
 C {devices/lab_pin.sym} 640 -540 0 0 {name=l1 sig_type=std_logic lab=VOUT}
 C {gnd.sym} 640 -340 0 0 {name=l4 lab=GND}
-C {symbols/pfet_03v3.sym} 630 -920 1 0 {name=M1
-L=0.28u
-W=60u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {symbols/nfet_03v3.sym} 630 -700 3 0 {name=M2
-L=0.28u
-W=20u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
 C {devices/lab_pin.sym} 120 -650 0 0 {name=l9 sig_type=std_logic lab=ENB}
 C {ipin.sym} 180 -650 0 1 {name=p7 lab=ENB}
-C {devices/lab_pin.sym} 580 -640 0 0 {name=l10 sig_type=std_logic lab=EN}
-C {devices/lab_pin.sym} 580 -980 0 0 {name=l11 sig_type=std_logic lab=ENB}
-C {devices/lab_pin.sym} 660 -880 0 1 {name=l12 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 660 -740 0 1 {name=l13 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} 560 -820 0 0 {name=l14 sig_type=std_logic lab=VIN}
-C {devices/lab_pin.sym} 740 -820 0 1 {name=l15 sig_type=std_logic lab=VOUT}
+C {devices/lab_pin.sym} 520 -680 0 0 {name=l10 sig_type=std_logic lab=EN}
+C {devices/lab_pin.sym} 520 -880 0 0 {name=l11 sig_type=std_logic lab=ENB}
+C {devices/lab_pin.sym} 630 -880 0 1 {name=l12 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 630 -680 0 1 {name=l13 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} 490 -780 0 0 {name=l14 sig_type=std_logic lab=VIN}
+C {devices/lab_pin.sym} 650 -780 0 1 {name=l15 sig_type=std_logic lab=VOUT}
 C {ammeter.sym} 640 -470 0 0 {name=Vmeas savecurrent=true spice_ignore=0}
 C {res.sym} 640 -390 0 0 {name=R1
 value=5k
@@ -350,3 +313,4 @@ C {devices/lab_pin.sym} 200 -500 0 0 {name=l16 sig_type=std_logic lab=EN}
 C {devices/lab_pin.sym} 80 -500 0 0 {name=l17 sig_type=std_logic lab=ENB}
 C {gnd.sym} 80 -400 0 0 {name=l18 lab=GND}
 C {vsource.sym} 80 -450 0 0 {name=V4 value=0 savecurrent=false}
+C {libs/core_analog/trans_gate/trans_gate.sym} 570 -780 0 0 {name=x1}
