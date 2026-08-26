@@ -1,6 +1,6 @@
 ** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/trans_gate/trans_gate.sch
-.subckt trans_gate VDD GND A ENB Y EN
-*.PININFO VDD:I GND:I Y:O A:I EN:I ENB:I
+.subckt trans_gate VDD VSS A ENB Y EN
+*.PININFO VDD:I VSS:I Y:O A:I EN:I ENB:I
 M1 A ENB Y VDD pfet_03v3 L=0.28u W=60u nf=1
-M2 A EN Y GND nfet_03v3 L=0.28u W=20u nf=1
+M2 A EN Y VSS nfet_03v3 L=0.28u W=20u nf=1
 .ends
