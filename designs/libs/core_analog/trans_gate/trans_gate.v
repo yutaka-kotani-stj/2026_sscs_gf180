@@ -11,7 +11,6 @@ module trans_gate(
         inout A,
         inout Y
 );
-//      assign A = (EN && !ENB) ? Y : 1'bz;
-        assign Y = (EN && !ENB) ? A : 1'bz;
+//        assign Y = (EN && !ENB) ? A : 1'bz;
 endmodule
 
