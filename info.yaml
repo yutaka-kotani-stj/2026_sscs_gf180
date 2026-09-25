@@ -94,13 +94,9 @@ pins:
     io_type: input_cmos
   - name: MOSBIUS_RST_N
     io_type: input_cmos
-  - name: MOSBIUS_S_DATA
+  - name: MOSBIUS_DIN
     io_type: input_cmos
-  - name: MOSBIUS_S_VALID
-    io_type: input_cmos
-  - name: MOSBIUS_LOAD_EN
-    io_type: input_cmos
-  - name: MOSBIUS_CS
+  - name: MOSBIUS_CS_N
     io_type: input_cmos
   - name: VDD
     io_type: power

@@ -95,4 +95,3 @@ C {iopin.sym} 200 -360 0 0 {name=p3 lab=VNW}
 C {iopin.sym} 200 -320 0 0 {name=p1 lab=VPW}
 C {iopin.sym} 200 -280 0 0 {name=p2 lab=Y}
 C {iopin.sym} 200 -240 0 0 {name=p5 lab=A}
-C {libs/gf180mcu_stdcells/inv_1.sym} 490 -440 0 0 {name=x1 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
