@@ -17,7 +17,7 @@ v {xschem version=3.1.0 file_version=1.2
 G {}
 K {type=primitive
 format="@name @@A @@Y @VPWR @VNB @VPB @VGND @prefix\\\\clkinv_1"
-template="name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=gf180mcu_fd_sc_mcu7t5v0__ "
+template="name=x1 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ "
 extra="VGND VNB VPB VPWR prefix"
 verilogprefix=gf180mcu_fd_sc_mcu7t5v0__
 highlight=true}

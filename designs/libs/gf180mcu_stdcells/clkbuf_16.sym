@@ -18,7 +18,7 @@ G {}
 K {type=primitive
 function1="0"
 format="@name @@A @@X @VPWR @VNB @VPB @VGND @prefix\\\\clkbuf_16"
-template="name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=gf180mcu_fd_sc_mcu7t5v0__ "
+template="name=x1 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ "
 extra="VGND VNB VPB VPWR prefix"
 verilogprefix=gf180mcu_fd_sc_mcu7t5v0__
 highlight=true}
