@@ -26,11 +26,11 @@ N 760 -120 760 -90 {lab=GND}
 N 740 -280 740 -240 {lab=#net1}
 N 320 -500 420 -500 {lab=#net2}
 N 200 -440 240 -440 {lab=CS_N}
-N 380 -480 420 -480 {lab=RST_N}
+N 380 -480 420 -480 {lab=RESET_N}
 N 400 -520 420 -520 {lab=CLK}
 N 400 -340 420 -340 {lab=CS_N}
-N 380 -480 380 -300 {lab=RST_N}
-N 380 -300 420 -300 {lab=RST_N}
+N 380 -480 380 -300 {lab=RESET_N}
+N 380 -300 420 -300 {lab=RESET_N}
 N 320 -320 420 -320 {lab=#net3}
 N 220 -380 620 -380 {lab=#net4}
 N 620 -380 620 -340 {lab=#net4}
@@ -64,8 +64,8 @@ N 800 -180 820 -180 {lab=ROW}
 N 120 -600 400 -600 {lab=CLK}
 N 400 -600 400 -530 {lab=CLK}
 N 400 -530 400 -520 {lab=CLK}
-N 120 -640 380 -640 {lab=RST_N}
-N 380 -640 380 -480 {lab=RST_N}
+N 120 -640 380 -640 {lab=RESET_N}
+N 380 -640 380 -480 {lab=RESET_N}
 N 960 -580 980 -580 {lab=RESET_N}
 N 960 -540 980 -540 {lab=CLK}
 N 960 -500 980 -500 {lab=D}
@@ -77,14 +77,11 @@ N 950 -380 980 -380 {lab=COL}
 N 950 -340 980 -340 {lab=ROW}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
 C {libs/gf180mcu_stdcells/dffrnq_1.sym} 510 -500 0 0 {name=x11 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {libs/gf180mcu_stdcells/mux2_2.sym} 280 -500 0 0 {name=x12 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {libs/gf180mcu_stdcells/clkinv_1.sym} 700 -280 0 0 {name=x13 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=gf180mcu_fd_sc_mcu7t5v0__ }
 C {libs/core_analog/trans_gate/trans_gate.sym} 740 -180 0 0 {name=x14}
 C {lab_pin.sym} 760 -270 0 1 {name=p23 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 760 -90 0 1 {name=p24 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 600 -180 0 0 {name=p25 sig_type=std_logic lab=COL}
 C {libs/gf180mcu_stdcells/dffrnq_1.sym} 510 -320 0 0 {name=x15 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {libs/gf180mcu_stdcells/mux2_2.sym} 280 -320 0 0 {name=x16 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=gf180mcu_fd_sc_mcu7t5v0__ }
 C {lab_pin.sym} 120 -520 0 0 {name=p3 sig_type=std_logic lab=D}
 C {lab_pin.sym} 660 -520 0 1 {name=p17 sig_type=std_logic lab=Q}
 C {lab_pin.sym} 120 -440 0 0 {name=p18 sig_type=std_logic lab=CS_N}
@@ -109,3 +106,6 @@ C {lab_pin.sym} 950 -420 0 0 {name=p16 sig_type=std_logic lab=Q}
 C {opin.sym} 980 -420 0 0 {name=p22 lab=Q}
 C {iopin.sym} 950 -380 0 1 {name=p26 lab=COL}
 C {iopin.sym} 950 -340 0 1 {name=p27 lab=ROW}
+C {designs/libs/gf180mcu_stdcells/mux2_2.sym} 280 -500 0 0 {name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=gf180mcu_fd_sc_mcu7t5v0__ }
+C {designs/libs/gf180mcu_stdcells/mux2_2.sym} 280 -320 0 0 {name=x2 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=gf180mcu_fd_sc_mcu7t5v0__ }
+C {designs/libs/gf180mcu_stdcells/clkinv_1.sym} 700 -280 0 0 {name=x3 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
