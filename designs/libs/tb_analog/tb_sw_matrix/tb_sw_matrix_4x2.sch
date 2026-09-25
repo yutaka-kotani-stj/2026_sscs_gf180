@@ -433,7 +433,6 @@ m=1}
 C {gnd.sym} 2600 -280 0 0 {name=l28 lab=GND}
 C {vsource.sym} 2600 -330 0 0 {name=V19 value="0.5" savecurrent=false}
 C {lab_pin.sym} 2960 -380 0 1 {name=p26 sig_type=std_logic lab=ROW[0]}
-C {sw_matrix_4x2.sym} 2840 -860 0 0 {name=x1}
 C {vdd.sym} 2840 -960 0 0 {name=l1 lab=VDD}
 C {gnd.sym} 2840 -780 0 0 {name=l2 lab=GND}
 C {lab_pin.sym} 2660 -840 0 0 {name=p1 sig_type=std_logic lab=DIN}
@@ -446,3 +445,4 @@ C {lab_pin.sym} 2860 -1060 0 0 {name=p7 sig_type=std_logic lab=COL[2]}
 C {lab_pin.sym} 2860 -1080 0 0 {name=p8 sig_type=std_logic lab=COL[3]}
 C {lab_pin.sym} 3020 -860 0 1 {name=p9 sig_type=std_logic lab=ROW[0]}
 C {lab_pin.sym} 3020 -840 0 1 {name=p10 sig_type=std_logic lab=ROW[1]}
+C {core_analog/sw_matrix/sw_matrix_4x2.sym} 2840 -860 0 0 {name=x1}
