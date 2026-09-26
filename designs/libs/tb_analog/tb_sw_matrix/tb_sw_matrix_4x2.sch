@@ -21,14 +21,14 @@ S {}
 F {}
 E {}
 B 2 2240 -1550 2950 -1010 {flags=graph
-y1=-1.32
-y2=1.98
+y1=0
+y2=4
 ypos1=0
 ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0.495
+x1=0
 divx=5
 subdivx=4
 
@@ -38,14 +38,14 @@ sim_type=dc
 logx=0
 logy=0
 legend=1
-x2=3.795
+x2=3.3
 hilight_wave=0
 autoload=1
 rainbow=1
 rawfile=$netlist_dir/tb_pfd_dc.raw
-color="4 12"
-node="UP_B
-DOWN"}
+color="4 4"
+node="COL[0]
+ROW[0]"}
 B 2 0 -700 710 -160 {flags=graph
 y1=0
 ypos1=0
@@ -448,4 +448,4 @@ C {lab_pin.sym} 1930 -1140 0 1 {name=p83 sig_type=std_logic lab=COL[0]}
 C {lab_pin.sym} 1930 -1120 0 1 {name=p94 sig_type=std_logic lab=COL[1]}
 C {lab_pin.sym} 1930 -1100 0 1 {name=p96 sig_type=std_logic lab=COL[2]}
 C {lab_pin.sym} 1930 -1080 0 1 {name=p98 sig_type=std_logic lab=COL[3]}
-C {designs/libs/core_analog/sw_matrix/sw_matrix_4x2.sym} 1810 -980 0 0 {name=x12}
+C {libs/core_analog/sw_matrix/sw_matrix_4x2.sym} 1810 -980 0 0 {name=x12}

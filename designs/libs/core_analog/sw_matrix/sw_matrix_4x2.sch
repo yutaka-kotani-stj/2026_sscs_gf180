@@ -213,15 +213,15 @@ C {lab_pin.sym} 220 -380 0 1 {name=p100 sig_type=std_logic lab=ROW[0]}
 C {iopin.sym} 200 -380 0 1 {name=p101 lab=ROW[0]}
 C {lab_pin.sym} 220 -360 0 1 {name=p102 sig_type=std_logic lab=ROW[1]}
 C {iopin.sym} 200 -360 0 1 {name=p103 lab=ROW[1]}
-C {designs/libs/core_analog/sw_matrix/sw_matrix_cell.sym} 700 -520 0 0 {name=x1}
-C {designs/libs/core_analog/sw_matrix/sw_matrix_cell.sym} 1280 -520 0 0 {name=x5}
-C {designs/libs/core_analog/sw_matrix/sw_matrix_cell.sym} 1860 -520 0 0 {name=x6}
-C {designs/libs/core_analog/sw_matrix/sw_matrix_cell.sym} 2440 -520 0 0 {name=x7}
-C {designs/libs/core_analog/sw_matrix/sw_matrix_cell.sym} 700 -260 0 0 {name=x8}
-C {designs/libs/core_analog/sw_matrix/sw_matrix_cell.sym} 1280 -260 0 0 {name=x9}
-C {designs/libs/core_analog/sw_matrix/sw_matrix_cell.sym} 1860 -260 0 0 {name=x10}
-C {designs/libs/core_analog/sw_matrix/sw_matrix_cell.sym} 2440 -260 0 0 {name=x11}
-C {designs/libs/gf180mcu_stdcells/clkbuf_16.sym} 120 -220 0 0 {name=x2 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {designs/libs/gf180mcu_stdcells/clkbuf_16.sym} 300 -220 0 0 {name=x3 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {designs/libs/gf180mcu_stdcells/clkbuf_16.sym} 300 -160 0 0 {name=x4 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
+C {libs/core_analog/sw_matrix/sw_matrix_cell.sym} 700 -520 0 0 {name=x1}
+C {libs/core_analog/sw_matrix/sw_matrix_cell.sym} 1280 -520 0 0 {name=x5}
+C {libs/core_analog/sw_matrix/sw_matrix_cell.sym} 1860 -520 0 0 {name=x6}
+C {libs/core_analog/sw_matrix/sw_matrix_cell.sym} 2440 -520 0 0 {name=x7}
+C {libs/core_analog/sw_matrix/sw_matrix_cell.sym} 700 -260 0 0 {name=x8}
+C {libs/core_analog/sw_matrix/sw_matrix_cell.sym} 1280 -260 0 0 {name=x9}
+C {libs/core_analog/sw_matrix/sw_matrix_cell.sym} 1860 -260 0 0 {name=x10}
+C {libs/core_analog/sw_matrix/sw_matrix_cell.sym} 2440 -260 0 0 {name=x11}
+C {libs/gf180mcu_stdcells/clkbuf_16.sym} 120 -220 0 0 {name=x2 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
+C {libs/gf180mcu_stdcells/clkbuf_16.sym} 300 -220 0 0 {name=x3 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
+C {libs/gf180mcu_stdcells/clkbuf_16.sym} 300 -160 0 0 {name=x4 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
 C {lab_pin.sym} 360 -160 0 1 {name=p1 sig_type=std_logic lab=CLK2}
