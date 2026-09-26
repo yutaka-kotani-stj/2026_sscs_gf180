@@ -22,13 +22,12 @@ F {}
 E {}
 B 2 1080 -620 1790 -80 {flags=graph
 y1=0
-y2=7e-05
 ypos1=0
 ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0.0406117
+x1=0
 divx=5
 subdivx=4
 
@@ -40,13 +39,14 @@ node=i(vmeas_p)
 logx=0
 logy=0
 legend=1
-x2=3.6406117
+x2=3.6
 hilight_wave=0
 autoload=1
 rainbow=1
-rawfile=$netlist_dir/tb_bmr_dc.raw}
+rawfile=$netlist_dir/tb_bmr_dc.raw
+y2=70u}
 B 2 1820 -620 2530 -80 {flags=graph
-y1=50u
+y1=1.4e-05
 ypos1=0
 ypos2=2
 divy=5
@@ -69,7 +69,7 @@ hilight_wave=0
 autoload=1
 rainbow=1
 rawfile=$netlist_dir/tb_bmr_tran.raw
-y2=0.000070}
+y2=70u}
 B 2 1820 -1160 2530 -620 {flags=graph
 y1=0
 ypos1=0
@@ -101,10 +101,18 @@ T {TRAN analysis} 2020 -1240 0 0 0.8 0.8 {}
 T {Target: 64uA output} 500 -1020 0 0 0.6 0.6 {}
 N 140 -960 140 -940 {lab=GND}
 N 140 -1000 140 -980 {lab=VDD}
-N 340 -980 340 -960 {lab=#net1}
-N 340 -900 340 -880 {lab=GND}
+N 340 -760 340 -740 {lab=GND}
 N 440 -900 440 -880 {lab=GND}
 N 440 -980 440 -960 {lab=VDD}
+N 330 -910 340 -910 {lab=#net1}
+N 330 -910 330 -850 {lab=#net1}
+N 330 -850 340 -850 {lab=#net1}
+N 340 -970 340 -940 {lab=#net2}
+N 340 -880 340 -820 {lab=#net1}
+N 340 -980 340 -970 {lab=#net2}
+N 340 -960 400 -960 {lab=#net2}
+N 400 -960 400 -910 {lab=#net2}
+N 380 -910 400 -910 {lab=#net2}
 C {devices/code_shown.sym} 1110 -1000 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
@@ -144,8 +152,22 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
-C {ammeter.sym} 340 -930 0 0 {name=Vmeas_p savecurrent=true spice_ignore=0}
-C {gnd.sym} 340 -880 0 0 {name=l12 lab=GND}
+C {ammeter.sym} 340 -790 0 0 {name=Vmeas_p savecurrent=true spice_ignore=0}
+C {gnd.sym} 340 -740 0 0 {name=l12 lab=GND}
 C {libs/core_analog/bmr/bmr.sym} 240 -970 0 0 {name=x1}
 C {vdd.sym} 440 -980 0 0 {name=l1 lab=VDD}
 C {gnd.sym} 440 -880 0 0 {name=l4 lab=GND}
+C {symbols/nfet_03v3.sym} 360 -910 0 1 {name=M8
+L=1u
+W=64u
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
