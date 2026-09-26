@@ -4,9 +4,11 @@ meta:
   version: 3
   flow: Classic
 
-DESIGN_NAME: trans_gate
+DESIGN_NAME: top_switch_matrix_system
 VERILOG_FILES:
-  - dir::trans_gate.v
+  - dir::top_switch_matrix_system.v
+  - dir::switch_matrix_2x4.v
+  - dir::trans_gate/trans_gate.v
 CLOCK_PORT: clk
 CLOCK_PERIOD: 50
 
@@ -14,7 +16,7 @@ STD_CELL_LIBRARY: "gf180mcu_fd_sc_mcu7t5v0"
 
 # Die area: 100um x 100 um absolute (plenty of room for 4 flops).
 FP_SIZING: absolute
-DIE_AREA: [0.0, 0.0, 100.0, 100.0]
+DIE_AREA: [0.0, 0.0, 1000.0, 1000.0]
 
 # Power / ground nets.
 VDD_NETS:
@@ -27,7 +29,7 @@ PRIMARY_GDSII_STREAMOUT_TOOL: klayout
 
 # Routing / ESD.
 DIODE_ON_PORTS: in
-RT_MAX_LAYER: Metal4
+RT_MAX_LAYER: Metal5
 PDN_MULTILAYER: false
 
 # Power distribution network (straps + pitch).
@@ -63,3 +65,54 @@ RUN_POST_GPL_DESIGN_REPAIR: false
 RUN_POST_CTS_RESIZER_TIMING: false
 RUN_POST_GRT_RESIZER_TIMING: false
 DESIGN_REPAIR_BUFFER_INPUT_PORTS: false
+
+# Add transmission gate as custom standard cell
+EXTRA_GDS:
+  - "dir::trans_gate/trans_gate.gds" 
+EXTRA_LEFS:
+  - "dir::trans_gate/trans_gate.lef"
+
+MACROS:
+  trans_gate:
+    gds: "dir::trans_gate/trans_gate.gds"
+    lef: "dir::trans_gate/trans_gate.lef"
+    instances:
+      u_switch_matrix.GEN_ROW[0].GEN_COL[0].u_tg:
+        location: [300.0, 300.0]
+        orientation: "N"
+
+      u_switch_matrix.GEN_ROW[0].GEN_COL[1].u_tg:
+        location: [400.0, 300.0]
+        orientation: "N"
+
+      u_switch_matrix.GEN_ROW[0].GEN_COL[2].u_tg:
+        location: [500.0, 300.0]
+        orientation: "N"
+
+      u_switch_matrix.GEN_ROW[0].GEN_COL[3].u_tg:
+        location: [600.0, 300.0]
+        orientation: "N"
+
+      u_switch_matrix.GEN_ROW[1].GEN_COL[0].u_tg:
+        location: [300.0, 500.0]
+        orientation: "N"
+
+      u_switch_matrix.GEN_ROW[1].GEN_COL[1].u_tg:
+        location: [400.0, 500.0]
+        orientation: "N"
+
+      u_switch_matrix.GEN_ROW[1].GEN_COL[2].u_tg:
+        location: [500.0, 500.0]
+        orientation: "N"
+
+      u_switch_matrix.GEN_ROW[1].GEN_COL[3].u_tg:
+        location: [600.0, 500.0]
+        orientation: "N"
+
+FP_MACRO_HORIZONTAL_HALO: 10
+FP_MACRO_VERTICAL_HALO: 10
+
+
+
+# EXTRA_LIBS:
+#  - "dir::trans_gate/tras_gate..lib"
