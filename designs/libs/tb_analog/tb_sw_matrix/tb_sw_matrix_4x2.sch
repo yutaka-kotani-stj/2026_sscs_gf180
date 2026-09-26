@@ -170,7 +170,7 @@ rainbow=1
 rawfile=$netlist_dir/tb_sw_matrix_4x2_tran.raw
 y2=4
 color=4
-node=COL[0]}
+node=COL0}
 B 2 710 -1780 1420 -1240 {flags=graph
 y1=0
 ypos1=0
@@ -195,7 +195,7 @@ rainbow=1
 rawfile=$netlist_dir/tb_sw_matrix_4x2_tran.raw
 y2=4
 color=4
-node=COL[1]}
+node=COL1}
 B 2 710 -1240 1420 -700 {flags=graph
 y1=0
 ypos1=0
@@ -220,7 +220,7 @@ rainbow=1
 rawfile=$netlist_dir/tb_sw_matrix_4x2_tran.raw
 y2=4
 color=4
-node=COL[2]}
+node=COL2}
 B 2 710 -700 1420 -160 {flags=graph
 y1=0
 ypos1=0
@@ -245,7 +245,7 @@ rainbow=1
 rawfile=$netlist_dir/tb_sw_matrix_4x2_tran.raw
 y2=4
 color=4
-node=COL[3]}
+node=COL3}
 B 2 1420 -2320 2130 -1780 {flags=graph
 y1=0
 ypos1=0
@@ -270,7 +270,7 @@ rainbow=1
 rawfile=$netlist_dir/tb_sw_matrix_4x2_tran.raw
 y2=4
 color=4
-node=ROW[0]}
+node=ROW0}
 B 2 1420 -1780 2130 -1240 {flags=graph
 y1=0
 ypos1=0
@@ -295,7 +295,7 @@ rainbow=1
 rawfile=$netlist_dir/tb_sw_matrix_4x2_tran.raw
 y2=4
 color=4
-node=ROW[1]}
+node=ROW1}
 T {Switch matrix 4x2} 20 -2510 0 0 1 1 {}
 T {DC analysis} 2470 -1620 0 0 0.8 0.8 {}
 T {TRAN analysis} 230 -2400 0 0 0.8 0.8 {}
@@ -319,31 +319,32 @@ N 1970 -300 1970 -280 {lab=GND}
 N 1970 -380 1970 -360 {lab=#net3}
 N 1730 -300 1730 -280 {lab=GND}
 N 1730 -380 1730 -360 {lab=#net4}
-N 2090 -380 2090 -360 {lab=ROW[0]}
-N 2210 -380 2210 -360 {lab=ROW[1]}
-N 1610 -460 1610 -440 {lab=COL[0]}
-N 1730 -460 1730 -440 {lab=COL[1]}
-N 1850 -460 1850 -440 {lab=COL[2]}
-N 1970 -460 1970 -440 {lab=COL[3]}
+N 2090 -380 2090 -360 {lab=ROW0}
+N 2210 -380 2210 -360 {lab=ROW1}
+N 1610 -460 1610 -440 {lab=COL0}
+N 1730 -460 1730 -440 {lab=COL1}
+N 1850 -460 1850 -440 {lab=COL2}
+N 1970 -460 1970 -440 {lab=COL3}
 N 1810 -920 1810 -900 {lab=GND}
 N 1630 -1020 1650 -1020 {lab=RESET_N}
 N 1630 -1000 1650 -1000 {lab=CLK}
 N 1630 -980 1650 -980 {lab=CS_N}
 N 1630 -960 1650 -960 {lab=DIN}
-N 1970 -980 1990 -980 {lab=ROW[0]}
-N 1970 -960 1990 -960 {lab=ROW[1]}
-N 1910 -1140 1930 -1140 {lab=COL[0]}
-N 1910 -1120 1930 -1120 {lab=COL[1]}
-N 1910 -1100 1930 -1100 {lab=COL[2]}
-N 1910 -1080 1930 -1080 {lab=COL[3]}
+N 1990 -1000 2010 -1000 {lab=ROW0}
+N 1990 -980 2010 -980 {lab=ROW1}
+N 1910 -1140 1930 -1140 {lab=COL0}
+N 1910 -1120 1930 -1120 {lab=COL1}
+N 1910 -1100 1930 -1100 {lab=COL2}
+N 1910 -1080 1930 -1080 {lab=COL3}
 N 1810 -1080 1810 -1060 {lab=VDD}
-N 1910 -1080 1910 -1060 {lab=COL[3]}
-N 1890 -1100 1910 -1100 {lab=COL[2]}
-N 1890 -1100 1890 -1060 {lab=COL[2]}
-N 1870 -1120 1870 -1060 {lab=COL[1]}
-N 1870 -1120 1910 -1120 {lab=COL[1]}
-N 1850 -1140 1910 -1140 {lab=COL[0]}
-N 1850 -1140 1850 -1060 {lab=COL[0]}
+N 1910 -1080 1910 -1060 {lab=COL3}
+N 1890 -1100 1910 -1100 {lab=COL2}
+N 1890 -1100 1890 -1060 {lab=COL2}
+N 1870 -1120 1870 -1060 {lab=COL1}
+N 1870 -1120 1910 -1120 {lab=COL1}
+N 1850 -1140 1910 -1140 {lab=COL0}
+N 1850 -1140 1850 -1060 {lab=COL0}
+N 1990 -960 2010 -960 {lab=DOUT}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
 C {devices/launcher.sym} 1635 -765 0 0 {name=h1
 descr="Click left mouse button here with CTRL key
@@ -402,10 +403,10 @@ C {lab_pin.sym} 2190 -680 0 1 {name=p19 sig_type=std_logic lab=CS_N}
 C {vsource.sym} 2510 -630 0 0 {name=V15 value="3.3 pwl(0n 0 1000u 0 1010u 3.3 1200u 3.3 1210u 0 1310u 0)" savecurrent=false}
 C {gnd.sym} 2510 -580 0 0 {name=l24 lab=GND}
 C {lab_pin.sym} 2510 -680 0 1 {name=p20 sig_type=std_logic lab=DIN}
-C {lab_pin.sym} 1610 -460 0 0 {name=p21 sig_type=std_logic lab=COL[0]}
-C {lab_pin.sym} 1730 -460 0 0 {name=p22 sig_type=std_logic lab=COL[1]}
-C {lab_pin.sym} 1850 -460 0 0 {name=p23 sig_type=std_logic lab=COL[2]}
-C {lab_pin.sym} 1970 -460 0 0 {name=p24 sig_type=std_logic lab=COL[3]}
+C {lab_pin.sym} 1610 -460 0 0 {name=p21 sig_type=std_logic lab=COL0}
+C {lab_pin.sym} 1730 -460 0 0 {name=p22 sig_type=std_logic lab=COL1}
+C {lab_pin.sym} 1850 -460 0 0 {name=p23 sig_type=std_logic lab=COL2}
+C {lab_pin.sym} 1970 -460 0 0 {name=p24 sig_type=std_logic lab=COL3}
 C {res.sym} 1610 -410 0 0 {name=R9
 value=100
 footprint=1206
@@ -427,7 +428,7 @@ device=resistor
 m=1}
 C {gnd.sym} 1970 -280 0 0 {name=l27 lab=GND}
 C {vsource.sym} 1970 -330 0 0 {name=V18 value="3" savecurrent=false}
-C {lab_pin.sym} 2210 -380 0 1 {name=p25 sig_type=std_logic lab=ROW[1]}
+C {lab_pin.sym} 2210 -380 0 1 {name=p25 sig_type=std_logic lab=ROW1}
 C {res.sym} 1730 -410 0 0 {name=R12
 value=100
 footprint=1206
@@ -435,17 +436,18 @@ device=resistor
 m=1}
 C {gnd.sym} 1730 -280 0 0 {name=l28 lab=GND}
 C {vsource.sym} 1730 -330 0 0 {name=V19 value="0.5" savecurrent=false}
-C {lab_pin.sym} 2090 -380 0 1 {name=p26 sig_type=std_logic lab=ROW[0]}
+C {lab_pin.sym} 2090 -380 0 1 {name=p26 sig_type=std_logic lab=ROW0}
 C {gnd.sym} 1810 -900 0 0 {name=l7 lab=GND}
 C {vdd.sym} 1810 -1080 0 0 {name=l8 lab=VDD}
 C {lab_pin.sym} 1630 -1020 0 0 {name=p11 sig_type=std_logic lab=RESET_N}
-C {lab_pin.sym} 1990 -980 0 1 {name=p12 sig_type=std_logic lab=ROW[0]}
+C {lab_pin.sym} 2010 -1000 0 1 {name=p12 sig_type=std_logic lab=ROW0}
 C {lab_pin.sym} 1630 -980 0 0 {name=p13 sig_type=std_logic lab=CS_N}
 C {lab_pin.sym} 1630 -960 0 0 {name=p14 sig_type=std_logic lab=DIN}
 C {lab_pin.sym} 1630 -1000 0 0 {name=p28 sig_type=std_logic lab=CLK}
-C {lab_pin.sym} 1990 -960 0 1 {name=p60 sig_type=std_logic lab=ROW[1]}
-C {lab_pin.sym} 1930 -1140 0 1 {name=p83 sig_type=std_logic lab=COL[0]}
-C {lab_pin.sym} 1930 -1120 0 1 {name=p94 sig_type=std_logic lab=COL[1]}
-C {lab_pin.sym} 1930 -1100 0 1 {name=p96 sig_type=std_logic lab=COL[2]}
-C {lab_pin.sym} 1930 -1080 0 1 {name=p98 sig_type=std_logic lab=COL[3]}
-C {libs/core_analog/sw_matrix/sw_matrix_4x2.sym} 1810 -980 0 0 {name=x12}
+C {lab_pin.sym} 2010 -980 0 1 {name=p60 sig_type=std_logic lab=ROW1}
+C {lab_pin.sym} 1930 -1140 0 1 {name=p83 sig_type=std_logic lab=COL0}
+C {lab_pin.sym} 1930 -1120 0 1 {name=p94 sig_type=std_logic lab=COL1}
+C {lab_pin.sym} 1930 -1100 0 1 {name=p96 sig_type=std_logic lab=COL2}
+C {lab_pin.sym} 1930 -1080 0 1 {name=p98 sig_type=std_logic lab=COL3}
+C {libs/core_analog/sw_matrix/sw_matrix_4x2.sym} 1810 -980 0 0 {name=x1}
+C {lab_pin.sym} 2010 -960 0 1 {name=p1 sig_type=std_logic lab=DOUT}
