@@ -62,13 +62,13 @@ N 960 -540 980 -540 {lab=CLK}
 N 960 -500 980 -500 {lab=D}
 N 960 -460 980 -460 {lab=CS_N}
 N 960 -660 980 -660 {lab=VDD}
-N 960 -620 980 -620 {lab=GND}
+N 960 -620 980 -620 {lab=VSS}
 N 950 -420 980 -420 {lab=Q}
 N 620 -340 660 -340 {lab=OUT}
-N 950 -380 980 -380 {lab=Q}
+N 950 -380 980 -380 {lab=OUT}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
-C {libs/gf180mcu_stdcells/dffrnq_1.sym} 510 -500 0 0 {name=x11 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {libs/gf180mcu_stdcells/dffrnq_1.sym} 510 -320 0 0 {name=x15 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
+C {libs/gf180mcu_stdcells/dffrnq_1.sym} 510 -500 0 0 {name=x11 VGND=VSS VNB=VDD VPB=VSS VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
+C {libs/gf180mcu_stdcells/dffrnq_1.sym} 510 -320 0 0 {name=x15 VGND=VSS VNB=VDD VPB=VSS VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
 C {lab_pin.sym} 120 -520 0 0 {name=p3 sig_type=std_logic lab=D}
 C {lab_pin.sym} 660 -520 0 1 {name=p17 sig_type=std_logic lab=Q}
 C {lab_pin.sym} 120 -440 0 0 {name=p18 sig_type=std_logic lab=CS_N}
@@ -83,13 +83,19 @@ C {lab_pin.sym} 980 -540 0 1 {name=p7 sig_type=std_logic lab=CLK}
 C {lab_pin.sym} 980 -500 0 1 {name=p8 sig_type=std_logic lab=D}
 C {lab_pin.sym} 980 -460 0 1 {name=p9 sig_type=std_logic lab=CS_N}
 C {lab_pin.sym} 980 -660 0 1 {name=p11 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 980 -620 0 1 {name=p13 sig_type=std_logic lab=GND}
-C {ipin.sym} 960 -620 0 0 {name=p10 lab=GND}
+C {lab_pin.sym} 980 -620 0 1 {name=p13 sig_type=std_logic lab=VSS}
+C {ipin.sym} 960 -620 0 0 {name=p10 lab=VSS}
 C {ipin.sym} 960 -660 0 0 {name=p12 lab=VDD}
 C {lab_pin.sym} 950 -420 0 0 {name=p16 sig_type=std_logic lab=Q}
 C {opin.sym} 980 -420 0 0 {name=p22 lab=Q}
-C {libs/gf180mcu_stdcells/mux2_2.sym} 280 -500 0 0 {name=x1 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {libs/gf180mcu_stdcells/mux2_2.sym} 280 -320 0 0 {name=x2 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
+C {libs/gf180mcu_stdcells/mux2_2.sym} 280 -500 0 0 {name=x1 VGND=VSS VNB=VDD VPB=VSS VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
+C {libs/gf180mcu_stdcells/mux2_2.sym} 280 -320 0 0 {name=x2 VGND=VSS VNB=VDD VPB=VSS VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
 C {lab_pin.sym} 660 -340 0 1 {name=p19 sig_type=std_logic lab=OUT}
 C {lab_pin.sym} 950 -380 0 0 {name=p14 sig_type=std_logic lab=OUT}
 C {opin.sym} 980 -380 0 0 {name=p15 lab=OUT}
+C {devices/code_shown.sym} 30 -210 0 0 {name=MODELS only_toplevel=true
+format="tcleval( @value )"
+value="
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
+
+"}
