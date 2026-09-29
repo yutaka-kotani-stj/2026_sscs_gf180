@@ -1,0 +1,35 @@
+** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/sw_matrix/sw_matrix_cell.sch
+.subckt sw_matrix_cell VDD VSS RESET_N CLK D CS_N Q COL ROW
+*.PININFO RESET_N:I CLK:I D:I CS_N:I VSS:I VDD:I Q:O COL:B ROW:B
+x14 VDD VSS COL net1 ROW net2 trans_gate
+x3 net2 net1 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+x4 VDD VSS RESET_N CLK D CS_N Q net2 sreg
+**** begin user architecture code
+
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
+
+
+**** end user architecture code
+.ends
+
+* expanding   symbol:  libs/core_analog/trans_gate/trans_gate.sym # of pins=6
+** sym_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/trans_gate/trans_gate.sym
+** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/trans_gate/trans_gate.sch
+.subckt trans_gate VNW VPW A ENB Y EN
+*.PININFO EN:I ENB:I VNW:B VPW:B Y:B A:B
+M1 A ENB Y VNW pfet_03v3 L=0.28u W=60u nf=1
+M2 A EN Y VPW nfet_03v3 L=0.28u W=20u nf=1
+.ends
+
+
+* expanding   symbol:  libs/core_analog/sreg/sreg.sym # of pins=8
+** sym_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/sreg/sreg.sym
+** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/sreg/sreg.sch
+.subckt sreg VDD VSS RESET_N CLK D CS_N Q OUT
+*.PININFO RESET_N:I CLK:I D:I CS_N:I VSS:I VDD:I Q:O OUT:O
+x11 net1 RESET_N CLK Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+x15 net2 RESET_N CS_N OUT VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+x1 D Q CS_N net1 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+x2 Q OUT CS_N net2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+.ends
+
