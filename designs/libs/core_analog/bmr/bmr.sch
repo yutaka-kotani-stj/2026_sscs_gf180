@@ -57,12 +57,12 @@ N 430 -760 440 -760 {lab=VDD}
 N 280 -830 400 -830 {lab=#net2}
 N 280 -830 280 -710 {lab=#net2}
 N 480 -710 500 -710 {lab=#net2}
-N 130 -570 140 -570 {lab=GND}
-N 130 -570 130 -510 {lab=GND}
-N 130 -510 140 -510 {lab=GND}
-N 430 -570 440 -570 {lab=GND}
-N 430 -570 430 -510 {lab=GND}
-N 430 -510 440 -510 {lab=GND}
+N 130 -570 140 -570 {lab=VSS}
+N 130 -570 130 -510 {lab=VSS}
+N 130 -510 140 -510 {lab=VSS}
+N 430 -570 440 -570 {lab=VSS}
+N 430 -570 430 -510 {lab=VSS}
+N 430 -510 440 -510 {lab=VSS}
 N 280 -630 440 -630 {lab=#net3}
 N 500 -710 560 -710 {lab=#net2}
 N 540 -830 540 -710 {lab=#net2}
@@ -75,13 +75,13 @@ N 540 -650 600 -650 {lab=#net2}
 N 600 -680 600 -600 {lab=#net2}
 N 440 -680 440 -600 {lab=#net3}
 N 140 -680 140 -600 {lab=#net1}
-N 140 -540 140 -400 {lab=GND}
-N 440 -540 440 -400 {lab=GND}
+N 140 -540 140 -400 {lab=VSS}
+N 440 -540 440 -400 {lab=VSS}
 N 220 -490 500 -490 {lab=#net3}
 N 440 -630 500 -630 {lab=#net3}
 N 500 -630 500 -570 {lab=#net3}
 N 500 -570 500 -490 {lab=#net3}
-N 440 -400 440 -390 {lab=GND}
+N 440 -400 440 -390 {lab=VSS}
 N 780 -780 780 -740 {lab=VDD}
 N 780 -710 790 -710 {lab=VDD}
 N 790 -760 790 -710 {lab=VDD}
@@ -93,13 +93,13 @@ N 400 -830 720 -830 {lab=#net2}
 N 180 -570 220 -570 {lab=#net3}
 N 220 -570 220 -490 {lab=#net3}
 N 600 -540 600 -480 {lab=#net4}
-N 440 -390 440 -380 {lab=GND}
-N 140 -400 140 -380 {lab=GND}
+N 440 -390 440 -380 {lab=VSS}
+N 140 -400 140 -380 {lab=VSS}
 N 780 -650 780 -640 {lab=64uA_OUT}
 N 860 -500 880 -500 {lab=VDD}
-N 860 -460 880 -460 {lab=GND}
+N 860 -460 880 -460 {lab=VSS}
 N 860 -420 880 -420 {lab=64uA_OUT}
-N 600 -420 600 -380 {lab=GND}
+N 600 -420 600 -380 {lab=VSS}
 N 560 -450 580 -450 {lab=VDD}
 N 560 -470 560 -450 {lab=VDD}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
@@ -216,20 +216,20 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {lab_pin.sym} 140 -380 0 0 {name=p1 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 440 -380 0 0 {name=p2 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 140 -380 0 0 {name=p1 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 440 -380 0 0 {name=p2 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 780 -640 0 0 {name=p4 sig_type=std_logic lab=64uA_OUT}
 C {lab_pin.sym} 140 -780 0 0 {name=p9 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 880 -420 0 1 {name=p10 sig_type=std_logic lab=64uA_OUT}
 C {lab_pin.sym} 880 -500 0 1 {name=p11 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 880 -460 0 1 {name=p12 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 880 -460 0 1 {name=p12 sig_type=std_logic lab=VSS}
 C {ipin.sym} 860 -500 0 0 {name=p13 lab=VDD}
-C {ipin.sym} 860 -460 0 0 {name=p14 lab=GND}
+C {ipin.sym} 860 -460 0 0 {name=p14 lab=VSS}
 C {opin.sym} 860 -420 0 1 {name=p15 lab=64uA_OUT}
 C {lab_pin.sym} 780 -780 0 0 {name=p16 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 440 -780 0 0 {name=p17 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 600 -780 0 0 {name=p18 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 600 -380 0 0 {name=p3 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 600 -380 0 0 {name=p3 sig_type=std_logic lab=VSS}
 C {symbols/ppolyf_u_3k.sym} 600 -450 0 0 {name=R1
 W=1e-6
 L=1e-6
