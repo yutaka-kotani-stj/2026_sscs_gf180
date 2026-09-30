@@ -344,4 +344,4 @@ C {libs/gf180mcu_stdcells/clkbuf_16.sym} 440 -360 0 0 {name=x19 VGND=GND VNB=VDD
 C {libs/gf180mcu_stdcells/clkbuf_16.sym} 440 -300 0 0 {name=x20 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
 C {lab_pin.sym} 500 -300 0 1 {name=p60 sig_type=std_logic lab=CS_N2}
 C {lab_pin.sym} 320 -380 0 1 {name=p61 sig_type=std_logic lab=CS_N0}
-C {sw_matrix_25x14.sym} 1080 -280 0 0 {name=x9}
+C {libs/core_analog/sw_matrix/sw_matrix_25x14.sym} 1080 -280 0 0 {name=x21}
