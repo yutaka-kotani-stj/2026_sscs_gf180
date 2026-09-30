@@ -49,12 +49,6 @@ T {(24)} 790 -880 0 0 0.5 0.5 {}
 T {(*) shows switch matrix ROW number} 120 -1420 0 0 0.5 0.5 {}
 T {External pin:
 Total external pins:13} 1660 -535 0 0 0.6 0.6 {}
-N 200 -480 220 -480 {lab=CLK}
-N 360 -480 400 -480 {lab=CLK0}
-N 480 -480 500 -480 {lab=CLK1}
-N 480 -420 500 -420 {lab=CLK2}
-N 380 -420 400 -420 {lab=CLK0}
-N 380 -480 380 -420 {lab=CLK0}
 N 1810 -390 1830 -390 {lab=RESET_N}
 N 1810 -370 1830 -370 {lab=CLK}
 N 1810 -350 1830 -350 {lab=CS_N}
@@ -66,8 +60,6 @@ N 1810 -270 1830 -270 {lab=ROW1_PLL_OUT}
 N 1810 -230 1830 -230 {lab=ROW3_VCO_IN}
 N 1810 -210 1830 -210 {lab=ROW4_TEST_OUT}
 N 1810 -190 1830 -190 {lab=ROW5_TEST_IN}
-N 300 -480 360 -480 {lab=CLK0}
-N 320 -500 320 -480 {lab=CLK0}
 N 1810 -310 1830 -310 {lab=DOUT}
 N 1590 -1380 1590 -1360 {lab=VDD}
 N 390 -1300 410 -1300 {lab=PFD_CLK_IN}
@@ -170,35 +162,16 @@ N 740 -340 760 -340 {lab=DOUT0}
 N 740 -140 760 -140 {lab=GND}
 N 740 -420 760 -420 {lab=VDD}
 N 1380 -140 1400 -140 {lab=DOUT}
-N 200 -600 220 -600 {lab=CLK}
-N 360 -600 400 -600 {lab=CLK0}
-N 480 -600 500 -600 {lab=CLK1}
-N 480 -540 500 -540 {lab=CLK2}
-N 380 -540 400 -540 {lab=CLK0}
-N 380 -600 380 -540 {lab=CLK0}
-N 300 -600 360 -600 {lab=CLK0}
-N 320 -620 320 -600 {lab=CLK0}
-N 200 -360 220 -360 {lab=CLK}
-N 360 -360 400 -360 {lab=CLK0}
-N 480 -360 500 -360 {lab=CLK1}
-N 480 -300 500 -300 {lab=CLK2}
-N 380 -300 400 -300 {lab=CLK0}
-N 380 -360 380 -300 {lab=CLK0}
-N 300 -360 360 -360 {lab=CLK0}
-N 320 -380 320 -360 {lab=CLK0}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
-C {lab_pin.sym} 200 -480 0 0 {name=p15 sig_type=std_logic lab=CLK}
-C {lab_pin.sym} 320 -500 0 1 {name=p29 sig_type=std_logic lab=CLK0}
-C {lab_pin.sym} 500 -480 0 1 {name=p30 sig_type=std_logic lab=CLK1}
 C {lab_pin.sym} 1830 -390 0 1 {name=p80 sig_type=std_logic lab=RESET_N}
 C {lab_pin.sym} 1830 -350 0 1 {name=p81 sig_type=std_logic lab=CS_N}
 C {lab_pin.sym} 1830 -330 0 1 {name=p82 sig_type=std_logic lab=DIN}
 C {lab_pin.sym} 1830 -290 0 1 {name=p83 sig_type=std_logic lab=ROW0_PLL_IN}
 C {lab_pin.sym} 1830 -370 0 1 {name=p84 sig_type=std_logic lab=CLK}
-C {lab_pin.sym} 1830 -410 0 1 {name=p85 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 1830 -410 0 1 {name=p85 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1830 -430 0 1 {name=p86 sig_type=std_logic lab=VDD}
 C {ipin.sym} 1810 -430 0 0 {name=p87 lab=VDD}
-C {ipin.sym} 1810 -410 0 0 {name=p88 lab=GND}
+C {ipin.sym} 1810 -410 0 0 {name=p88 lab=VSS}
 C {ipin.sym} 1810 -390 0 0 {name=p89 lab=RESET_N}
 C {ipin.sym} 1810 -370 0 0 {name=p90 lab=CLK}
 C {ipin.sym} 1810 -350 0 0 {name=p91 lab=CS_N}
@@ -212,10 +185,6 @@ C {lab_pin.sym} 1830 -210 0 1 {name=p98 sig_type=std_logic lab=ROW4_TEST_OUT}
 C {iopin.sym} 1810 -210 0 1 {name=p99 lab=ROW4_TEST_OUT}
 C {lab_pin.sym} 1830 -190 0 1 {name=p100 sig_type=std_logic lab=ROW5_TEST_IN}
 C {iopin.sym} 1810 -190 0 1 {name=p101 lab=ROW5_TEST_IN}
-C {libs/gf180mcu_stdcells/clkbuf_16.sym} 260 -480 0 0 {name=x2 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {libs/gf180mcu_stdcells/clkbuf_16.sym} 440 -480 0 0 {name=x3 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {libs/gf180mcu_stdcells/clkbuf_16.sym} 440 -420 0 0 {name=x4 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {lab_pin.sym} 500 -420 0 1 {name=p1 sig_type=std_logic lab=CLK2}
 C {lab_pin.sym} 1810 -310 0 0 {name=p2 sig_type=std_logic lab=DOUT}
 C {opin.sym} 1830 -310 0 0 {name=p3 lab=DOUT}
 C {libs/core_analog/pfd/pfd.sym} 510 -1280 0 0 {name=x1}
@@ -252,42 +221,42 @@ C {lab_pin.sym} 1590 -1380 0 1 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 2170 -1360 0 1 {name=p8 sig_type=std_logic lab=VDD}
 C {libs/core_analog/scdac/scdac.sym} 490 -820 0 0 {name=x11}
 C {lab_pin.sym} 490 -920 0 1 {name=p9 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1110 -960 0 1 {name=p10 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 1070 -1200 0 1 {name=p11 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 1650 -1180 0 1 {name=p12 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 2170 -1200 0 1 {name=p13 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 490 -740 0 1 {name=p14 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 330 -860 0 0 {name=p16 sig_type=std_logic lab=RESET_N1}
-C {lab_pin.sym} 330 -820 0 0 {name=p17 sig_type=std_logic lab=CS_N1}
+C {lab_pin.sym} 1110 -960 0 1 {name=p10 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1070 -1200 0 1 {name=p11 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1650 -1180 0 1 {name=p12 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 2170 -1200 0 1 {name=p13 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 490 -740 0 1 {name=p14 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 330 -860 0 0 {name=p16 sig_type=std_logic lab=RESET_N}
+C {lab_pin.sym} 330 -820 0 0 {name=p17 sig_type=std_logic lab=CS_N}
 C {lab_pin.sym} 330 -800 0 0 {name=p18 sig_type=std_logic lab=DIN}
-C {lab_pin.sym} 330 -840 0 0 {name=p19 sig_type=std_logic lab=CLK1}
+C {lab_pin.sym} 330 -840 0 0 {name=p19 sig_type=std_logic lab=CLK}
 C {devices/lab_pin.sym} 650 -860 0 1 {name=l4 sig_type=std_logic lab=SCDAC_IOUT3}
 C {devices/lab_pin.sym} 650 -800 0 1 {name=l11 sig_type=std_logic lab=DOUT3}
 C {libs/core_analog/scdac/scdac.sym} 1110 -820 0 0 {name=x12}
 C {lab_pin.sym} 1110 -920 0 1 {name=p20 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1110 -740 0 1 {name=p21 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 950 -860 0 0 {name=p22 sig_type=std_logic lab=RESET_N1}
-C {lab_pin.sym} 950 -820 0 0 {name=p23 sig_type=std_logic lab=CS_N1}
+C {lab_pin.sym} 1110 -740 0 1 {name=p21 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 950 -860 0 0 {name=p22 sig_type=std_logic lab=RESET_N}
+C {lab_pin.sym} 950 -820 0 0 {name=p23 sig_type=std_logic lab=CS_N}
 C {lab_pin.sym} 950 -800 0 0 {name=p24 sig_type=std_logic lab=DOUT3}
-C {lab_pin.sym} 950 -840 0 0 {name=p25 sig_type=std_logic lab=CLK1}
+C {lab_pin.sym} 950 -840 0 0 {name=p25 sig_type=std_logic lab=CLK}
 C {devices/lab_pin.sym} 1270 -860 0 1 {name=l13 sig_type=std_logic lab=SCDAC_IOUT2}
 C {devices/lab_pin.sym} 1270 -800 0 1 {name=l14 sig_type=std_logic lab=DOUT2}
 C {libs/core_analog/scdac/scdac.sym} 1730 -820 0 0 {name=x13}
 C {lab_pin.sym} 1730 -920 0 1 {name=p26 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1730 -740 0 1 {name=p27 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 1570 -860 0 0 {name=p28 sig_type=std_logic lab=RESET_N1}
-C {lab_pin.sym} 1570 -820 0 0 {name=p31 sig_type=std_logic lab=CS_N1}
+C {lab_pin.sym} 1730 -740 0 1 {name=p27 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1570 -860 0 0 {name=p28 sig_type=std_logic lab=RESET_N}
+C {lab_pin.sym} 1570 -820 0 0 {name=p31 sig_type=std_logic lab=CS_N}
 C {lab_pin.sym} 1570 -800 0 0 {name=p32 sig_type=std_logic lab=DOUT2}
-C {lab_pin.sym} 1570 -840 0 0 {name=p33 sig_type=std_logic lab=CLK1}
+C {lab_pin.sym} 1570 -840 0 0 {name=p33 sig_type=std_logic lab=CLK}
 C {devices/lab_pin.sym} 1890 -860 0 1 {name=l15 sig_type=std_logic lab=SCDAC_IOUT1}
 C {devices/lab_pin.sym} 1890 -800 0 1 {name=l16 sig_type=std_logic lab=DOUT1}
 C {libs/core_analog/scdac/scdac.sym} 2350 -820 0 0 {name=x14}
 C {lab_pin.sym} 2350 -920 0 1 {name=p34 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 2350 -740 0 1 {name=p35 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 2190 -860 0 0 {name=p36 sig_type=std_logic lab=RESET_N1}
-C {lab_pin.sym} 2190 -820 0 0 {name=p37 sig_type=std_logic lab=CS_N1}
+C {lab_pin.sym} 2350 -740 0 1 {name=p35 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 2190 -860 0 0 {name=p36 sig_type=std_logic lab=RESET_N}
+C {lab_pin.sym} 2190 -820 0 0 {name=p37 sig_type=std_logic lab=CS_N}
 C {lab_pin.sym} 2190 -800 0 0 {name=p38 sig_type=std_logic lab=DOUT1}
-C {lab_pin.sym} 2190 -840 0 0 {name=p39 sig_type=std_logic lab=CLK1}
+C {lab_pin.sym} 2190 -840 0 0 {name=p39 sig_type=std_logic lab=CLK}
 C {devices/lab_pin.sym} 2510 -860 0 1 {name=l19 sig_type=std_logic lab=SCDAC_IOUT0}
 C {devices/lab_pin.sym} 2510 -800 0 1 {name=l24 sig_type=std_logic lab=DOUT0}
 C {lab_pin.sym} 1830 -250 0 1 {name=p40 sig_type=std_logic lab=ROW2_PLL_FB_IN}
@@ -323,25 +292,11 @@ C {devices/lab_pin.sym} 880 -540 1 0 {name=l52 sig_type=std_logic lab=SCDAC_IOUT
 C {devices/lab_pin.sym} 860 -540 1 0 {name=l53 sig_type=std_logic lab=SCDAC_IOUT2}
 C {devices/lab_pin.sym} 840 -540 1 0 {name=l54 sig_type=std_logic lab=SCDAC_IOUT1}
 C {devices/lab_pin.sym} 820 -540 1 0 {name=l55 sig_type=std_logic lab=SCDAC_IOUT0}
-C {lab_pin.sym} 740 -140 0 0 {name=p48 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 740 -140 0 0 {name=p48 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 740 -400 0 0 {name=p49 sig_type=std_logic lab=RESET_N2}
 C {lab_pin.sym} 740 -360 0 0 {name=p50 sig_type=std_logic lab=CS_N2}
 C {lab_pin.sym} 740 -340 0 0 {name=p51 sig_type=std_logic lab=DOUT0}
 C {lab_pin.sym} 740 -380 0 0 {name=p52 sig_type=std_logic lab=CLK2}
 C {lab_pin.sym} 740 -420 0 0 {name=p54 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 1400 -140 0 1 {name=l56 sig_type=std_logic lab=DOUT}
-C {lab_pin.sym} 200 -600 0 0 {name=p53 sig_type=std_logic lab=RESET_N}
-C {lab_pin.sym} 320 -620 0 1 {name=p55 sig_type=std_logic lab=RESET_N0}
-C {lab_pin.sym} 500 -600 0 1 {name=p56 sig_type=std_logic lab=RESET_N1}
-C {libs/gf180mcu_stdcells/clkbuf_16.sym} 260 -600 0 0 {name=x15 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {libs/gf180mcu_stdcells/clkbuf_16.sym} 440 -600 0 0 {name=x16 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {libs/gf180mcu_stdcells/clkbuf_16.sym} 440 -540 0 0 {name=x17 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {lab_pin.sym} 500 -540 0 1 {name=p57 sig_type=std_logic lab=RESET_N2}
-C {lab_pin.sym} 200 -360 0 0 {name=p58 sig_type=std_logic lab=CS_N}
-C {lab_pin.sym} 500 -360 0 1 {name=p59 sig_type=std_logic lab=CS_N1}
-C {libs/gf180mcu_stdcells/clkbuf_16.sym} 260 -360 0 0 {name=x18 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {libs/gf180mcu_stdcells/clkbuf_16.sym} 440 -360 0 0 {name=x19 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {libs/gf180mcu_stdcells/clkbuf_16.sym} 440 -300 0 0 {name=x20 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {lab_pin.sym} 500 -300 0 1 {name=p60 sig_type=std_logic lab=CS_N2}
-C {lab_pin.sym} 320 -380 0 1 {name=p61 sig_type=std_logic lab=CS_N0}
 C {libs/core_analog/sw_matrix/sw_matrix_25x14.sym} 1080 -280 0 0 {name=x21}

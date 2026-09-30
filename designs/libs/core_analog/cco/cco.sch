@@ -18,10 +18,10 @@ T {Bias current} 220 -130 0 0 0.6 0.6 {}
 T {Oscillator} 770 -130 0 0 0.6 0.6 {}
 T {Output buffer} 1200 -130 0 0 0.6 0.6 {}
 T {Current Controlled Oscillator} 40 -1090 0 0 1 1 {}
-N 820 -270 820 -250 {lab=GND}
-N 690 -270 700 -270 {lab=GND}
-N 700 -290 700 -270 {lab=GND}
-N 920 -290 920 -270 {lab=GND}
+N 820 -270 820 -250 {lab=VSS}
+N 690 -270 700 -270 {lab=VSS}
+N 700 -290 700 -270 {lab=VSS}
+N 920 -290 920 -270 {lab=VSS}
 N 700 -390 700 -350 {lab=#net1}
 N 920 -390 920 -350 {lab=#net2}
 N 700 -770 700 -730 {lab=out1_n}
@@ -30,24 +30,24 @@ N 920 -850 920 -830 {lab=VDD}
 N 700 -850 920 -850 {lab=VDD}
 N 700 -850 700 -830 {lab=VDD}
 N 800 -870 800 -850 {lab=VDD}
-N 690 -700 700 -700 {lab=GND}
+N 690 -700 700 -700 {lab=VSS}
 N 920 -800 930 -800 {lab=VDD}
 N 920 -700 930 -700 {lab=GND}
 N 860 -700 880 -700 {lab=out1_n}
 N 740 -700 760 -700 {lab=out1_p}
 N 920 -750 960 -750 {lab=out1_p}
 N 660 -750 700 -750 {lab=out1_n}
-N 920 -320 1040 -320 {lab=GND}
-N 700 -320 820 -320 {lab=GND}
-N 820 -320 820 -270 {lab=GND}
+N 920 -320 1040 -320 {lab=VSS}
+N 700 -320 820 -320 {lab=VSS}
+N 820 -320 820 -270 {lab=VSS}
 N 640 -320 660 -320 {lab=#net3}
 N 640 -370 640 -320 {lab=#net3}
 N 740 -370 860 -370 {lab=#net3}
 N 860 -370 860 -320 {lab=#net3}
 N 860 -320 880 -320 {lab=#net3}
-N 920 -270 1040 -270 {lab=GND}
-N 820 -270 920 -270 {lab=GND}
-N 700 -270 820 -270 {lab=GND}
+N 920 -270 1040 -270 {lab=VSS}
+N 820 -270 920 -270 {lab=VSS}
+N 700 -270 820 -270 {lab=VSS}
 N 700 -670 700 -610 {lab=#net4}
 N 700 -410 700 -390 {lab=#net1}
 N 920 -410 920 -390 {lab=#net2}
@@ -56,9 +56,9 @@ N 640 -370 740 -370 {lab=#net3}
 N 930 -800 1000 -800 {lab=VDD}
 N 1000 -850 1000 -800 {lab=VDD}
 N 920 -850 1000 -850 {lab=VDD}
-N 600 -700 690 -700 {lab=GND}
-N 600 -700 600 -650 {lab=GND}
-N 1040 -320 1040 -270 {lab=GND}
+N 600 -700 690 -700 {lab=VSS}
+N 600 -700 600 -650 {lab=VSS}
+N 1040 -320 1040 -270 {lab=VSS}
 N 930 -700 1020 -700 {lab=GND}
 N 1020 -700 1020 -650 {lab=GND}
 N 700 -750 760 -750 {lab=out1_n}
@@ -74,16 +74,16 @@ N 860 -800 880 -800 {lab=#net6}
 N 860 -920 860 -800 {lab=#net6}
 N 260 -920 860 -920 {lab=#net6}
 N 610 -920 610 -840 {lab=#net6}
-N 700 -440 820 -440 {lab=GND}
+N 700 -440 820 -440 {lab=VSS}
 N 640 -440 660 -440 {lab=#net7}
 N 640 -490 640 -440 {lab=#net7}
 N 740 -490 860 -490 {lab=#net7}
 N 860 -490 860 -440 {lab=#net7}
 N 860 -440 880 -440 {lab=#net7}
 N 640 -490 740 -490 {lab=#net7}
-N 820 -440 820 -320 {lab=GND}
-N 920 -440 1040 -440 {lab=GND}
-N 1040 -440 1040 -320 {lab=GND}
+N 820 -440 820 -320 {lab=VSS}
+N 920 -440 1040 -440 {lab=VSS}
+N 1040 -440 1040 -320 {lab=VSS}
 N 700 -610 700 -470 {lab=#net4}
 N 920 -610 920 -470 {lab=#net5}
 N 700 -650 780 -650 {lab=#net4}
@@ -94,21 +94,21 @@ N 420 -410 420 -350 {lab=#net3}
 N 480 -370 480 -320 {lab=#net3}
 N 460 -440 480 -440 {lab=#net7}
 N 460 -320 480 -320 {lab=#net3}
-N 420 -290 420 -270 {lab=GND}
+N 420 -290 420 -270 {lab=VSS}
 N 500 -320 560 -320 {lab=#net3}
 N 420 -800 500 -800 {lab=VDD}
 N 420 -770 420 -750 {lab=#net8}
 N 360 -800 380 -800 {lab=#net6}
 N 480 -440 500 -440 {lab=#net7}
 N 480 -320 500 -320 {lab=#net3}
-N 300 -270 440 -270 {lab=GND}
-N 310 -440 420 -440 {lab=GND}
-N 300 -440 300 -270 {lab=GND}
-N 300 -440 310 -440 {lab=GND}
+N 300 -270 440 -270 {lab=VSS}
+N 310 -440 420 -440 {lab=VSS}
+N 300 -440 300 -270 {lab=VSS}
+N 300 -440 310 -440 {lab=VSS}
 N 500 -800 520 -800 {lab=VDD}
 N 420 -850 520 -850 {lab=VDD}
 N 420 -850 420 -830 {lab=VDD}
-N 540 -270 690 -270 {lab=GND}
+N 540 -270 690 -270 {lab=VSS}
 N 240 -800 260 -800 {lab=#net6}
 N 260 -800 360 -800 {lab=#net6}
 N 200 -850 200 -830 {lab=VDD}
@@ -120,20 +120,20 @@ N 100 -850 200 -850 {lab=VDD}
 N 200 -770 200 -730 {lab=#net6}
 N 200 -750 260 -750 {lab=#net6}
 N 260 -800 260 -750 {lab=#net6}
-N 300 -320 420 -320 {lab=GND}
+N 300 -320 420 -320 {lab=VSS}
 N 520 -850 520 -800 {lab=VDD}
 N 420 -870 420 -850 {lab=VDD}
 N 260 -920 260 -800 {lab=#net6}
 N 500 -440 640 -440 {lab=#net7}
 N 560 -320 640 -320 {lab=#net3}
-N 440 -270 540 -270 {lab=GND}
+N 440 -270 540 -270 {lab=VSS}
 N 1280 -620 1280 -540 {lab=OSCOUT}
-N 1280 -480 1280 -440 {lab=GND}
+N 1280 -480 1280 -440 {lab=VSS}
 N 1280 -650 1400 -650 {lab=VDD}
-N 1280 -510 1400 -510 {lab=GND}
-N 1280 -440 1280 -250 {lab=GND}
-N 1280 -440 1400 -440 {lab=GND}
-N 1400 -510 1400 -440 {lab=GND}
+N 1280 -510 1400 -510 {lab=VSS}
+N 1280 -440 1280 -250 {lab=VSS}
+N 1280 -440 1400 -440 {lab=VSS}
+N 1400 -510 1400 -440 {lab=VSS}
 N 1280 -870 1280 -680 {lab=VDD}
 N 1280 -720 1400 -720 {lab=VDD}
 N 1400 -720 1400 -650 {lab=VDD}
@@ -166,7 +166,7 @@ N 420 -620 420 -470 {lab=#net7}
 N 840 -650 880 -650 {lab=#net5}
 N 1280 -880 1280 -870 {lab=VDD}
 N 1000 -1080 1040 -1080 {lab=VDD}
-N 1000 -1040 1040 -1040 {lab=GND}
+N 1000 -1040 1040 -1040 {lab=VSS}
 N 1000 -1000 1040 -1000 {lab=IBOSC}
 N 1000 -960 1040 -960 {lab=OSCOUT}
 C {devices/lab_pin.sym} 960 -750 0 1 {name=l4 sig_type=std_logic lab=out1_p}
@@ -408,15 +408,15 @@ C {devices/lab_pin.sym} 420 -870 0 1 {name=l20 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 800 -870 0 1 {name=l21 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 1280 -880 0 1 {name=l1 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 200 -600 0 1 {name=l7 sig_type=std_logic lab=IBOSC}
-C {devices/lab_pin.sym} 820 -250 0 1 {name=l6 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} 1280 -250 0 1 {name=l9 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} 820 -250 0 1 {name=l6 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1280 -250 0 1 {name=l9 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1000 -1080 0 0 {name=l10 sig_type=std_logic lab=VDD}
 C {ipin.sym} 1040 -1080 0 1 {name=p1 lab=VDD}
-C {devices/lab_pin.sym} 1000 -1040 0 0 {name=l14 sig_type=std_logic lab=GND}
-C {ipin.sym} 1040 -1040 0 1 {name=p2 lab=GND}
+C {devices/lab_pin.sym} 1000 -1040 0 0 {name=l14 sig_type=std_logic lab=VSS}
+C {ipin.sym} 1040 -1040 0 1 {name=p2 lab=VSS}
 C {devices/lab_pin.sym} 1000 -1000 0 0 {name=l22 sig_type=std_logic lab=IBOSC}
 C {ipin.sym} 1040 -1000 0 1 {name=p3 lab=IBOSC}
 C {devices/lab_pin.sym} 1000 -960 0 0 {name=l23 sig_type=std_logic lab=OSCOUT}
 C {opin.sym} 1040 -960 0 0 {name=p4 lab=OSCOUT}
-C {devices/lab_pin.sym} 600 -650 0 1 {name=l15 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} 1020 -650 0 1 {name=l16 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} 600 -650 0 1 {name=l15 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1020 -650 0 1 {name=l16 sig_type=std_logic lab=VSS}
