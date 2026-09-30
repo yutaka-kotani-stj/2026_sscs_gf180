@@ -37,7 +37,7 @@ N 1280 -440 1280 -420 {lab=VSS}
 N 1100 -560 1120 -560 {lab=RESET_N1}
 N 1100 -540 1120 -540 {lab=CLK1}
 N 1100 -520 1120 -520 {lab=CS_N1}
-N 1100 -500 1120 -500 {lab=Q7}
+N 1100 -500 1120 -500 {lab=Q_E}
 N 1100 -480 1120 -480 {lab=COL_D}
 N 1440 -480 1460 -480 {lab=ROW}
 N 1440 -500 1460 -500 {lab=Q_D}
@@ -46,7 +46,7 @@ N 1860 -440 1860 -420 {lab=VSS}
 N 1680 -560 1700 -560 {lab=RESET_N1}
 N 1680 -540 1700 -540 {lab=CLK1}
 N 1680 -520 1700 -520 {lab=CS_N1}
-N 1680 -500 1700 -500 {lab=Q6}
+N 1680 -500 1700 -500 {lab=Q_D}
 N 1680 -480 1700 -480 {lab=COL_C}
 N 2020 -480 2040 -480 {lab=ROW}
 N 2020 -500 2040 -500 {lab=Q_C}
@@ -55,7 +55,7 @@ N 2440 -440 2440 -420 {lab=VSS}
 N 2260 -560 2280 -560 {lab=RESET_N1}
 N 2260 -540 2280 -540 {lab=CLK1}
 N 2260 -520 2280 -520 {lab=CS_N1}
-N 2260 -500 2280 -500 {lab=Q5}
+N 2260 -500 2280 -500 {lab=Q_C}
 N 2260 -480 2280 -480 {lab=COL_B}
 N 2600 -480 2620 -480 {lab=ROW}
 N 2600 -500 2620 -500 {lab=Q_B}
@@ -64,7 +64,7 @@ N 3020 -440 3020 -420 {lab=VSS}
 N 2840 -560 2860 -560 {lab=RESET_N1}
 N 2840 -540 2860 -540 {lab=CLK1}
 N 2840 -520 2860 -520 {lab=CS_N1}
-N 2840 -500 2860 -500 {lab=Q1}
+N 2840 -500 2860 -500 {lab=Q_B}
 N 2840 -480 2860 -480 {lab=COL_A}
 N 3180 -480 3200 -480 {lab=ROW}
 N 3180 -500 3200 -500 {lab=DOUT}
@@ -98,28 +98,28 @@ C {lab_pin.sym} 560 -800 0 1 {name=p30 sig_type=std_logic lab=CLK1}
 C {lab_pin.sym} 1100 -560 0 0 {name=p31 sig_type=std_logic lab=RESET_N1}
 C {lab_pin.sym} 1460 -480 0 1 {name=p32 sig_type=std_logic lab=ROW}
 C {lab_pin.sym} 1100 -520 0 0 {name=p33 sig_type=std_logic lab=CS_N1}
-C {lab_pin.sym} 1100 -500 0 0 {name=p34 sig_type=std_logic lab=Q7}
+C {lab_pin.sym} 1100 -500 0 0 {name=p34 sig_type=std_logic lab=Q_E}
 C {lab_pin.sym} 1100 -480 0 0 {name=p35 sig_type=std_logic lab=COL_D}
 C {lab_pin.sym} 1460 -500 0 1 {name=p36 sig_type=std_logic lab=Q_D}
 C {lab_pin.sym} 1100 -540 0 0 {name=p37 sig_type=std_logic lab=CLK1}
 C {lab_pin.sym} 1680 -560 0 0 {name=p38 sig_type=std_logic lab=RESET_N1}
 C {lab_pin.sym} 2040 -480 0 1 {name=p39 sig_type=std_logic lab=ROW}
 C {lab_pin.sym} 1680 -520 0 0 {name=p40 sig_type=std_logic lab=CS_N1}
-C {lab_pin.sym} 1680 -500 0 0 {name=p41 sig_type=std_logic lab=Q6}
+C {lab_pin.sym} 1680 -500 0 0 {name=p41 sig_type=std_logic lab=Q_D}
 C {lab_pin.sym} 1680 -480 0 0 {name=p42 sig_type=std_logic lab=COL_C}
 C {lab_pin.sym} 2040 -500 0 1 {name=p43 sig_type=std_logic lab=Q_C}
 C {lab_pin.sym} 1680 -540 0 0 {name=p44 sig_type=std_logic lab=CLK1}
 C {lab_pin.sym} 2260 -560 0 0 {name=p45 sig_type=std_logic lab=RESET_N1}
 C {lab_pin.sym} 2620 -480 0 1 {name=p46 sig_type=std_logic lab=ROW}
 C {lab_pin.sym} 2260 -520 0 0 {name=p47 sig_type=std_logic lab=CS_N1}
-C {lab_pin.sym} 2260 -500 0 0 {name=p48 sig_type=std_logic lab=Q5}
+C {lab_pin.sym} 2260 -500 0 0 {name=p48 sig_type=std_logic lab=Q_C}
 C {lab_pin.sym} 2260 -480 0 0 {name=p49 sig_type=std_logic lab=COL_B}
 C {lab_pin.sym} 2620 -500 0 1 {name=p50 sig_type=std_logic lab=Q_B}
 C {lab_pin.sym} 2260 -540 0 0 {name=p51 sig_type=std_logic lab=CLK1}
 C {lab_pin.sym} 2840 -560 0 0 {name=p73 sig_type=std_logic lab=RESET_N1}
 C {lab_pin.sym} 3200 -480 0 1 {name=p74 sig_type=std_logic lab=ROW}
 C {lab_pin.sym} 2840 -520 0 0 {name=p75 sig_type=std_logic lab=CS_N1}
-C {lab_pin.sym} 2840 -500 0 0 {name=p76 sig_type=std_logic lab=Q1}
+C {lab_pin.sym} 2840 -500 0 0 {name=p76 sig_type=std_logic lab=Q_B}
 C {lab_pin.sym} 2840 -480 0 0 {name=p77 sig_type=std_logic lab=COL_A}
 C {lab_pin.sym} 3200 -500 0 1 {name=p78 sig_type=std_logic lab=DOUT}
 C {lab_pin.sym} 2840 -540 0 0 {name=p79 sig_type=std_logic lab=CLK1}
@@ -171,3 +171,9 @@ C {lab_pin.sym} 1280 -420 0 1 {name=p21 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1860 -420 0 1 {name=p22 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 2440 -420 0 1 {name=p23 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 3020 -420 0 1 {name=p24 sig_type=std_logic lab=VSS}
+C {devices/code_shown.sym} 60 -160 0 0 {name=MODELS only_toplevel=true
+format="tcleval( @value )"
+value="
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
+
+"}

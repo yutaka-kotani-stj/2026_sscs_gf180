@@ -1,0 +1,14 @@
+** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/pfd/pfd.sch
+.subckt pfd UP CLK_IN CLK_FB DOWN
+*.PININFO UP:O DOWN:O CLK_IN:I CLK_FB:I
+x1 VDD net1 CLK_IN UP VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+x2 VDD net1 CLK_FB DOWN VDD VDD GND GND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+x3 UP DOWN net1 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nand2_1
+**** begin user architecture code
+
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
+
+
+**** end user architecture code
+.ends
+.GLOBAL VDD
