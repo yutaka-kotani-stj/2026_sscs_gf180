@@ -245,7 +245,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {ipin.sym} 580 -120 0 0 {name=p7 lab=GND}
+C {ipin.sym} 580 -120 0 0 {name=p7 lab=VSS}
 C {symbols/nfet_03v3.sym} 320 -210 0 1 {name=M13
 L=4u
 W=4u

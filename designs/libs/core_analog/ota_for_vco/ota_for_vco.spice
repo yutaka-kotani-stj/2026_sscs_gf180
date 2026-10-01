@@ -1,0 +1,24 @@
+** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/ota_for_vco/ota_for_vco.sch
+.subckt ota_for_vco IBKVCO VIN_N VIN_P OTA_OUT VSS VDD IBCEN
+*.PININFO IBKVCO:I VIN_N:I VIN_P:I OTA_OUT:O VSS:I VDD:I IBCEN:I
+M1 IBKVCO IBKVCO net4 net4 pfet_03v3 L=0.28u W=8u nf=1
+M2 net6 IBKVCO net3 net3 pfet_03v3 L=0.28u W=8u nf=1
+M3 net1 VIN_N net6 net6 pfet_03v3 L=4u W=12u nf=1
+M4 net2 VIN_P net6 net6 pfet_03v3 L=4u W=12u nf=1
+M8 net1 net1 VSS VSS nfet_03v3 L=4u W=12u nf=1
+M12 net2 net2 VSS VSS nfet_03v3 L=4u W=12u nf=1
+M13 net7 net1 VSS VSS nfet_03v3 L=4u W=4u nf=1
+M14 net5 net2 VSS VSS nfet_03v3 L=4u W=4u nf=1
+M15 net7 net7 VDD VDD pfet_03v3 L=4u W=12u nf=1
+M16 net5 net7 VDD VDD pfet_03v3 L=4u W=12u nf=1
+M5 net4 net4 VDD VDD pfet_03v3 L=0.28u W=8u nf=1
+M6 net3 net4 VDD VDD pfet_03v3 L=0.28u W=8u nf=1
+M7 net5 IBCEN net8 net8 pfet_03v3 L=0.28u W=30u nf=1
+M9 net8 net11 VDD VDD pfet_03v3 L=0.28u W=30u nf=1
+M10 net9 net9 VSS VSS nfet_03v3 L=0.28u W=10u nf=1
+M17 net10 net9 VSS VSS nfet_03v3 L=0.28u W=10u nf=1
+M19 IBCEN IBCEN net11 net11 pfet_03v3 L=0.28u W=30u nf=1
+M20 net11 net11 VDD VDD pfet_03v3 L=0.28u W=30u nf=1
+M11 net5 net5 net9 VSS nfet_03v3 L=0.28u W=10u nf=1
+M18 OTA_OUT net5 net10 VSS nfet_03v3 L=0.28u W=10u nf=1
+.ends
