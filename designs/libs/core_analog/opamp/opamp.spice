@@ -1,0 +1,17 @@
+** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/opamp/opamp.sch
+.subckt opamp VDD VSS IB VOUT VIN_P VIN_N
+*.PININFO VDD:I VSS:I IB:I VOUT:O VIN_P:I VIN_N:I
+XC1 VOUT net6 cap_mim_2f0fF c_width=34.32e-6 c_length=34.32e-6
+M1 net1 VIN_N net3 VDD pfet_03v3 L=0.28u W=3.2u nf=1
+M2 net2 VIN_P net3 VDD pfet_03v3 L=0.28u W=3.2u nf=1
+M3 net1 net1 VSS VSS nfet_03v3 L=0.28u W=1.6u nf=1
+M4 net2 net1 VSS VSS nfet_03v3 L=0.28u W=1.6u nf=1
+M5 net3 IB VDD VDD pfet_03v3 L=0.28u W=3.2u nf=1
+M6 IB IB VDD VDD pfet_03v3 L=0.28u W=3.2u nf=1
+M7 VOUT IB VDD VDD pfet_03v3 L=0.28u W=32u nf=1
+M8 VOUT net2 VSS VSS nfet_03v3 L=0.28u W=32u nf=1
+M9 net4 net4 VSS VSS nfet_03v3 L=0.28u W=1.6u nf=1
+M10 net5 net5 net4 VSS nfet_03v3 L=0.28u W=1.6u nf=1
+M11 net6 net5 net2 VSS nfet_03v3 L=0.28u W=1.6u nf=1
+M12 net5 IB VDD VDD pfet_03v3 L=0.28u W=3.2u nf=1
+.ends

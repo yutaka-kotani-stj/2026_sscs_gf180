@@ -100,7 +100,7 @@ N 920 -280 1120 -280 {lab=#net2}
 N 920 -280 920 -170 {lab=#net2}
 N 700 -170 920 -170 {lab=#net2}
 N 700 -350 700 -170 {lab=#net2}
-N 920 -430 920 -370 {lab=GND}
+N 920 -430 920 -370 {lab=VSS}
 N 950 -430 980 -430 {lab=#net6}
 N 1040 -430 1160 -430 {lab=VOUT}
 N 880 -430 890 -430 {lab=#net2}
@@ -309,7 +309,6 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {gnd.sym} 920 -370 0 0 {name=l15 lab=GND}
 C {devices/lab_pin.sym} 1200 -430 0 1 {name=l16 sig_type=std_logic lab=VOUT}
 C {devices/lab_pin.sym} 120 -590 0 1 {name=l17 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 420 -590 0 1 {name=l24 sig_type=std_logic lab=VDD}
@@ -331,3 +330,4 @@ C {devices/lab_pin.sym} 1400 -480 0 0 {name=l12 sig_type=std_logic lab=VIN_P}
 C {devices/lab_pin.sym} 1400 -440 0 0 {name=l14 sig_type=std_logic lab=VIN_N}
 C {ipin.sym} 1460 -480 0 1 {name=p5 lab=VIN_P}
 C {ipin.sym} 1460 -440 0 1 {name=p6 lab=VIN_N}
+C {devices/lab_pin.sym} 920 -370 0 1 {name=l18 sig_type=std_logic lab=VSS}
