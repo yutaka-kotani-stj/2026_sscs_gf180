@@ -1,0 +1,21 @@
+** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/cco/cco.sch
+.subckt cco VDD VSS IBOSC OSCOUT
+*.PININFO VDD:I VSS:I IBOSC:I OSCOUT:O
+M1 out1_n out1_p net4 VSS nfet_03v3 L=0.28u W=20u nf=1
+M2 out1_p out1_n net5 VSS nfet_03v3 L=0.28u W=20u nf=1
+XC1 net5 net4 cap_mim_2f0fF c_width=34.32e-6 c_length=34.32e-6
+M5 net1 net3 VSS VSS nfet_03v3 L=0.28u W=10u nf=1
+M6 net2 net3 VSS VSS nfet_03v3 L=0.28u W=10u nf=1
+M4 out1_p net6 VDD VDD pfet_03v3 L=0.28u W=20u nf=1
+M3 out1_n net6 VDD VDD pfet_03v3 L=0.28u W=20u nf=1
+M9 net4 net7 net1 VSS nfet_03v3 L=0.28u W=10u nf=1
+M10 net5 net7 net2 VSS nfet_03v3 L=0.28u W=10u nf=1
+M13 net3 net3 VSS VSS nfet_03v3 L=0.28u W=10u nf=1
+M14 net7 net7 net3 VSS nfet_03v3 L=0.28u W=10u nf=1
+M15 net8 net6 VDD VDD pfet_03v3 L=0.28u W=20u nf=1
+M17 net6 net6 VDD VDD pfet_03v3 L=0.28u W=20u nf=1
+M8 OSCOUT out1_n VDD VDD pfet_03v3 L=0.28u W=32u nf=1
+M11 OSCOUT out1_n VSS VSS nfet_03v3 L=0.28u W=12u nf=1
+M7 net7 IBOSC net8 net8 pfet_03v3 L=0.28u W=20u nf=1
+M12 IBOSC IBOSC net6 net6 pfet_03v3 L=0.28u W=20u nf=1
+.ends
