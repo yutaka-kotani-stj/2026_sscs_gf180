@@ -62,7 +62,7 @@ N 740 -680 770 -680 {lab=Q7}
 N 520 -740 540 -740 {lab=RESET_N}
 N 520 -720 540 -720 {lab=CLK}
 N 520 -700 540 -700 {lab=CS_N}
-N 520 -680 540 -680 {lab=Q[8]}
+N 520 -680 540 -680 {lab=Q8}
 N 740 -700 770 -700 {lab=BIT7}
 N 1060 -640 1060 -620 {lab=VSS}
 N 1060 -800 1060 -780 {lab=VDD}
@@ -87,7 +87,7 @@ N 100 -300 120 -300 {lab=RESET_N}
 N 100 -280 120 -280 {lab=CLK}
 N 100 -260 120 -260 {lab=CS_N}
 N 100 -240 120 -240 {lab=Q1}
-N 320 -260 350 -260 {lab=BIT7}
+N 320 -260 350 -260 {lab=BIT0}
 N 220 -420 220 -400 {lab=VSS}
 N 220 -580 220 -560 {lab=VDD}
 N 320 -460 350 -460 {lab=Q4}
@@ -166,7 +166,7 @@ C {libs/core_analog/sreg/sreg.sym} 640 -700 0 0 {name=x1}
 C {lab_pin.sym} 640 -800 0 1 {name=p29 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 640 -620 0 1 {name=p30 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 770 -700 0 1 {name=p33 sig_type=std_logic lab=BIT7}
-C {lab_pin.sym} 520 -680 0 0 {name=p22 sig_type=std_logic lab=Q[8]}
+C {lab_pin.sym} 520 -680 0 0 {name=p22 sig_type=std_logic lab=Q8}
 C {lab_pin.sym} 770 -680 0 1 {name=p23 sig_type=std_logic lab=Q7}
 C {lab_pin.sym} 940 -700 0 0 {name=p43 sig_type=std_logic lab=CS_N}
 C {lab_pin.sym} 940 -720 0 0 {name=p44 sig_type=std_logic lab=CLK}
@@ -175,7 +175,7 @@ C {libs/core_analog/sreg/sreg.sym} 1060 -700 0 0 {name=x3}
 C {lab_pin.sym} 1060 -800 0 1 {name=p46 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1060 -620 0 1 {name=p47 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1190 -700 0 1 {name=p48 sig_type=std_logic lab=BIT6}
-C {lab_pin.sym} 940 -680 0 0 {name=p49 sig_type=std_logic lab=Q[7]}
+C {lab_pin.sym} 940 -680 0 0 {name=p49 sig_type=std_logic lab=Q7}
 C {lab_pin.sym} 1190 -680 0 1 {name=p50 sig_type=std_logic lab=Q6}
 C {lab_pin.sym} 1360 -700 0 0 {name=p51 sig_type=std_logic lab=CS_N}
 C {lab_pin.sym} 1360 -720 0 0 {name=p52 sig_type=std_logic lab=CLK}
@@ -192,7 +192,7 @@ C {lab_pin.sym} 100 -300 0 0 {name=p61 sig_type=std_logic lab=RESET_N}
 C {libs/core_analog/sreg/sreg.sym} 220 -260 0 0 {name=x6}
 C {lab_pin.sym} 220 -360 0 1 {name=p62 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 220 -180 0 1 {name=p63 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 350 -260 0 1 {name=p64 sig_type=std_logic lab=BIT7}
+C {lab_pin.sym} 350 -260 0 1 {name=p64 sig_type=std_logic lab=BIT0}
 C {lab_pin.sym} 100 -240 0 0 {name=p65 sig_type=std_logic lab=Q1}
 C {lab_pin.sym} 350 -240 0 1 {name=p66 sig_type=std_logic lab=DOUT}
 C {lab_pin.sym} 100 -480 0 0 {name=p67 sig_type=std_logic lab=CS_N}
@@ -231,3 +231,9 @@ C {lab_pin.sym} 1480 -400 0 1 {name=p97 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1610 -480 0 1 {name=p98 sig_type=std_logic lab=BIT1}
 C {lab_pin.sym} 1360 -460 0 0 {name=p99 sig_type=std_logic lab=Q2}
 C {lab_pin.sym} 1610 -460 0 1 {name=p100 sig_type=std_logic lab=Q1}
+C {devices/code_shown.sym} 1210 -150 0 0 {name=MODELS only_toplevel=true
+format="tcleval( @value )"
+value="
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
+
+"}

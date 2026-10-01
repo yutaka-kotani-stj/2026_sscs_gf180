@@ -1,0 +1,102 @@
+** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/scdac/scdac.sch
+.subckt scdac VDD VSS RESET_N CLK DIN CS_N DOUT DAC_IOUT
+*.PININFO DAC_IOUT:O RESET_N:I CLK:I DIN:I CS_N:I VSS:I VDD:I DOUT:O
+x2 DAC_IOUT VSS VDD BIT8 BIT7 BIT6 BIT5 BIT4 BIT3 BIT2 BIT1 BIT0 cdac
+x4 VDD VSS RESET_N CLK DIN CS_N Q8 BIT8 sreg
+x1 VDD VSS RESET_N CLK Q8 CS_N Q7 BIT7 sreg
+x3 VDD VSS RESET_N CLK Q7 CS_N Q6 BIT6 sreg
+x5 VDD VSS RESET_N CLK Q6 CS_N Q5 BIT5 sreg
+x6 VDD VSS RESET_N CLK Q1 CS_N DOUT BIT0 sreg
+x7 VDD VSS RESET_N CLK Q5 CS_N Q4 BIT4 sreg
+x8 VDD VSS RESET_N CLK Q4 CS_N Q3 BIT3 sreg
+x9 VDD VSS RESET_N CLK Q3 CS_N Q2 BIT2 sreg
+x10 VDD VSS RESET_N CLK Q2 CS_N Q1 BIT1 sreg
+**** begin user architecture code
+
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
+
+
+**** end user architecture code
+.ends
+
+* expanding   symbol:  libs/core_analog/scdac/cdac.sym # of pins=12
+** sym_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/scdac/cdac.sym
+** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/scdac/cdac.sch
+.subckt cdac DAC_IOUT VSS VDD BIT8 BIT7 BIT6 BIT5 BIT4 BIT3 BIT2 BIT1 BIT0
+*.PININFO BIT8:I BIT7:I BIT6:I BIT5:I BIT4:I BIT3:I BIT2:I BIT1:I BIT0:I VDD:I VSS:I DAC_IOUT:O
+M8 64uA_REF 64uA_REF VSS VSS nfet_03v3 L=1u W=64u nf=1
+M11 net1 64uA_REF VSS VSS nfet_03v3 L=1u W=61.1u nf=1
+M13 DAC_IOUT BIT8 net1 VSS nfet_03v3 L=0.28u W=4u nf=1
+M15 net2 64uA_REF VSS VSS nfet_03v3 L=1u W=61.1u nf=1
+M16 DAC_IOUT BIT8 net2 VSS nfet_03v3 L=0.28u W=4u nf=1
+M18 net3 64uA_REF VSS VSS nfet_03v3 L=1u W=61.1u nf=1
+M19 DAC_IOUT BIT8 net3 VSS nfet_03v3 L=0.28u W=4u nf=1
+M21 net4 64uA_REF VSS VSS nfet_03v3 L=1u W=61.1u nf=1
+M22 DAC_IOUT BIT8 net4 VSS nfet_03v3 L=0.28u W=4u nf=1
+M24 net5 64uA_REF VSS VSS nfet_03v3 L=1u W=61.1u nf=1
+M25 DAC_IOUT BIT7 net5 VSS nfet_03v3 L=0.28u W=4u nf=1
+M27 net6 64uA_REF VSS VSS nfet_03v3 L=1u W=61.1u nf=1
+M28 DAC_IOUT BIT7 net6 VSS nfet_03v3 L=0.28u W=4u nf=1
+M30 net7 64uA_REF VSS VSS nfet_03v3 L=1u W=61.1u nf=1
+M31 DAC_IOUT BIT6 net7 VSS nfet_03v3 L=0.28u W=4u nf=8
+M1 net8 64uA_REF VSS VSS nfet_03v3 L=1u W=7.62u nf=1
+M2 DAC_IOUT BIT5 net8 VSS nfet_03v3 L=0.28u W=4u nf=1
+M3 net9 64uA_REF VSS VSS nfet_03v3 L=1u W=7.62u nf=1
+M4 DAC_IOUT BIT5 net9 VSS nfet_03v3 L=0.28u W=4u nf=1
+M5 net10 64uA_REF VSS VSS nfet_03v3 L=1u W=7.62u nf=1
+M6 DAC_IOUT BIT5 net10 VSS nfet_03v3 L=0.28u W=4u nf=1
+M7 net11 64uA_REF VSS VSS nfet_03v3 L=1u W=7.62u nf=1
+M9 DAC_IOUT BIT5 net11 VSS nfet_03v3 L=0.28u W=4u nf=1
+M10 net12 64uA_REF VSS VSS nfet_03v3 L=1u W=7.62u nf=1
+M12 DAC_IOUT BIT4 net12 VSS nfet_03v3 L=0.28u W=4u nf=1
+M14 net13 64uA_REF VSS VSS nfet_03v3 L=1u W=7.62u nf=1
+M17 DAC_IOUT BIT4 net13 VSS nfet_03v3 L=0.28u W=4u nf=1
+M20 net14 64uA_REF VSS VSS nfet_03v3 L=1u W=7.62u nf=1
+M23 DAC_IOUT BIT3 net14 VSS nfet_03v3 L=0.28u W=4u nf=1
+M26 net15 64uA_REF VSS VSS nfet_03v3 L=1u W=1.01u nf=1
+M29 DAC_IOUT BIT2 net15 VSS nfet_03v3 L=0.28u W=4u nf=1
+M32 net16 64uA_REF VSS VSS nfet_03v3 L=1u W=1.01u nf=1
+M35 DAC_IOUT BIT2 net16 VSS nfet_03v3 L=0.28u W=4u nf=1
+M36 net17 64uA_REF VSS VSS nfet_03v3 L=1u W=1.01u nf=1
+M37 DAC_IOUT BIT2 net17 VSS nfet_03v3 L=0.28u W=4u nf=1
+M38 net18 64uA_REF VSS VSS nfet_03v3 L=1u W=1.01u nf=1
+M39 DAC_IOUT BIT2 net18 VSS nfet_03v3 L=0.28u W=4u nf=1
+M40 net19 64uA_REF VSS VSS nfet_03v3 L=1u W=1.01u nf=1
+M41 DAC_IOUT BIT1 net19 VSS nfet_03v3 L=0.28u W=4u nf=1
+M42 net20 64uA_REF VSS VSS nfet_03v3 L=1u W=1.01u nf=1
+M43 DAC_IOUT BIT1 net20 VSS nfet_03v3 L=0.28u W=4u nf=1
+M44 net21 64uA_REF VSS VSS nfet_03v3 L=1u W=1.01u nf=1
+M45 DAC_IOUT BIT0 net21 VSS nfet_03v3 L=0.28u W=4u nf=1
+x1 VDD VSS 64uA_REF bmr
+.ends
+
+
+* expanding   symbol:  libs/core_analog/sreg/sreg.sym # of pins=8
+** sym_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/sreg/sreg.sym
+** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/sreg/sreg.sch
+.subckt sreg VDD VSS RESET_N CLK D CS_N Q OUT
+*.PININFO RESET_N:I CLK:I D:I CS_N:I VSS:I VDD:I Q:O OUT:O
+x11 net1 RESET_N CLK Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+x15 net2 RESET_N CS_N OUT VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+x1 D Q CS_N net1 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+x2 Q OUT CS_N net2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+.ends
+
+
+* expanding   symbol:  libs/core_analog/bmr/bmr.sym # of pins=3
+** sym_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/bmr/bmr.sym
+** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/bmr/bmr.sch
+.subckt bmr VDD VSS 64uA_OUT
+*.PININFO VDD:I VSS:I 64uA_OUT:O
+M3 net2 net1 net3 GND nfet_03v3 L=1u W=10u nf=1
+M5 net3 net2 VDD VDD pfet_03v3 L=3u W=15u nf=1
+M6 net1 net1 VDD VDD pfet_03v3 L=4u W=4u nf=1
+M9 net2 net3 net4 net4 nfet_03v3 L=3u W=10u nf=1
+M12 net2 net2 VDD VDD pfet_03v3 L=3u W=15u nf=1
+M1 net1 net3 VSS VSS nfet_03v3 L=3u W=10u nf=1
+M2 net3 net3 VSS VSS nfet_03v3 L=3u W=5u nf=1
+M4 64uA_OUT net2 VDD VDD pfet_03v3 L=3u W=14u nf=1
+XR1 VSS net4 VDD ppolyf_u_3k r_width=1e-6 r_length=1e-6
+.ends
+
+.GLOBAL GND
