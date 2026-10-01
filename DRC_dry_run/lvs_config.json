@@ -2,8 +2,8 @@
 	"STD_CELL_LIBRARY": "GF180MCU Pcells",
 	"INCLUDE_CONFIGS": [
 	],
-	"TOP_SOURCE": "DUT",
-	"TOP_LAYOUT": "DUT",
+	"TOP_SOURCE": "c4_all",
+	"TOP_LAYOUT": "c4_all",
 	"EXTRACT_FLATGLOB": [
 		""
 	],
