@@ -15,7 +15,7 @@ project:
   title: "General purpose PLL"             # Project title (e.g. "Simple CPU", "PLL", "ADC")
   team: "C4 Super Long Wave"                      # Your Team name
   discord: "Yutaka KOTANI"                   # Optional: Discord username (for support / communication)
-  description: "PDK test data"  # Short one-line description
+  description: "General purpose PLL with Mosbius"  # Short one-line description
   lvs_config: "./DRC_dry_run/lvs_config.json"
 
   gf_def_ready: true            # data ready for def generation with global foundries' pad frame
