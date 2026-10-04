@@ -2,7 +2,7 @@
 .subckt pfd UP CLK_IN CLK_FB DOWN
 *.PININFO UP:O DOWN:O CLK_IN:I CLK_FB:I
 x1 VDD net1 CLK_IN UP VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
-x2 VDD net1 CLK_FB DOWN VDD VDD GND GND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+x2 VDD net1 CLK_FB DOWN VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
 x3 UP DOWN net1 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nand2_1
 **** begin user architecture code
 

@@ -25,7 +25,7 @@ N 160 1400 200 1400 {lab=VDD}
 N 140 1180 200 1180 {lab=CLK_IN}
 N 140 1380 200 1380 {lab=CLK_FB}
 C {libs/gf180mcu_stdcells/dffrnq_1.sym} 290 1200 0 0 {name=x1 VGND=VSS VNB=VDD VPB=VSS VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
-C {libs/gf180mcu_stdcells/dffrnq_1.sym} 290 1400 0 0 {name=x2 VGND=GND VNB=VDD VPB=GND VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
+C {libs/gf180mcu_stdcells/dffrnq_1.sym} 290 1400 0 0 {name=x2 VGND=VSS VNB=VDD VPB=VSS VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
 C {libs/gf180mcu_stdcells/nand2_1.sym} 280 1300 0 1 {name=x3 VGND=VSS VNB=VDD VPB=VSS VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
 C {opin.sym} 520 1180 0 0 {name=p1 lab=UP}
 C {opin.sym} 520 1380 0 0 {name=p2 lab=DOWN}
