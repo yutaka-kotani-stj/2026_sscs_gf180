@@ -3,7 +3,7 @@
 *.PININFO VDD:I VSS:I IBOSC:I OSCOUT:O
 M1 out1_n out1_p net4 VSS nfet_03v3 L=0.28u W=20u nf=1
 M2 out1_p out1_n net5 VSS nfet_03v3 L=0.28u W=20u nf=1
-XC1 net5 net4 cap_mim_2f0fF c_width=34.32e-6 c_length=34.32e-6
+C1 net5 net4 cap_mim_2f0fF c_width=34.32e-6 c_length=34.32e-6
 M5 net1 net3 VSS VSS nfet_03v3 L=0.28u W=10u nf=1
 M6 net2 net3 VSS VSS nfet_03v3 L=0.28u W=10u nf=1
 M4 out1_p net6 VDD VDD pfet_03v3 L=0.28u W=20u nf=1
