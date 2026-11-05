@@ -1,17 +1,17 @@
-Test plan
+# C4 Super Long wave - General purpose PLL - Test plan
 # Pre-silicon base line (the reference silicon is compared to)
 
-# DC charactristics test
 
-# AC charactristics test
+## Component test
+### DC charactristics test
 
-# Functional Test
-## Power-up,reset behavior
-## 
+### AC charactristics test
 
-
-
-# Device under test
+## Functional test
+Testing FM demodulation function.
+Device will be configured by SPI MOSBIUS CONFIG data.
+Input FM intermidiate frequnecy 10.7MH Wideband FM modulation signal,
+Output Audio Signal.
 ```mermaid
 graph LR
 A[Analog Discovery] --- Space[ ] --- B[Device Under Test]
