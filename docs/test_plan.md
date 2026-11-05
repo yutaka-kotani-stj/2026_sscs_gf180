@@ -14,6 +14,6 @@ Test plan
 # Device under test
 ```mermaid
 graph LR
-    A[Analog Discovery] -->|10.7MHz FM| B[Device Under Test]
-    B -->|Audio Signal| A
+    A[Analog Discovery] ---->|10.7MHz FM| B[Device Under Test]
+    B ---->|Audio Signal| A
 
