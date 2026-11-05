@@ -51,8 +51,8 @@ N 180 -710 200 -710 {lab=#net1}
 N 200 -700 200 -660 {lab=#net1}
 N 280 -710 280 -690 {lab=#net2}
 N 200 -710 200 -700 {lab=#net1}
-N 280 -660 290 -660 {lab=GND}
-N 290 -660 290 -620 {lab=GND}
+N 280 -660 290 -660 {lab=VSS}
+N 290 -660 290 -620 {lab=VSS}
 N 430 -760 440 -760 {lab=VDD}
 N 280 -830 400 -830 {lab=#net2}
 N 280 -830 280 -710 {lab=#net2}
@@ -67,9 +67,7 @@ N 280 -630 440 -630 {lab=#net3}
 N 500 -710 560 -710 {lab=#net2}
 N 540 -830 540 -710 {lab=#net2}
 N 480 -570 560 -570 {lab=#net3}
-N 600 -570 610 -570 {lab=#net4}
-N 610 -570 610 -510 {lab=#net4}
-N 600 -510 610 -510 {lab=#net4}
+N 600 -570 610 -570 {lab=VSS}
 N 540 -710 540 -650 {lab=#net2}
 N 540 -650 600 -650 {lab=#net2}
 N 600 -680 600 -600 {lab=#net2}
@@ -102,6 +100,8 @@ N 860 -420 880 -420 {lab=64uA_OUT}
 N 600 -420 600 -380 {lab=VSS}
 N 560 -450 580 -450 {lab=VDD}
 N 560 -470 560 -450 {lab=VDD}
+N 290 -620 290 -600 {lab=VSS}
+N 610 -570 640 -570 {lab=VSS}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yutaka KOTANI"}
 C {symbols/nfet_03v3.sym} 260 -660 0 0 {name=M3
 L=1u
@@ -187,7 +187,6 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gnd.sym} 290 -620 0 0 {name=l17 lab=GND}
 C {symbols/nfet_03v3.sym} 460 -570 0 1 {name=M2
 L=3u
 W=5u
@@ -237,3 +236,5 @@ model=ppolyf_u_3k
 spiceprefix=X
 m=1}
 C {lab_pin.sym} 560 -470 0 0 {name=p5 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 290 -600 0 0 {name=p6 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 640 -570 0 1 {name=p7 sig_type=std_logic lab=VSS}
