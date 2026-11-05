@@ -15,6 +15,7 @@ Test plan
 ```mermaid
 graph LR
 A[Analog Discovery] --- Space[ ] --- B[Device Under Test]
+A ----> |SPI MOSBIUS CONFIG| B
 A ----> |10.7MHz FM| B
 B ----> |Audio Signal| A
 
