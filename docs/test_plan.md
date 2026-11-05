@@ -14,6 +14,11 @@ Test plan
 # Device under test
 ```mermaid
 graph LR
-    A[Analog Discovery] ---->|10.7MHz FM| B[Device Under Test]
-    B ---->|Audio Signal| A
+A[Analog Discovery] --- Space[ ] --- B[Device Under Test]
+A ----> |10.7MHz FM| B
+B ----> |Audio Signal| A
+
+linkStyle 0,1 stroke-width:0px;
+classDef invisible fill:none,stroke:none,color:none;
+class Space invisible;
 
