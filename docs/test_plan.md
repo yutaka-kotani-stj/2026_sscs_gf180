@@ -1,12 +1,4 @@
 # C4 Super Long wave - General purpose PLL - Test plan
-# Pre-silicon base line (the reference silicon is compared to)
-
-
-## Component test
-### DC charactristics test
-
-### AC charactristics test
-
 ## Functional test
 
 ### SPI configurable VCO
