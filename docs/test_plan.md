@@ -22,7 +22,7 @@ B ----> |10MHz clock| A
 linkStyle 0,1 stroke-width:0px;
 classDef invisible fill:none,stroke:none,color:none;
 class Space invisible;
-
+```
 
 
 ### FM demodulation by PLL
@@ -41,3 +41,4 @@ linkStyle 0,1 stroke-width:0px;
 classDef invisible fill:none,stroke:none,color:none;
 class Space invisible;
 
+```
