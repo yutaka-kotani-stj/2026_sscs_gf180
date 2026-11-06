@@ -203,7 +203,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 760 -710 0 0 {name=M4
 L=3u
-W=14u
+W=15u
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -229,12 +229,12 @@ C {lab_pin.sym} 780 -780 0 0 {name=p16 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 440 -780 0 0 {name=p17 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 600 -780 0 0 {name=p18 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 600 -380 0 0 {name=p3 sig_type=std_logic lab=VSS}
-C {symbols/ppolyf_u_3k.sym} 600 -450 0 0 {name=R1
-W=1e-6
-L=1e-6
-model=ppolyf_u_3k
-spiceprefix=X
-m=1}
 C {lab_pin.sym} 560 -470 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 290 -600 0 0 {name=p6 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 640 -570 0 1 {name=p7 sig_type=std_logic lab=VSS}
+C {symbols/ppolyf_u_1k.sym} 600 -450 0 0 {name=R2
+W=1e-6
+L=2.61e-6
+model=ppolyf_u_1k
+spiceprefix=X
+m=1}

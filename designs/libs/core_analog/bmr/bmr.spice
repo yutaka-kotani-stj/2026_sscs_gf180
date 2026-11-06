@@ -8,6 +8,6 @@ M9 net2 net3 net4 VSS nfet_03v3 L=3u W=10u nf=1
 M12 net2 net2 VDD VDD pfet_03v3 L=3u W=15u nf=1
 M1 net1 net3 VSS VSS nfet_03v3 L=3u W=10u nf=1
 M2 net3 net3 VSS VSS nfet_03v3 L=3u W=5u nf=1
-M4 64uA_OUT net2 VDD VDD pfet_03v3 L=3u W=14u nf=1
-R1 VSS net4 VDD ppolyf_u_3k r_width=1e-6 r_length=1e-6
+M4 64uA_OUT net2 VDD VDD pfet_03v3 L=3u W=15u nf=1
+R2 VSS net4 VDD ppolyf_u_1k r_width=1e-6 r_length=2.61e-6
 .ends
