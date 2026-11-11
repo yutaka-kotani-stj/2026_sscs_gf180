@@ -20,7 +20,7 @@ project:
 
   gf_def_ready: true            # data ready for def generation with global foundries' pad frame
   ws_def_ready: true            # data ready for def generation with wafer space pad frame
-  drc_ready: false               # data ready for integration and DRC
+  drc_ready: true               # data ready for integration and DRC
   lvs_ready: false              # data ready for integrated LVS
   export_control: "docs/Export_Control_GF_Rev8.2_team_c4_signed.pdf"   # Required export control document
 pins:
