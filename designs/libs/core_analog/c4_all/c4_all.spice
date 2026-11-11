@@ -30,7 +30,7 @@ x21 VDD VSS RESET_N CLK CS_N DOUT0 DOUT PFD_CLK_IN PFD_CLK_FB PFD_UP PFD_DOWN CP
 .subckt pfd UP CLK_IN CLK_FB DOWN
 *.PININFO UP:O DOWN:O CLK_IN:I CLK_FB:I
 x1 VDD net1 CLK_IN UP VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
-x2 VDD net1 CLK_FB DOWN VDD VDD GND GND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+x2 VDD net1 CLK_FB DOWN VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
 x3 UP DOWN net1 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nand2_1
 .ends
 
@@ -59,7 +59,7 @@ M8 VDD UP net2 VDD pfet_03v3 L=0.28u W=2u nf=1
 *.PININFO VDD:I VSS:I IBOSC:I OSCOUT:O
 M1 out1_n out1_p net4 VSS nfet_03v3 L=0.28u W=20u nf=1
 M2 out1_p out1_n net5 VSS nfet_03v3 L=0.28u W=20u nf=1
-XC1 net5 net4 cap_mim_2f0fF c_width=34.32e-6 c_length=34.32e-6
+C1 net5 net4 cap_mim_2f0fF c_width=34.32e-6 c_length=34.32e-6
 M5 net1 net3 VSS VSS nfet_03v3 L=0.28u W=10u nf=1
 M6 net2 net3 VSS VSS nfet_03v3 L=0.28u W=10u nf=1
 M4 out1_p net6 VDD VDD pfet_03v3 L=0.28u W=20u nf=1
@@ -120,7 +120,7 @@ M7 IB_OUT IB_IN VDD VDD pfet_03v3 L=4u W=48u nf=1
 ** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/opamp/opamp.sch
 .subckt opamp VDD VSS IB VOUT VIN_P VIN_N
 *.PININFO VDD:I VSS:I IB:I VOUT:O VIN_P:I VIN_N:I
-XC1 VOUT net6 cap_mim_2f0fF c_width=34.32e-6 c_length=34.32e-6
+C1 VOUT net6 cap_mim_2f0fF c_width=34.32e-6 c_length=34.32e-6
 M1 net1 VIN_N net3 VDD pfet_03v3 L=0.28u W=3.2u nf=1
 M2 net2 VIN_P net3 VDD pfet_03v3 L=0.28u W=3.2u nf=1
 M3 net1 net1 VSS VSS nfet_03v3 L=0.28u W=1.6u nf=1
@@ -281,15 +281,15 @@ x7 VDD VSS RESET_N1 CLK1 CS_N1 Q5 DOUT COL0 COL1 COL2 COL3 COL4 ROW sw_matrix_5x
 ** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/bmr/bmr.sch
 .subckt bmr VDD VSS 64uA_OUT
 *.PININFO VDD:I VSS:I 64uA_OUT:O
-M3 net2 net1 net3 GND nfet_03v3 L=1u W=10u nf=1
+M3 net2 net1 net3 VSS nfet_03v3 L=1u W=10u nf=1
 M5 net3 net2 VDD VDD pfet_03v3 L=3u W=15u nf=1
 M6 net1 net1 VDD VDD pfet_03v3 L=4u W=4u nf=1
-M9 net2 net3 net4 net4 nfet_03v3 L=3u W=10u nf=1
+M9 net2 net3 net4 VSS nfet_03v3 L=3u W=10u nf=1
 M12 net2 net2 VDD VDD pfet_03v3 L=3u W=15u nf=1
 M1 net1 net3 VSS VSS nfet_03v3 L=3u W=10u nf=1
 M2 net3 net3 VSS VSS nfet_03v3 L=3u W=5u nf=1
-M4 64uA_OUT net2 VDD VDD pfet_03v3 L=3u W=14u nf=1
-XR1 VSS net4 VDD ppolyf_u_3k r_width=1e-6 r_length=1e-6
+M4 64uA_OUT net2 VDD VDD pfet_03v3 L=3u W=15u nf=1
+R2 VSS net4 VDD ppolyf_u_1k r_width=1e-6 r_length=2.61e-6
 .ends
 
 
@@ -330,4 +330,3 @@ M2 A EN Y VPW nfet_03v3 L=0.28u W=20u nf=1
 .ends
 
 .GLOBAL VDD
-.GLOBAL GND
