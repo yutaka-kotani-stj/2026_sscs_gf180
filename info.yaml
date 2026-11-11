@@ -24,6 +24,10 @@ project:
   lvs_ready: false              # data ready for integrated LVS
   export_control: "docs/Export_Control_GF_Rev8.2_team_c4_signed.pdf"   # Required export control document
 pins:
+  - name: VDD
+    io_type: power
+  - name: VSS
+    io_type: ground  # note: due to a common ground connection, ground pads are generally not needed.
   - name: RESET_N
     io_type: input_cmos
   - name: CLK
@@ -34,11 +38,7 @@ pins:
     io_type: input_cmos
   - name: DOUT
     io_type: input_cmos
-  - name: VDD
-    io_type: power
-  - name: VSS
-    io_type: ground  # note: due to a common ground connection, ground pads are generally not needed.
-  - name: ROW0_PLL_IN 
+ - name: ROW0_PLL_IN 
     io_type: analog
     secondary_esd: false
   - name: ROW1_PLL_OUT

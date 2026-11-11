@@ -24,17 +24,17 @@ N 160 1200 160 1400 {lab=VDD}
 N 160 1400 200 1400 {lab=VDD}
 N 140 1180 200 1180 {lab=CLK_IN}
 N 140 1380 200 1380 {lab=CLK_FB}
+N 660 1220 700 1220 {lab=VDD}
+N 660 1260 700 1260 {lab=VSS}
 C {libs/gf180mcu_stdcells/dffrnq_1.sym} 290 1200 0 0 {name=x1 VGND=VSS VNB=VDD VPB=VSS VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
 C {libs/gf180mcu_stdcells/dffrnq_1.sym} 290 1400 0 0 {name=x2 VGND=VSS VNB=VDD VPB=VSS VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
 C {libs/gf180mcu_stdcells/nand2_1.sym} 280 1300 0 1 {name=x3 VGND=VSS VNB=VDD VPB=VSS VPWR=VDD prefix=gf180mcu_fd_sc_mcu7t5v0__ }
 C {opin.sym} 520 1180 0 0 {name=p1 lab=UP}
 C {opin.sym} 520 1380 0 0 {name=p2 lab=DOWN}
 C {ipin.sym} 140 1180 0 0 {name=p3 lab=CLK_IN}
-C {vdd.sym} 160 1160 0 0 {name=l1 lab=VDD}
 C {ipin.sym} 140 1380 0 0 {name=p4 lab=CLK_FB}
-C {devices/code_shown.sym} 30 1490 0 0 {name=MODELS only_toplevel=true
-format="tcleval( @value )"
-value="
-.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
-
-"}
+C {lab_wire.sym} 160 1160 0 1 {name=p8 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 700 1220 0 1 {name=p5 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 700 1260 0 1 {name=p6 sig_type=std_logic lab=VSS}
+C {ipin.sym} 660 1220 0 0 {name=p14 lab=VDD}
+C {ipin.sym} 660 1260 0 0 {name=p16 lab=VSS}
