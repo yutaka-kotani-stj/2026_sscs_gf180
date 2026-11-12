@@ -21,7 +21,7 @@ project:
   gf_def_ready: true            # data ready for def generation with global foundries' pad frame
   ws_def_ready: true            # data ready for def generation with wafer space pad frame
   drc_ready: true               # data ready for integration and DRC
-  lvs_ready: false              # data ready for integrated LVS
+  lvs_ready: true              # data ready for integrated LVS
   export_control: "docs/Export_Control_GF_Rev8.2_team_c4_signed.pdf"   # Required export control document
 pins:
   - name: VDD
@@ -38,7 +38,7 @@ pins:
     io_type: input_cmos
   - name: DOUT
     io_type: input_cmos
- - name: ROW0_PLL_IN 
+  - name: ROW0_PLL_IN 
     io_type: analog
     secondary_esd: false
   - name: ROW1_PLL_OUT
