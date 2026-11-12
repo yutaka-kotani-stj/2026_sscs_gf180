@@ -1,10 +1,3 @@
-**** begin user architecture code
-
-.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
-
-
-**** end user architecture code
-
 ** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/c4_all/c4_all.sch
 .subckt c4_all VDD VSS RESET_N CLK CS_N DIN ROW0_PLL_IN ROW1_PLL_OUT ROW3_VCO_IN ROW4_TEST_OUT ROW5_TEST_IN DOUT ROW2_PLL_FB_IN
 *.PININFO VDD:I VSS:I RESET_N:I CLK:I CS_N:I DIN:I ROW0_PLL_IN:B ROW1_PLL_OUT:B ROW3_VCO_IN:B ROW4_TEST_OUT:B ROW5_TEST_IN:B
@@ -23,6 +16,12 @@ x11 VDD VSS RESET_N CLK DIN CS_N DOUT3 SCDAC_IOUT3 scdac
 x12 VDD VSS RESET_N CLK DOUT3 CS_N DOUT2 SCDAC_IOUT2 scdac
 x13 VDD VSS RESET_N CLK DOUT2 CS_N DOUT1 SCDAC_IOUT1 scdac
 x14 VDD VSS RESET_N CLK DOUT1 CS_N DOUT0 SCDAC_IOUT0 scdac
+**** begin user architecture code
+
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
+
+
+**** end user architecture code
 .ends
 
 * expanding   symbol:  libs/core_analog/charge_pump/charge_pump.sym # of pins=6
@@ -49,7 +48,7 @@ M8 VDD UP net2 VDD pfet_03v3 L=0.28u W=2u nf=1
 *.PININFO VDD:I VSS:I IBOSC:I OSCOUT:O
 M1 out1_n out1_p net4 VSS nfet_03v3 L=0.28u W=20u nf=1
 M2 out1_p out1_n net5 VSS nfet_03v3 L=0.28u W=20u nf=1
-C1 net5 net4 cap_mim_2f0fF c_width=34.32e-6 c_length=34.32e-6
+XC1 net5 net4 cap_mim_2f0fF c_width=34.32e-6 c_length=34.32e-6
 M5 net1 net3 VSS VSS nfet_03v3 L=0.28u W=10u nf=1
 M6 net2 net3 VSS VSS nfet_03v3 L=0.28u W=10u nf=1
 M4 out1_p net6 VDD VDD pfet_03v3 L=0.28u W=20u nf=1
@@ -110,7 +109,7 @@ M7 IB_OUT IB_IN VDD VDD pfet_03v3 L=4u W=48u nf=1
 ** sch_path: /foss/designs/03_super_long_wave/2026_sscs_gf180/designs/libs/core_analog/opamp/opamp.sch
 .subckt opamp VDD VSS IB VOUT VIN_P VIN_N
 *.PININFO VDD:I VSS:I IB:I VOUT:O VIN_P:I VIN_N:I
-C1 VOUT net6 cap_mim_2f0fF c_width=34.32e-6 c_length=34.32e-6
+XC1 VOUT net6 cap_mim_2f0fF c_width=34.32e-6 c_length=34.32e-6
 M1 net1 VIN_N net3 VDD pfet_03v3 L=0.28u W=3.2u nf=1
 M2 net2 VIN_P net3 VDD pfet_03v3 L=0.28u W=3.2u nf=1
 M3 net1 net1 VSS VSS nfet_03v3 L=0.28u W=1.6u nf=1
@@ -306,7 +305,7 @@ M12 net2 net2 VDD VDD pfet_03v3 L=3u W=15u nf=1
 M1 net1 net3 VSS VSS nfet_03v3 L=3u W=10u nf=1
 M2 net3 net3 VSS VSS nfet_03v3 L=3u W=5u nf=1
 M4 64uA_OUT net2 VDD VDD pfet_03v3 L=3u W=15u nf=1
-R2 VSS net4 VDD ppolyf_u_1k r_width=1e-6 r_length=2.61e-6
+XR2 VSS net4 VDD ppolyf_u_1k r_width=1e-6 r_length=2.61e-6
 .ends
 
 
