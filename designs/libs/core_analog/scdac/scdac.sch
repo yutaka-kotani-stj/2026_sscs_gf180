@@ -27,7 +27,7 @@ Output type: Sink
 Resolution: 1uA
 MAX output current: 511uA
 } 1200 -340 0 0 0.5 0.5 {}
-N 1010 -80 1030 -80 {lab=DAC_IOUT}
+N 1010 -80 1040 -80 {lab=DAC_IOUT}
 N 760 -280 780 -280 {lab=DAC_IOUT}
 N 680 -80 680 -60 {lab=VSS}
 N 680 -340 680 -320 {lab=VDD}
@@ -54,7 +54,6 @@ N 100 -740 120 -740 {lab=RESET_N}
 N 100 -720 120 -720 {lab=CLK}
 N 100 -700 120 -700 {lab=CS_N}
 N 100 -680 120 -680 {lab=DIN}
-N 1030 -80 1040 -80 {lab=DAC_IOUT}
 N 320 -700 350 -700 {lab=BIT8}
 N 640 -640 640 -620 {lab=VSS}
 N 640 -800 640 -780 {lab=VDD}
