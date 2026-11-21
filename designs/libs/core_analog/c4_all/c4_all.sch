@@ -38,7 +38,7 @@ T {(17)} 820 -1070 0 0 0.5 0.5 {}
 T {(18)} 820 -1030 0 0 0.5 0.5 {}
 T {(19)} 1340 -1060 0 0 0.5 0.5 {}
 T {(20)} 1250 -1000 0 0 0.5 0.5 {}
-T {(*) shows switch matrix ROW number} 120 -1420 0 0 0.5 0.5 {}
+T {(*) shows switch matrix COLUMN number} 120 -1420 0 0 0.5 0.5 {}
 T {External pin:
 Total external pins:13} 1660 -535 0 0 0.6 0.6 {}
 T {(0)} 200 -1290 0 0 0.5 0.5 {}
@@ -115,10 +115,10 @@ N 960 -540 960 -520 {lab=OPAMP_VIN_P}
 N 940 -540 940 -520 {lab=OPAMP_VIN_N}
 N 920 -540 920 -520 {lab=OPAMP_OUT}
 N 900 -540 900 -520 {lab=OPAMP_IB}
-N 880 -540 880 -520 {lab=SCDAC_IOUT3}
-N 860 -540 860 -520 {lab=SCDAC_IOUT2}
-N 840 -540 840 -520 {lab=SCDAC_IOUT1}
-N 820 -540 820 -520 {lab=SCDAC_IOUT0}
+N 880 -540 880 -520 {lab=SCDAC_IOUT0}
+N 860 -540 860 -520 {lab=SCDAC_IOUT1}
+N 840 -540 840 -520 {lab=SCDAC_IOUT2}
+N 820 -540 820 -520 {lab=#net1}
 N 740 -400 760 -400 {lab=RESET_N}
 N 740 -380 760 -380 {lab=CLK}
 N 740 -360 760 -360 {lab=CS_N}
@@ -255,10 +255,10 @@ C {devices/lab_pin.sym} 960 -540 1 0 {name=l48 sig_type=std_logic lab=OPAMP_VIN_
 C {devices/lab_pin.sym} 940 -540 1 0 {name=l49 sig_type=std_logic lab=OPAMP_VIN_N}
 C {devices/lab_pin.sym} 920 -540 1 0 {name=l50 sig_type=std_logic lab=OPAMP_OUT}
 C {devices/lab_pin.sym} 900 -540 1 0 {name=l51 sig_type=std_logic lab=OPAMP_IB}
-C {devices/lab_pin.sym} 880 -540 1 0 {name=l52 sig_type=std_logic lab=SCDAC_IOUT3}
-C {devices/lab_pin.sym} 860 -540 1 0 {name=l53 sig_type=std_logic lab=SCDAC_IOUT2}
-C {devices/lab_pin.sym} 840 -540 1 0 {name=l54 sig_type=std_logic lab=SCDAC_IOUT1}
-C {devices/lab_pin.sym} 820 -540 1 0 {name=l55 sig_type=std_logic lab=SCDAC_IOUT0}
+C {devices/lab_pin.sym} 820 -540 1 0 {name=l52 sig_type=std_logic lab=SCDAC_IOUT3}
+C {devices/lab_pin.sym} 840 -540 1 0 {name=l53 sig_type=std_logic lab=SCDAC_IOUT2}
+C {devices/lab_pin.sym} 860 -540 1 0 {name=l54 sig_type=std_logic lab=SCDAC_IOUT1}
+C {devices/lab_pin.sym} 880 -540 1 0 {name=l55 sig_type=std_logic lab=SCDAC_IOUT0}
 C {lab_pin.sym} 740 -140 0 0 {name=p48 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 740 -400 0 0 {name=p49 sig_type=std_logic lab=RESET_N}
 C {lab_pin.sym} 740 -360 0 0 {name=p50 sig_type=std_logic lab=CS_N}
